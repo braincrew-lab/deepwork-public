@@ -21,8 +21,16 @@ body {
     linear-gradient(90deg, rgba(23, 23, 23, 0.035) 1px, transparent 1px) 0 0 / 28px 28px,
     linear-gradient(180deg, rgba(23, 23, 23, 0.035) 1px, transparent 1px) 0 0 / 28px 28px,
     var(--paper);
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:
+    ui-sans-serif,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Apple SD Gothic Neo",
+    "Noto Sans KR",
+    "Segoe UI",
+    sans-serif;
   line-height: 1.5;
+  word-break: keep-all;
 }
 
 a {
