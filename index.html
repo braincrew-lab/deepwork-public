@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DeepWork Public</title>
+    <meta
+      name="description"
+      content="Official public distribution hub for DeepWork downloads, update metadata, and public policy pages."
+    />
+    <link rel="icon" href="assets/deepwork-icon.png" />
+    <link rel="stylesheet" href="assets/site.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="./" aria-label="DeepWork Public home">
+        <img src="assets/deepwork-icon.png" alt="" />
+        <span>DeepWork Public</span>
+      </a>
+      <nav aria-label="Primary">
+        <a href="download/">Download</a>
+        <a href="privacy/deepwork-chrome-bridge/">Privacy</a>
+        <a href="releases/stable.json">Release metadata</a>
+        <a href="https://github.com/braincrew-lab/deepwork-public/releases">GitHub Releases</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Official Braincrew distribution surface</p>
+          <h1>DeepWork downloads and public release metadata.</h1>
+          <p>
+            This site is the unauthenticated public home for DeepWork download
+            pages, privacy policies, update-checker metadata, and release links.
+          </p>
+          <div class="actions">
+            <a class="button" href="download/">Open downloads</a>
+            <a class="button secondary" href="privacy/deepwork-chrome-bridge/">Privacy policy</a>
+          </div>
+        </div>
+
+        <aside class="release-panel" aria-label="Current public release status">
+          <img src="assets/deepwork-icon.png" alt="DeepWork icon" />
+          <div class="status">Public hub initialized</div>
+          <h2>Release artifacts live in GitHub Releases.</h2>
+          <p>
+            Installer binaries should not be committed to git. Download pages
+            and update metadata should point to reviewed release artifacts.
+          </p>
+          <img
+            class="product-shot"
+            src="assets/deepwork-browser-connection.png"
+            alt="DeepWork desktop interface showing the browser connection workflow"
+          />
+        </aside>
+      </section>
+
+      <section class="grid" aria-label="Public hub responsibilities">
+        <article class="tile">
+          <h2>Downloads</h2>
+          <p>
+            User-facing download pages for macOS and Windows builds, backed by
+            official release artifacts.
+          </p>
+        </article>
+        <article class="tile">
+          <h2>Updates</h2>
+          <p>
+            Stable public metadata for update checkers, release channels,
+            checksums, and release notes.
+          </p>
+        </article>
+        <article class="tile">
+          <h2>Policies</h2>
+          <p>
+            Public legal and privacy pages for users, enterprise admins, and
+            Chrome Web Store reviewers.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      Copyright 2026 Braincrew. All rights reserved. Public visibility does not
+      grant an open-source license.
+    </footer>
+  </body>
+</html>

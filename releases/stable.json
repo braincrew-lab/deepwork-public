@@ -1,0 +1,13 @@
+{
+  "product": "DeepWork",
+  "channel": "stable",
+  "status": "pending-public-release",
+  "version": null,
+  "releasedAt": null,
+  "downloads": {
+    "macosUniversal": null,
+    "windows": null
+  },
+  "notesUrl": null
+}
+

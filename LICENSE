@@ -1,0 +1,30 @@
+Braincrew Proprietary License
+
+Copyright (c) 2026 Braincrew. All rights reserved.
+
+This repository is public so Braincrew can distribute DeepWork public materials,
+downloads, update metadata, legal pages, and release-facing web pages. Public
+access to this repository does not grant an open-source license.
+
+Unless Braincrew provides a separate written license, no person or organization
+may copy, modify, publish, distribute, sublicense, sell, repackage, mirror,
+reverse engineer, or create derivative works from the contents of this
+repository.
+
+All Braincrew-owned materials in this repository are proprietary Braincrew
+assets. This includes, without limitation, product names, trademarks, logos,
+icons, screenshots, visual designs, copywriting, documentation, installer
+artifacts, update metadata, release manifests, website source files, HTML/CSS,
+and other assets created for DeepWork or Braincrew.
+
+Users may view public pages hosted from this repository and may download and
+install official DeepWork release artifacts only through Braincrew-approved
+distribution channels. That permission does not transfer ownership or grant any
+right to redistribute the artifacts.
+
+Third-party software, libraries, fonts, icons, or other materials included in
+release artifacts remain subject to their own license terms. Nothing in this
+license limits rights granted by those third-party licenses.
+
+For licensing or distribution questions, contact Braincrew.
+

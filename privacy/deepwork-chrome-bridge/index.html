@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DeepWork Chrome Bridge Privacy Policy</title>
+    <meta
+      name="description"
+      content="Privacy policy for the DeepWork Chrome Bridge browser extension."
+    />
+    <link rel="icon" href="../../assets/deepwork-icon.png" />
+    <link rel="stylesheet" href="../../assets/site.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="../../">
+        <img src="../../assets/deepwork-icon.png" alt="" />
+        <span>DeepWork Public</span>
+      </a>
+      <nav aria-label="Primary">
+        <a href="../../download/">Download</a>
+        <a href="../../releases/stable.json">Release metadata</a>
+        <a href="https://github.com/braincrew-lab/deepwork-public">GitHub</a>
+      </nav>
+    </header>
+
+    <main class="document">
+      <p class="eyebrow">Privacy Policy</p>
+      <h1>DeepWork Chrome Bridge Privacy Policy</h1>
+      <p><strong>Effective date:</strong> June 20, 2026</p>
+      <p>
+        This privacy policy describes how the DeepWork Chrome Bridge browser
+        extension handles user data. The extension id is
+        <code>khklcdfoafkbllfoiecjmjfnafmelihg</code>.
+      </p>
+      <p>
+        DeepWork Chrome Bridge is a local bridge between Google Chrome and the
+        installed DeepWork desktop app. It is not useful as a standalone cloud
+        service. Its single purpose is to let a user run approved browser
+        automation from the DeepWork desktop app through a local native
+        messaging host.
+      </p>
+
+      <section>
+        <h2>Data The Extension Handles</h2>
+        <p>
+          DeepWork Chrome Bridge can handle the following data when the user
+          connects the extension to DeepWork and requests browser actions:
+        </p>
+        <ul>
+          <li>
+            Website content, such as page text, DOM state, visible screenshots,
+            selected page content, images, links, and page structure needed for
+            the requested task.
+          </li>
+          <li>
+            Web history, such as tab URLs, page titles, tab state, and
+            navigation state for tabs used by DeepWork browser tasks.
+          </li>
+          <li>
+            User activity, such as user-requested clicks, typing, scrolling,
+            screenshots, file-upload actions, and waits for page conditions.
+          </li>
+          <li>
+            Local connection metadata, such as whether the extension is
+            connected to the native host and metadata used to keep
+            DeepWork-created tabs grouped by session.
+          </li>
+        </ul>
+        <p>
+          The extension does not intentionally collect health information,
+          financial and payment information, authentication information,
+          location information, or personal communications as separate data
+          categories. If a user directs DeepWork to automate a page that visibly
+          contains sensitive information, that information may be present in the
+          page content handled for that user-requested task. DeepWork Chrome
+          Bridge uses redaction and session-boundary checks where available, but
+          users should avoid directing browser automation at sensitive pages
+          unless their organization policy allows it.
+        </p>
+      </section>
+
+      <section>
+        <h2>How Data Is Used</h2>
+        <p>
+          DeepWork Chrome Bridge uses handled data only to provide or improve
+          its single purpose: local, user-approved browser automation for the
+          DeepWork desktop app. For example, the extension may read page content
+          so DeepWork can summarize what is visible, capture a screenshot
+          requested by the user, click or type into a target tab, wait for text
+          or a selector to appear, or report the current tab URL and title.
+        </p>
+        <p>
+          The extension does not use handled data for advertising, behavioral
+          targeting, creditworthiness, lending, or unrelated analytics.
+        </p>
+      </section>
+
+      <section>
+        <h2>How Data Is Shared</h2>
+        <p>
+          DeepWork Chrome Bridge sends browser-task data to the locally
+          installed DeepWork desktop app through the local Chrome native
+          messaging host. The extension itself does not sell user data, show
+          ads, or independently upload browsing data as a standalone cloud
+          service.
+        </p>
+        <p>
+          Depending on the user's DeepWork configuration and the task the user
+          requests, the DeepWork desktop app may send task context to
+          user-configured model providers, organization-managed services, or
+          remote agents. Those transfers are controlled by the DeepWork desktop
+          app, the user's configured providers, and the user's organization
+          policy.
+        </p>
+        <p>
+          DeepWork Chrome Bridge may also disclose data if required by law or to
+          protect against security abuse, fraud, or malware.
+        </p>
+      </section>
+
+      <section>
+        <h2>Storage And Retention</h2>
+        <p>
+          DeepWork Chrome Bridge stores local connection and session metadata in
+          Chrome extension storage so the bridge can reconnect and keep
+          DeepWork-created tabs organized. The extension does not store
+          long-term copies of page content or screenshots as a standalone
+          service.
+        </p>
+        <p>
+          Users can remove locally stored extension data by disabling or
+          uninstalling the extension in Chrome. Users can also clear DeepWork
+          desktop app data according to the desktop app's own settings and
+          organization policy.
+        </p>
+      </section>
+
+      <section>
+        <h2>Security</h2>
+        <p>
+          The extension communicates with the DeepWork desktop app through
+          Chrome native messaging on the user's device. Browser-task data routed
+          beyond the device is handled by the DeepWork desktop app and the
+          user's configured providers.
+        </p>
+        <p>
+          The extension package runs JavaScript included in the submitted Chrome
+          Web Store bundle. It does not load remotely hosted JavaScript for
+          extension logic.
+        </p>
+      </section>
+
+      <section>
+        <h2>Chrome Web Store Limited Use Statement</h2>
+        <p>
+          DeepWork Chrome Bridge's use of user data complies with the Chrome Web
+          Store User Data Policy, including the Limited Use requirements.
+        </p>
+      </section>
+
+      <section>
+        <h2>Changes To This Policy</h2>
+        <p>
+          Braincrew may update this policy as the extension, DeepWork desktop
+          app, or legal requirements change. Updates will be published with a
+          revised effective date.
+        </p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>
+          For privacy questions about DeepWork Chrome Bridge, contact
+          <a href="mailto:dev@brain-crew.com">dev@brain-crew.com</a>.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      Copyright 2026 Braincrew. All rights reserved.
+    </footer>
+  </body>
+</html>
+
