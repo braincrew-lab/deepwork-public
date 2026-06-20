@@ -137,6 +137,13 @@ p {
   color: var(--ink);
 }
 
+.button.compact {
+  flex: 0 0 auto;
+  min-height: 40px;
+  padding: 0 16px;
+  white-space: nowrap;
+}
+
 .release-panel {
   padding: 28px;
   border: 1px solid var(--rule);
@@ -199,6 +206,7 @@ code {
   background: rgba(23, 23, 23, 0.08);
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.92em;
+  overflow-wrap: anywhere;
 }
 
 footer {
