@@ -1,7 +1,7 @@
 # DeepWork Public
 
 Public distribution hub for DeepWork downloads, release metadata, update
-checker files, landing pages, and public legal pages.
+checker files, and public legal pages.
 
 This repository is intentionally public. It gives users, reviewers, enterprise
 admins, and update clients a stable unauthenticated place to read public
@@ -11,7 +11,7 @@ DeepWork information and fetch official distribution metadata.
 
 `deepwork-public` owns the public surfaces around DeepWork distribution:
 
-- download and landing pages for current DeepWork releases;
+- the root download page for current DeepWork releases;
 - public privacy policy pages, including Chrome Web Store review pages;
 - release-facing metadata used by download pages and update checkers;
 - links to official GitHub Release artifacts;
@@ -37,8 +37,7 @@ Planned public paths:
 
 | Path | Purpose |
 | --- | --- |
-| `/` | Landing page and high-level DeepWork distribution entry point |
-| `/download/` | Download page for official macOS and Windows builds |
+| `/` | Download page for official macOS and Windows builds |
 | `/privacy/deepwork-chrome-bridge/` | Chrome Web Store privacy policy URL |
 | `/releases/stable.json` | Public stable release metadata |
 | `/updates/` | Update checker metadata contract and channel notes |
@@ -102,8 +101,7 @@ and other assets are proprietary Braincrew assets. See [LICENSE](LICENSE) and
 
 ```text
 .
-├── index.html                         # Public landing page
-├── download/                          # Download page
+├── index.html                         # Root download page
 ├── privacy/deepwork-chrome-bridge/    # Chrome Web Store privacy policy page
 ├── releases/                          # Public release metadata
 ├── updates/                           # Update checker contract and channel notes
