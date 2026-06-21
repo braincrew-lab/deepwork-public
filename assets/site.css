@@ -240,6 +240,28 @@ footer {
   font-size: 14px;
 }
 
+.site-footer {
+  display: grid;
+  gap: 12px;
+}
+
+.footer-brand {
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.footer-details {
+  display: grid;
+  gap: 6px;
+  font-style: normal;
+}
+
+.footer-copyright {
+  margin-top: 4px;
+  font-size: 14px;
+}
+
 @media (max-width: 720px) {
   header,
   .download-card,
