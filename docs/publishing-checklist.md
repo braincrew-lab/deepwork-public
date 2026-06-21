@@ -10,6 +10,8 @@ stores, updater clients, or customer communications.
 - The page does not include private repository URLs, local file paths, customer
   names, support tickets, tokens, or screenshots with private content.
 - The page matches the current product behavior and public policy.
+- macOS download copy names Apple Silicon as the supported Mac target and does
+  not imply Intel Mac support.
 
 ## Release Artifact
 
@@ -26,4 +28,3 @@ stores, updater clients, or customer communications.
 - URLs are public and stable.
 - Checksums match the downloadable artifact.
 - Metadata does not point to a draft, expired, or private artifact.
-

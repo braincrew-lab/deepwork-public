@@ -1,11 +1,39 @@
 {
   "product": "DeepWork",
   "channel": "stable",
-  "status": "macos-public-release-available",
+  "status": "macos-apple-silicon-public-release-available",
   "version": "0.4.1",
   "releasedAt": "2026-06-21T13:05:28Z",
   "downloads": {
+    "macosAppleSilicon": {
+      "architecture": "arm64",
+      "supportedHardware": ["Apple Silicon Mac"],
+      "unsupportedHardware": ["Intel Mac"],
+      "packageType": "dmg",
+      "downloadUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1/DeepWork-0.4.1-universal.dmg",
+      "artifactName": "DeepWork-0.4.1-universal.dmg",
+      "artifactCompatibility": "legacy universal artifact; public support is Apple Silicon only",
+      "bytes": 498501456,
+      "sha256": "06d594a2a278c89d62d644558a06484ffc250593a10a47e38419a90db329f9b2",
+      "updater": {
+        "provider": "github",
+        "owner": "braincrew-lab",
+        "repo": "deepwork-public",
+        "latestMacYmlUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1/latest-mac.yml",
+        "zipUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1/DeepWork-0.4.1-universal-mac.zip",
+        "blockmapUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1/DeepWork-0.4.1-universal-mac.zip.blockmap"
+      },
+      "signature": {
+        "status": "Valid",
+        "signer": "Developer ID Application: Brain Crew Co., Ltd. (8B5Y7J56D7)",
+        "notarization": "Accepted",
+        "ticket": "Stapled"
+      },
+      "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1/SHA256SUMS.txt"
+    },
     "macosUniversal": {
+      "deprecated": true,
+      "replacement": "macosAppleSilicon",
       "architecture": "universal",
       "packageType": "dmg",
       "downloadUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1/DeepWork-0.4.1-universal.dmg",
@@ -54,7 +82,8 @@
     "tag": "v0.4.1"
   },
   "verification": {
-    "macosUniversalBuild": "success",
+    "macosAppleSiliconPublicDownload": "available",
+    "macosUniversalBuild": "legacy-proof-artifact",
     "macosAppNotarization": "success",
     "macosDmgNotarization": "success",
     "electronUpdaterPublicProvider": "success"

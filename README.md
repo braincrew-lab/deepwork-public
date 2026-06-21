@@ -54,7 +54,7 @@ metadata in this repository.
 
 Expected artifact classes:
 
-- macOS Universal DMG/ZIP;
+- macOS Apple Silicon DMG/ZIP; Intel Mac is not a supported public target;
 - Windows signed MSIX/AppX or installer packages;
 - update metadata consumed by DeepWork's updater;
 - checksums and release notes approved for public distribution.
