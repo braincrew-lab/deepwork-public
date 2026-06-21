@@ -10,18 +10,17 @@
       "supportedHardware": ["Apple Silicon Mac"],
       "unsupportedHardware": ["Intel Mac"],
       "packageType": "dmg",
-      "downloadUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1/DeepWork-0.4.1-universal.dmg",
-      "artifactName": "DeepWork-0.4.1-universal.dmg",
-      "artifactCompatibility": "legacy universal artifact; public support is Apple Silicon only",
-      "bytes": 498501456,
-      "sha256": "06d594a2a278c89d62d644558a06484ffc250593a10a47e38419a90db329f9b2",
+      "downloadUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1/DeepWork-0.4.1-arm64.dmg",
+      "artifactName": "DeepWork-0.4.1-arm64.dmg",
+      "bytes": 371784836,
+      "sha256": "a40989b7dd63e3eab1588fe06b23f242e0d87f118116376ac87e87a80f233ccb",
       "updater": {
         "provider": "github",
         "owner": "braincrew-lab",
         "repo": "deepwork-public",
         "latestMacYmlUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1/latest-mac.yml",
-        "zipUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1/DeepWork-0.4.1-universal-mac.zip",
-        "blockmapUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1/DeepWork-0.4.1-universal-mac.zip.blockmap"
+        "zipUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1/DeepWork-0.4.1-arm64-mac.zip",
+        "blockmapUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1/DeepWork-0.4.1-arm64-mac.zip.blockmap"
       },
       "signature": {
         "status": "Valid",
