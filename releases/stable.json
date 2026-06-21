@@ -1,13 +1,41 @@
 {
   "product": "DeepWork",
-  "channel": "stable",
-  "status": "pending-public-release",
-  "version": null,
-  "releasedAt": null,
+  "channel": "preview",
+  "status": "windows-proof-available",
+  "version": "0.4.1-c2-proof.1",
+  "releasedAt": "2026-06-21T04:57:25Z",
   "downloads": {
     "macosUniversal": null,
-    "windows": null
+    "windows": {
+      "architecture": "x64",
+      "packageType": "appx",
+      "appInstallerUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1-c2-proof.1/DeepWork.appinstaller",
+      "packageUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1-c2-proof.1/DeepWork-0.4.1-c2-proof.1-windows-x64.appx",
+      "artifactName": "DeepWork-0.4.1-c2-proof.1-windows-x64.appx",
+      "bytes": 1427894558,
+      "sha256": "9991920ee993e0cd8cda6e2467def5e58e6e1d95746ea98537ef89e0cdc28b2f",
+      "signature": {
+        "status": "Valid",
+        "signerSubject": "CN=Braincrew Inc., O=Braincrew Inc., L=Seongnam-si, S=Gyeonggi-do, C=KR",
+        "signerThumbprint": "FE34D26618B206DF84B08DF7EEB28ED781912F3B",
+        "timestampSubject": "CN=DigiCert SHA256 RSA4096 Timestamp Responder 2025 1, O=\"DigiCert, Inc.\", C=US",
+        "timestampThumbprint": "DD6230AC860A2D306BDA38B16879523007FB417E"
+      },
+      "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1-c2-proof.1/SHA256SUMS.txt",
+      "evidenceUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1-c2-proof.1/windows-msix-vm-release-evidence.json"
+    }
   },
-  "notesUrl": null
+  "notesUrl": "https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.4.1-c2-proof.1",
+  "source": {
+    "repository": "braincrew-lab/deep-agent-builder-desktop",
+    "commit": "f4d61b7e454ac6c4ab03bd6d006868a848cfcc17",
+    "tag": "v0.4.1-c2-proof.1",
+    "workflowRun": "https://github.com/braincrew-lab/deep-agent-builder-desktop/actions/runs/27893417031"
+  },
+  "verification": {
+    "ciSignedMsixBuild": "success",
+    "ciDryRunInstallSmoke": "success",
+    "localDryRunInstallSmoke": "success",
+    "localUacInstallServiceUninstallSmoke": "success"
+  }
 }
-

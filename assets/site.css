@@ -144,6 +144,10 @@ p {
   background: var(--panel);
 }
 
+.download-card + .download-card {
+  margin-top: 16px;
+}
+
 .download-list {
   display: grid;
   gap: 12px;

@@ -28,7 +28,7 @@
       <section class="page-head">
         <p class="eyebrow">공식 다운로드</p>
         <h1>DeepWork</h1>
-        <p>현재 공개된 macOS Apple Silicon용 설치 파일입니다.</p>
+        <p>현재 공개된 macOS Apple Silicon 설치 파일과 Windows proof 패키지입니다.</p>
       </section>
 
       <section class="download-card" aria-labelledby="primary-download">
@@ -60,6 +60,39 @@
         </a>
       </section>
 
+      <section class="download-card" aria-labelledby="windows-download">
+        <div>
+          <h2 id="windows-download">Windows proof</h2>
+          <p>Windows x64 signed APPX + App Installer feed</p>
+          <dl class="metadata">
+            <div>
+              <dt>버전</dt>
+              <dd>v0.4.1-c2-proof.1</dd>
+            </div>
+            <div>
+              <dt>파일</dt>
+              <dd>DeepWork-0.4.1-c2-proof.1-windows-x64.appx</dd>
+            </div>
+            <div>
+              <dt>SHA-256</dt>
+              <dd>
+                <code>9991920ee993e0cd8cda6e2467def5e58e6e1d95746ea98537ef89e0cdc28b2f</code>
+              </dd>
+            </div>
+            <div>
+              <dt>서명</dt>
+              <dd>Braincrew Inc. DigiCert 코드사이닝 검증 완료</dd>
+            </div>
+          </dl>
+        </div>
+        <a
+          class="button primary"
+          href="https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1-c2-proof.1/DeepWork.appinstaller"
+        >
+          Windows 다운로드
+        </a>
+      </section>
+
       <section class="release-table" aria-label="다른 플랫폼">
         <div class="release-row">
           <span>macOS Universal</span>
@@ -67,14 +100,22 @@
         </div>
         <div class="release-row">
           <span>Windows</span>
-          <span class="muted">준비 중</span>
+          <a
+            class="button compact"
+            href="https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1-c2-proof.1/DeepWork-0.4.1-c2-proof.1-windows-x64.appx"
+          >
+            APPX 직접 다운로드
+          </a>
         </div>
       </section>
 
       <section class="link-list" aria-label="관련 링크">
         <a href="privacy/deepwork-chrome-bridge/">개인정보처리방침</a>
         <a href="https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.4.0-macos-ci.2">
-          릴리스 노트
+          macOS 릴리스 노트
+        </a>
+        <a href="https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.4.1-c2-proof.1">
+          Windows 릴리스 노트
         </a>
       </section>
     </main>
