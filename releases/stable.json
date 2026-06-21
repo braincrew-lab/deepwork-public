@@ -1,11 +1,33 @@
 {
   "product": "DeepWork",
-  "channel": "preview",
-  "status": "windows-proof-available",
-  "version": "0.4.1-c2-proof.1",
-  "releasedAt": "2026-06-21T04:57:25Z",
+  "channel": "stable",
+  "status": "macos-public-release-available",
+  "version": "0.4.1",
+  "releasedAt": "2026-06-21T13:05:28Z",
   "downloads": {
-    "macosUniversal": null,
+    "macosUniversal": {
+      "architecture": "universal",
+      "packageType": "dmg",
+      "downloadUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1/DeepWork-0.4.1-universal.dmg",
+      "artifactName": "DeepWork-0.4.1-universal.dmg",
+      "bytes": 498501456,
+      "sha256": "06d594a2a278c89d62d644558a06484ffc250593a10a47e38419a90db329f9b2",
+      "updater": {
+        "provider": "github",
+        "owner": "braincrew-lab",
+        "repo": "deepwork-public",
+        "latestMacYmlUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1/latest-mac.yml",
+        "zipUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1/DeepWork-0.4.1-universal-mac.zip",
+        "blockmapUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1/DeepWork-0.4.1-universal-mac.zip.blockmap"
+      },
+      "signature": {
+        "status": "Valid",
+        "signer": "Developer ID Application: Brain Crew Co., Ltd. (8B5Y7J56D7)",
+        "notarization": "Accepted",
+        "ticket": "Stapled"
+      },
+      "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1/SHA256SUMS.txt"
+    },
     "windows": {
       "architecture": "x64",
       "packageType": "appx",
@@ -25,17 +47,16 @@
       "evidenceUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1-c2-proof.1/windows-msix-vm-release-evidence.json"
     }
   },
-  "notesUrl": "https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.4.1-c2-proof.1",
+  "notesUrl": "https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.4.1",
   "source": {
     "repository": "braincrew-lab/deep-agent-builder-desktop",
-    "commit": "f4d61b7e454ac6c4ab03bd6d006868a848cfcc17",
-    "tag": "v0.4.1-c2-proof.1",
-    "workflowRun": "https://github.com/braincrew-lab/deep-agent-builder-desktop/actions/runs/27893417031"
+    "commit": "e285cbb19837874e389eebe7396f54bfdf00b735",
+    "tag": "v0.4.1"
   },
   "verification": {
-    "ciSignedMsixBuild": "success",
-    "ciDryRunInstallSmoke": "success",
-    "localDryRunInstallSmoke": "success",
-    "localUacInstallServiceUninstallSmoke": "success"
+    "macosUniversalBuild": "success",
+    "macosAppNotarization": "success",
+    "macosDmgNotarization": "success",
+    "electronUpdaterPublicProvider": "success"
   }
 }
