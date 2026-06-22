@@ -72,6 +72,19 @@
       },
       "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1-c2-proof.1/SHA256SUMS.txt",
       "evidenceUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1-c2-proof.1/windows-msix-vm-release-evidence.json"
+    },
+    "chromeBridgeExtension": {
+      "status": "chrome-web-store-review-pending",
+      "channel": "temporary-unpacked",
+      "version": "0.1.1",
+      "extensionId": "lgioocbpjbbddegmcjdhjcccbdkheene",
+      "webStoreExtensionId": "khklcdfoafkbllfoiecjmjfnafmelihg",
+      "downloadUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1/chrome-bridge-unpacked-0.1.1-lgioocbpjbbddegmcjdhjcccbdkheene.zip",
+      "artifactName": "chrome-bridge-unpacked-0.1.1-lgioocbpjbbddegmcjdhjcccbdkheene.zip",
+      "bytes": 48089,
+      "sha256": "20c09e4ad27022d7f2fb7de830da915a83a5c33f7bf7cff6b7547c27b0a794b6",
+      "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1/SHA256SUMS.txt",
+      "installGuideUrl": "https://braincrew-lab.github.io/deepwork-public/#browser-connection-guide"
     }
   },
   "notesUrl": "https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.4.1",
