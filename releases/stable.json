@@ -2,25 +2,25 @@
   "product": "DeepWork",
   "channel": "stable",
   "status": "macos-apple-silicon-public-release-available",
-  "version": "0.4.1",
-  "releasedAt": "2026-06-21T13:05:28Z",
+  "version": "0.4.2",
+  "releasedAt": "2026-06-22T14:19:25Z",
   "downloads": {
     "macosAppleSilicon": {
       "architecture": "arm64",
       "supportedHardware": ["Apple Silicon Mac"],
       "unsupportedHardware": ["Intel Mac"],
       "packageType": "dmg",
-      "downloadUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1/DeepWork-0.4.1-arm64.dmg",
-      "artifactName": "DeepWork-0.4.1-arm64.dmg",
-      "bytes": 371784836,
-      "sha256": "a40989b7dd63e3eab1588fe06b23f242e0d87f118116376ac87e87a80f233ccb",
+      "downloadUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.2/DeepWork-0.4.2-arm64.dmg",
+      "artifactName": "DeepWork-0.4.2-arm64.dmg",
+      "bytes": 371326865,
+      "sha256": "fa6b0350911af1a7ea272066d6afbcaff6c098b05f06e34554c7f8436e460269",
       "updater": {
         "provider": "github",
         "owner": "braincrew-lab",
         "repo": "deepwork-public",
-        "latestMacYmlUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1/latest-mac.yml",
-        "zipUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1/DeepWork-0.4.1-arm64-mac.zip",
-        "blockmapUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1/DeepWork-0.4.1-arm64-mac.zip.blockmap"
+        "latestMacYmlUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.2/latest-mac.yml",
+        "zipUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.2/DeepWork-0.4.2-arm64-mac.zip",
+        "blockmapUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.2/DeepWork-0.4.2-arm64-mac.zip.blockmap"
       },
       "signature": {
         "status": "Valid",
@@ -28,7 +28,7 @@
         "notarization": "Accepted",
         "ticket": "Stapled"
       },
-      "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1/SHA256SUMS.txt"
+      "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.2/SHA256SUMS.txt"
     },
     "macosUniversal": {
       "deprecated": true,
@@ -87,11 +87,22 @@
       "installGuideUrl": "https://braincrew-lab.github.io/deepwork-public/#browser-connection-guide"
     }
   },
-  "notesUrl": "https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.4.1",
+  "notesUrl": "https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.4.2",
+  "releaseNotes": {
+    "title": "DeepWork v0.4.2 macOS public",
+    "summary": "Apple Silicon Mac용 signed + notarized 공개 릴리스입니다. 0.4.1 대비 Panel 실행, 진단 번들, Browser Connection 안정성, 사용량/상태 표시를 개선했습니다. Windows 패키지는 이번 릴리스에 포함하지 않았습니다.",
+    "items": [
+      "Panel 실행이 실제 에이전트 도구 경로와 연결되어, 패널 멤버 작업과 실행 타임라인을 더 명확하게 확인할 수 있습니다.",
+      "Incident diagnostics와 support bundle이 확장되어 현재 스레드 진단, 타임라인 이벤트, 내보내기 흐름을 함께 수집할 수 있습니다.",
+      "Browser Connection / Chrome Bridge 경로를 정리하고 직접 도구 실행을 안정화했습니다.",
+      "앱 버전 표시, 모델 선택 라벨, 로컬 사용량 예산 편집, readiness toast 동작을 다듬었습니다.",
+      "공개 macOS 자산을 Apple Silicon arm64 설치 및 업데이트 경로로 명확히 정리했습니다."
+    ]
+  },
   "source": {
     "repository": "braincrew-lab/deep-agent-builder-desktop",
-    "commit": "e285cbb19837874e389eebe7396f54bfdf00b735",
-    "tag": "v0.4.1"
+    "commit": "6c90892d91a2eec1ef539000a8a4ba6cdb22aa0b",
+    "tag": "v0.4.2"
   },
   "verification": {
     "macosAppleSiliconPublicDownload": "available",
