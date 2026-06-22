@@ -12,7 +12,6 @@ DeepWork information and fetch official distribution metadata.
 `deepwork-public` owns the public surfaces around DeepWork distribution:
 
 - the root download page for current DeepWork releases;
-- small public support helper downloads linked from the root page;
 - public privacy policy pages, including Chrome Web Store review pages;
 - release-facing metadata used by download pages and update checkers;
 - links to official GitHub Release artifacts;
@@ -42,7 +41,6 @@ Planned public paths:
 | `/privacy/deepwork-chrome-bridge/` | Chrome Web Store privacy policy URL |
 | `/releases/stable.json` | Public stable release metadata |
 | `/updates/` | Update checker metadata contract and channel notes |
-| `/downloads/` | Small public helper downloads such as support diagnostics skill bundles |
 
 If Braincrew later connects a company domain, keep the same path structure and
 redirect old GitHub Pages URLs rather than breaking published Web Store or
@@ -107,7 +105,6 @@ and other assets are proprietary Braincrew assets. See [LICENSE](LICENSE) and
 ├── privacy/deepwork-chrome-bridge/    # Chrome Web Store privacy policy page
 ├── releases/                          # Public release metadata
 ├── updates/                           # Update checker contract and channel notes
-├── downloads/                         # Small public helper downloads
 ├── docs/                              # Operator-facing public repo contracts
 ├── assets/                            # Braincrew-owned public web assets and screenshots
 ├── LICENSE

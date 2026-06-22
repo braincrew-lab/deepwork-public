@@ -12,7 +12,6 @@ This repository is authoritative for:
 - public release metadata;
 - update checker metadata after release approval;
 - links to official release artifacts hosted through GitHub Releases;
-- small public helper downloads linked from public pages;
 - public proprietary asset notices.
 
 This repository is not authoritative for:
@@ -27,7 +26,7 @@ This repository is not authoritative for:
 ## Artifact Rule
 
 Large binaries belong in GitHub Releases. Git stores only pages, policies,
-metadata, small web assets, and small support helper downloads.
+metadata, and small web assets.
 
 ## Visibility Rule
 
