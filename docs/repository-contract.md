@@ -12,6 +12,7 @@ This repository is authoritative for:
 - public release metadata;
 - update checker metadata after release approval;
 - links to official release artifacts hosted through GitHub Releases;
+- small public helper downloads linked from public pages;
 - public proprietary asset notices.
 
 This repository is not authoritative for:
@@ -26,7 +27,7 @@ This repository is not authoritative for:
 ## Artifact Rule
 
 Large binaries belong in GitHub Releases. Git stores only pages, policies,
-metadata, and small web assets.
+metadata, small web assets, and small support helper downloads.
 
 ## Visibility Rule
 
@@ -40,4 +41,3 @@ purpose.
 Braincrew-owned logos, icons, screenshots, copy, HTML/CSS, metadata, installers,
 and release artifacts are proprietary Braincrew assets. Public access does not
 grant redistribution or derivative-work rights.
-
