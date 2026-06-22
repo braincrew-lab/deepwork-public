@@ -12,8 +12,8 @@
       "packageType": "dmg",
       "downloadUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.2/DeepWork-0.4.2-arm64.dmg",
       "artifactName": "DeepWork-0.4.2-arm64.dmg",
-      "bytes": 371326865,
-      "sha256": "fa6b0350911af1a7ea272066d6afbcaff6c098b05f06e34554c7f8436e460269",
+      "bytes": 371324053,
+      "sha256": "bd86ddd3f329ee405cfb4a943d3c22a3328ec01e3eb69c61e4c49e42b43938f0",
       "updater": {
         "provider": "github",
         "owner": "braincrew-lab",
@@ -96,12 +96,13 @@
       "Incident diagnostics와 support bundle이 확장되어 현재 스레드 진단, 타임라인 이벤트, 내보내기 흐름을 함께 수집할 수 있습니다.",
       "Browser Connection / Chrome Bridge 경로를 정리하고 직접 도구 실행을 안정화했습니다.",
       "앱 버전 표시, 모델 선택 라벨, 로컬 사용량 예산 편집, readiness toast 동작을 다듬었습니다.",
-      "공개 macOS 자산을 Apple Silicon arm64 설치 및 업데이트 경로로 명확히 정리했습니다."
+      "공개 macOS 자산을 Apple Silicon arm64 설치 및 업데이트 경로로 명확히 정리했습니다.",
+      "릴리스 UI에서 아직 준비 중인 Work overview entrypoint가 노출되지 않도록 정리했습니다."
     ]
   },
   "source": {
     "repository": "braincrew-lab/deep-agent-builder-desktop",
-    "commit": "6c90892d91a2eec1ef539000a8a4ba6cdb22aa0b",
+    "commit": "9aae4b7454dd120502e4482f231bd99d05dce0eb",
     "tag": "v0.4.2"
   },
   "verification": {
