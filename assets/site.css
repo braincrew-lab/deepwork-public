@@ -169,6 +169,37 @@ p {
   color: var(--ink);
 }
 
+.prompt-card {
+  display: grid;
+  gap: 18px;
+  margin-top: 16px;
+  padding: 24px;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.copy-prompt {
+  margin: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  padding: 18px;
+  border: 1px solid #c8d2ce;
+  border-radius: 6px;
+  background: #f3f7f5;
+  color: var(--ink);
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Consolas,
+    monospace;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
 .release-notes {
   display: grid;
   gap: 18px;
