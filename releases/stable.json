@@ -2,8 +2,8 @@
   "product": "DeepWork",
   "channel": "stable",
   "status": "macos-apple-silicon-public-release-available",
-  "version": "0.4.3",
-  "releasedAt": "2026-06-23T13:44:00Z",
+  "version": "0.4.4",
+  "releasedAt": "2026-06-23T14:16:47Z",
   "downloads": {
     "macosAppleSilicon": {
       "architecture": "arm64",
@@ -14,17 +14,17 @@
         "Intel Mac"
       ],
       "packageType": "dmg",
-      "downloadUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.3/DeepWork-0.4.3-arm64.dmg",
-      "artifactName": "DeepWork-0.4.3-arm64.dmg",
-      "bytes": 371299979,
-      "sha256": "7159e63cacf2d4f5499a54193c0de2f1dfc827e6fba49427617e0dba4a11756b",
+      "downloadUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.4/DeepWork-0.4.4-arm64.dmg",
+      "artifactName": "DeepWork-0.4.4-arm64.dmg",
+      "bytes": 371302689,
+      "sha256": "7ef4f3e3505589d5e789acb5636bbd69a25f8485eb4d3caebb35e085b4f73337",
       "updater": {
         "provider": "github",
         "owner": "braincrew-lab",
         "repo": "deepwork-public",
-        "latestMacYmlUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.3/latest-mac.yml",
-        "zipUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.3/DeepWork-0.4.3-arm64-mac.zip",
-        "blockmapUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.3/DeepWork-0.4.3-arm64-mac.zip.blockmap"
+        "latestMacYmlUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.4/latest-mac.yml",
+        "zipUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.4/DeepWork-0.4.4-arm64-mac.zip",
+        "blockmapUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.4/DeepWork-0.4.4-arm64-mac.zip.blockmap"
       },
       "signature": {
         "status": "Valid",
@@ -32,7 +32,7 @@
         "notarization": "Accepted",
         "ticket": "Stapled"
       },
-      "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.3/SHA256SUMS.txt"
+      "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.4/SHA256SUMS.txt"
     },
     "macosUniversal": {
       "deprecated": true,
@@ -91,23 +91,21 @@
       "installGuideUrl": "https://braincrew-lab.github.io/deepwork-public/#browser-connection-guide"
     }
   },
-  "notesUrl": "https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.4.3",
+  "notesUrl": "https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.4.4",
   "releaseNotes": {
-    "title": "DeepWork v0.4.3 macOS public",
-    "summary": "Apple Silicon Mac용 signed + notarized 공개 릴리스입니다. Deep Work 보안 작업 공간, HWPX 문서 흐름, 세션 회상 성능, 진단/공유 흐름을 안정화했습니다. Windows 패키지는 이번 릴리스에 포함하지 않았습니다.",
+    "title": "DeepWork v0.4.4 macOS public",
+    "summary": "Apple Silicon Mac용 signed + notarized 공개 릴리스입니다. 이번 릴리스는 최신 origin/main 기준의 패치 릴리스로, Deep Work 파일 프리뷰 경로 안정성과 릴리스 채널 운영 기준을 정리했습니다. Windows 패키지는 이번 공개 macOS 릴리스에 포함하지 않았습니다.",
     "items": [
-      "Deep Work VM의 macOS 네트워크와 workspace mount 경로를 정리해 보안 작업 공간 준비와 파일 접근 안정성을 높였습니다.",
-      "HWPX 양식 채우기 흐름을 스킬 기반 워크플로우로 되돌리고, 빈 프리뷰와 다운로드 동작을 보완했습니다.",
-      "Session recall reindex를 checkpoint 경로에서 비동기 큐로 분리해 대화 저장/전환 시 지연을 줄였습니다.",
-      "Thread deeplink, thread menu copy, bug report, support bundle export 흐름을 정리해 문제 공유와 재현 자료 수집을 쉽게 했습니다.",
-      "Browser Connection 자동 준비와 Chrome 권한 안내를 보강했습니다.",
-      "비밀값 출력 위험 감지와 agent run latency 진단을 다듬어 감사 가능성과 운영 진단성을 높였습니다."
+      "Deep Work 보안 작업 공간에서 생성된 파일을 보여줄 때 host 경로와 guest 경로가 섞여 프리뷰가 비는 문제를 보완했습니다.",
+      "파일 표시/승인 UI가 /workspace 기준 경로를 더 일관되게 다루도록 정리했습니다.",
+      "stable 앱 릴리스의 Windows 산출물 정책을 KeyLocker 예산 보존 기준에 맞춰 정리했습니다.",
+      "0.4.4 public macOS update feed를 braincrew-lab/deepwork-public 기준으로 다시 생성했습니다."
     ]
   },
   "source": {
     "repository": "braincrew-lab/deep-agent-builder-desktop",
-    "commit": "0478bc0d2f41a04493de5260b63ab922f21524b2",
-    "tag": "v0.4.3"
+    "commit": "cc5b06e0b53be1db4d85813bd64d4dcd1bce387b",
+    "tag": "v0.4.4"
   },
   "verification": {
     "macosAppleSiliconPublicDownload": "available",
