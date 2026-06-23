@@ -38,6 +38,7 @@ Planned public paths:
 | Path | Purpose |
 | --- | --- |
 | `/` | Download page for official macOS and Windows builds |
+| `/hwpx-form-fill/` | Link-only HWPX form-fill usability fixture; not linked from the root download page |
 | `/privacy/deepwork-chrome-bridge/` | Chrome Web Store privacy policy URL |
 | `/releases/stable.json` | Public stable release metadata |
 | `/updates/` | Update checker metadata contract and channel notes |
@@ -102,11 +103,12 @@ and other assets are proprietary Braincrew assets. See [LICENSE](LICENSE) and
 ```text
 .
 ├── index.html                         # Root download page
+├── hwpx-form-fill/                    # Link-only HWPX form-fill usability fixture
 ├── privacy/deepwork-chrome-bridge/    # Chrome Web Store privacy policy page
 ├── releases/                          # Public release metadata
 ├── updates/                           # Update checker contract and channel notes
 ├── docs/                              # Operator-facing public repo contracts
-├── assets/                            # Braincrew-owned public web assets and screenshots
+├── assets/                            # Braincrew-owned public web assets, screenshots, and small test fixtures
 ├── LICENSE
 └── NOTICE.md
 ```
