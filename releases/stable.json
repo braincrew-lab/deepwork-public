@@ -102,9 +102,9 @@
       "sha256": "21370fdcc1211beb56caf0c12ed3ab0de6efee151ce5c133b950ca4fddc4e1f3",
       "signature": {
         "status": "Valid",
-        "channel": "digicert-keylocker",
+        "channel": "windows-signed-appx",
         "productionSigningEvidence": true,
-        "notes": "Signed from deep-agent-builder-desktop origin/main commit 9ea1f167ef0645bd209f89ca3838a9ec91baf343 by release workflow run 28103294553. Public release intentionally exposes the APPX package only."
+        "notes": "Signed APPX built from deep-agent-builder-desktop origin/main commit 9ea1f167ef0645bd209f89ca3838a9ec91baf343 by release workflow run 28103294553. Public release intentionally exposes the APPX package only."
       },
       "releaseNotesUrl": "https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.4.6-win-signed.1"
     },
@@ -129,7 +129,7 @@
     "items": [
       "Deep Work 보안 작업 공간에서 생성된 파일을 보여줄 때 host 경로와 guest 경로가 섞여 프리뷰가 비는 문제를 보완했습니다.",
       "파일 표시/승인 UI가 /workspace 기준 경로를 더 일관되게 다루도록 정리했습니다.",
-      "stable 앱 릴리스의 Windows 산출물 정책을 KeyLocker 예산 보존 기준에 맞춰 정리했습니다.",
+      "stable 앱 릴리스의 Windows 산출물 정책을 서명 예산 보존 기준에 맞춰 정리했습니다.",
       "0.4.4 public macOS update feed를 braincrew-lab/deepwork-public 기준으로 다시 생성했습니다."
     ]
   },
@@ -145,7 +145,7 @@
     "macosDmgNotarization": "success",
     "electronUpdaterPublicProvider": "success",
     "windowsSelfSignedPublicDownload": "available",
-    "windowsKeyLockerSignedProofDownload": "available",
+    "windowsSignedProofDownload": "available",
     "windowsAppInstallerPublicFeed": "available"
   },
   "windowsRelease": {
