@@ -12,6 +12,6 @@
     Uri="https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.6-windows-self-signed.2/DeepWork.0.4.6.appx"
   />
   <UpdateSettings>
-    <OnLaunch HoursBetweenUpdateChecks="0" />
+    <OnLaunch HoursBetweenUpdateChecks="0" ShowPrompt="true" UpdateBlocksActivation="true" />
   </UpdateSettings>
 </AppInstaller>

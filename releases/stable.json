@@ -77,7 +77,10 @@
       },
       "updater": {
         "feedUrl": "https://braincrew-lab.github.io/deepwork-public/releases/windows/DeepWork.appinstaller",
-        "hoursBetweenUpdateChecks": 0
+        "hoursBetweenUpdateChecks": 0,
+        "showPrompt": true,
+        "updateBlocksActivation": true,
+        "testPurpose": "Expose the App Installer failure UX for service-bearing package updates."
       },
       "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.6-windows-self-signed.2/SHA256SUMS.txt",
       "evidenceUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.6-windows-self-signed.2/windows-msix-vm-release-evidence.json",
