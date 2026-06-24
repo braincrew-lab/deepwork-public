@@ -126,10 +126,27 @@ p {
   min-width: 190px;
 }
 
+.button.secondary {
+  border-color: var(--rule);
+  background: var(--panel);
+  color: var(--accent-strong);
+}
+
 .button.compact {
   flex: 0 0 auto;
   min-height: 40px;
   padding: 0 16px;
+  white-space: nowrap;
+}
+
+.button-stack {
+  display: grid;
+  gap: 10px;
+  justify-items: stretch;
+}
+
+.button-stack .button {
+  width: 100%;
   white-space: nowrap;
 }
 

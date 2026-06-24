@@ -67,34 +67,48 @@
       <section class="download-card" aria-labelledby="windows-download">
         <div>
           <h2 id="windows-download">Windows proof</h2>
-          <p>Windows x64 self-signed APPX + App Installer feed. 지금은 0.4.5 설치 단계입니다.</p>
+          <p>Windows x64 KeyLocker 서명 APPX proof입니다. 새 서명은 만들지 않고 기존 v0.4.1 signed proof를 공개합니다.</p>
           <dl class="metadata">
             <div>
-              <dt>현재 feed</dt>
-              <dd>v0.4.5-windows-self-signed.1</dd>
+              <dt>버전</dt>
+              <dd>v0.4.1-win-signed.1</dd>
             </div>
             <div>
-              <dt>다음 업데이트 대상</dt>
-              <dd>v0.4.6-windows-self-signed.2</dd>
+              <dt>파일</dt>
+              <dd>DeepWork.0.4.1-win-signed.1.appx</dd>
             </div>
             <div>
               <dt>SHA-256</dt>
               <dd>
-                <code>1db69727779e0c089ea18387ce05aefeabed3a7325bf07dde5057a99e979834c</code>
+                <code>e8d7f97e36b9591b90a3e30f670ded0b440bce105a4eb7e639e6d45a06ba2a1f</code>
               </dd>
             </div>
             <div>
               <dt>서명</dt>
-              <dd>Braincrew Inc. self-signed 테스트 인증서</dd>
+              <dd>DigiCert KeyLocker 서명 proof</dd>
             </div>
           </dl>
         </div>
-        <a
-          class="button primary"
-          href="https://braincrew-lab.github.io/deepwork-public/releases/windows/DeepWork.appinstaller"
-        >
-          0.4.5 설치 feed 다운로드
-        </a>
+        <div class="button-stack" aria-label="Windows 다운로드">
+          <a
+            class="button primary"
+            href="https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1-win-signed.1/DeepWork.0.4.1-win-signed.1.appx"
+          >
+            KeyLocker APPX 다운로드
+          </a>
+          <a
+            class="button secondary"
+            href="https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1-win-signed.1/DeepWork.v0.4.1-win-signed.1.appinstaller"
+          >
+            signed feed 다운로드
+          </a>
+          <a
+            class="button secondary"
+            href="https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.4.1-win-signed.1"
+          >
+            릴리스 노트
+          </a>
+        </div>
       </section>
 
       <section class="download-card" aria-labelledby="chrome-extension-download">
@@ -158,7 +172,16 @@
           </a>
         </div>
         <div class="release-row">
-          <span>Windows</span>
+          <span>Windows KeyLocker signed proof</span>
+          <a
+            class="button compact"
+            href="https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1-win-signed.1/DeepWork.0.4.1-win-signed.1.appx"
+          >
+            signed APPX
+          </a>
+        </div>
+        <div class="release-row">
+          <span>Windows self-signed feed</span>
           <a
             class="button compact"
             href="https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.5-windows-self-signed.1/DeepWork.0.4.5.appx"
@@ -190,6 +213,9 @@
         <a href="privacy/deepwork-chrome-bridge/">개인정보처리방침</a>
         <a href="https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.4.4">
           macOS 릴리스 노트
+        </a>
+        <a href="https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.4.1-win-signed.1">
+          Windows signed proof
         </a>
         <a href="https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.4.5-windows-self-signed.1">
           Windows 0.4.5 테스트 시작점
