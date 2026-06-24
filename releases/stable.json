@@ -97,7 +97,6 @@
       "packageType": "appx",
       "tag": "v0.4.1-win-signed.1",
       "downloadUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1-win-signed.1/DeepWork.0.4.1-win-signed.1.appx",
-      "appInstallerUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.1-win-signed.1/DeepWork.v0.4.1-win-signed.1.appinstaller",
       "artifactName": "DeepWork.0.4.1-win-signed.1.appx",
       "bytes": 1716484294,
       "sha256": "e8d7f97e36b9591b90a3e30f670ded0b440bce105a4eb7e639e6d45a06ba2a1f",
