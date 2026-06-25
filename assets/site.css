@@ -165,6 +165,29 @@ p {
   margin-top: 16px;
 }
 
+.download-card-subtle {
+  background: #fbfbfb;
+  border-color: #e6e8ea;
+}
+
+.download-card-subtle h2 {
+  font-size: 20px;
+}
+
+.download-card-subtle p,
+.download-card-subtle .metadata dt {
+  color: #6b7280;
+}
+
+.download-card-subtle code {
+  background: #f4f5f6;
+}
+
+.download-card-subtle .button.secondary {
+  border-color: #d9dde1;
+  background: #f8f9fa;
+}
+
 .guide-card {
   display: grid;
   gap: 18px;
