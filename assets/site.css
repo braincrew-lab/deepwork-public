@@ -166,12 +166,15 @@ p {
 }
 
 .download-card-subtle {
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px;
+  padding: 14px 16px;
   background: #fbfbfb;
   border-color: #e6e8ea;
 }
 
 .download-card-subtle h2 {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .download-card-subtle p,
@@ -179,11 +182,28 @@ p {
   color: #6b7280;
 }
 
+.download-card-subtle p {
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+.download-card-subtle .metadata {
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.download-card-subtle .metadata div {
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 10px;
+}
+
 .download-card-subtle code {
   background: #f4f5f6;
 }
 
 .download-card-subtle .button.secondary {
+  min-height: 40px;
+  padding: 0 14px;
   border-color: #d9dde1;
   background: #f8f9fa;
 }
