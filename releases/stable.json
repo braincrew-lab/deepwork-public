@@ -64,11 +64,11 @@
       "architecture": "x64",
       "packageType": "appx",
       "appInstallerUrl": "https://braincrew-lab.github.io/deepwork-public/releases/windows/DeepWork.appinstaller",
-      "packageUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.5-windows-self-signed.1/DeepWork.0.4.5.appx",
-      "certificateUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.5-windows-self-signed.1/DeepWork-local-msix-test-signing.cer",
-      "artifactName": "DeepWork.0.4.5.appx",
-      "bytes": 1715506348,
-      "sha256": "1db69727779e0c089ea18387ce05aefeabed3a7325bf07dde5057a99e979834c",
+      "packageUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.7-windows-self-signed.1/DeepWork.0.4.7.appx",
+      "certificateUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.7-windows-self-signed.1/DeepWork-local-msix-test-signing.cer",
+      "artifactName": "DeepWork.0.4.7.appx",
+      "bytes": 1715606094,
+      "sha256": "a80764b7a28179964cb432ad687b9bc5491fa12b7c7eaffaafd4d0acb74240eb",
       "signature": {
         "status": "Valid",
         "channel": "self-signed-test-certificate",
@@ -78,20 +78,10 @@
       },
       "updater": {
         "feedUrl": "https://braincrew-lab.github.io/deepwork-public/releases/windows/DeepWork.appinstaller",
-        "hoursBetweenUpdateChecks": 0,
-        "showPrompt": true,
-        "updateBlocksActivation": true,
-        "testPurpose": "Expose the App Installer failure UX for service-bearing package updates."
+        "hoursBetweenUpdateChecks": 0
       },
-      "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.5-windows-self-signed.1/SHA256SUMS.txt",
-      "evidenceUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.5-windows-self-signed.1/windows-msix-vm-release-evidence.json",
-      "updateTestTarget": {
-        "version": "0.4.6",
-        "tag": "v0.4.6-windows-self-signed.2",
-        "packageUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.6-windows-self-signed.2/DeepWork.0.4.6.appx",
-        "certificateUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.6-windows-self-signed.2/DeepWork-local-msix-test-signing.cer",
-        "sha256": "e6f250037c69e4efc3d09176b7b3dace6e5ccee351dff09094c958247fa7e3f0"
-      }
+      "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.7-windows-self-signed.1/SHA256SUMS.txt",
+      "evidenceUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.7-windows-self-signed.1/windows-msix-vm-release-evidence.json"
     },
     "windowsSignedProof": {
       "architecture": "x64",
@@ -135,8 +125,8 @@
   },
   "source": {
     "repository": "braincrew-lab/deep-agent-builder-desktop",
-    "commit": "2f029cbb9e057a0883766f672b91417362bbc6d8",
-    "tag": "main"
+    "commit": "9646b8fe1a8e1bd7a7663ed2a4c2e4e8bd932083",
+    "tag": "v0.4.7"
   },
   "verification": {
     "macosAppleSiliconPublicDownload": "available",
@@ -149,8 +139,8 @@
     "windowsAppInstallerPublicFeed": "available"
   },
   "windowsRelease": {
-    "tag": "v0.4.6-windows-self-signed.2",
-    "version": "0.4.6",
-    "releasedAt": "2026-06-24T07:09:08.030Z"
+    "tag": "v0.4.7-windows-self-signed.1",
+    "version": "0.4.7",
+    "releasedAt": "2026-06-29T08:31:33.205Z"
   }
 }
