@@ -2,8 +2,8 @@
   "product": "DeepWork",
   "channel": "stable",
   "status": "macos-apple-silicon-public-release-available",
-  "version": "0.4.6",
-  "releasedAt": "2026-06-24T20:51:39.332Z",
+  "version": "0.4.7",
+  "releasedAt": "2026-06-29T10:56:46.469Z",
   "downloads": {
     "macosAppleSilicon": {
       "architecture": "arm64",
@@ -15,17 +15,17 @@
       ],
       "packageType": "dmg",
       "bundledDeepWorkVm": true,
-      "downloadUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.6/DeepWork-0.4.6-arm64-full-offline.dmg",
-      "artifactName": "DeepWork-0.4.6-arm64-full-offline.dmg",
-      "bytes": 1099494792,
-      "sha256": "538ac43630e64e0e9be15092124c69be2c8a276817cf9a59392ee48b143522f5",
+      "downloadUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.7/DeepWork-0.4.7-arm64-full-offline.dmg",
+      "artifactName": "DeepWork-0.4.7-arm64-full-offline.dmg",
+      "bytes": 1099081040,
+      "sha256": "2f38056014ced229fea0d3e07c2de2cc3c04bd85f6cbcd3ee9754da045385707",
       "updater": {
         "provider": "github",
         "owner": "braincrew-lab",
         "repo": "deepwork-public",
-        "latestMacYmlUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.6/latest-mac.yml",
-        "zipUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.6/DeepWork-0.4.6-arm64-mac.zip",
-        "blockmapUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.6/DeepWork-0.4.6-arm64-mac.zip.blockmap"
+        "latestMacYmlUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.7/latest-mac.yml",
+        "zipUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.7/DeepWork-0.4.7-arm64-mac.zip",
+        "blockmapUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.7/DeepWork-0.4.7-arm64-mac.zip.blockmap"
       },
       "signature": {
         "status": "Valid",
@@ -33,7 +33,7 @@
         "notarization": "Accepted",
         "ticket": "Stapled"
       },
-      "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.6/SHA256SUMS.txt"
+      "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.7/SHA256SUMS.txt"
     },
     "macosUniversal": {
       "deprecated": true,
@@ -113,15 +113,11 @@
       "installGuideUrl": "https://braincrew-lab.github.io/deepwork-public/#browser-connection-guide"
     }
   },
-  "notesUrl": "https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.4.6",
+  "notesUrl": "https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.4.7",
   "releaseNotes": {
-    "title": "DeepWork v0.4.6 macOS public",
-    "summary": "Apple Silicon Mac용 signed + notarized 0.4.6 공개 릴리스입니다. 이번 DMG는 Deep Work VM을 포함한 번들 배포입니다.",
-    "items": [
-      "Apple Silicon Mac용 VM 포함 DMG를 0.4.6으로 번들링했습니다.",
-      "자동 업데이트용 ZIP은 같은 0.4.6 light artifact로 함께 유지합니다.",
-      "public 다운로드 페이지와 stable.json을 VM 포함 DMG 기준으로 갱신합니다."
-    ]
+    "title": "DeepWork v0.4.7 macOS public",
+    "summary": "DeepWork v0.4.7 macOS Apple Silicon 공개 릴리스 (signed + notarized, Deep Work VM 포함)",
+    "items": []
   },
   "source": {
     "repository": "braincrew-lab/deep-agent-builder-desktop",
