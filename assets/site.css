@@ -110,7 +110,12 @@ header {
   text-decoration: none;
 }
 
+.brand picture {
+  display: flex;
+}
+
 .brand img {
+  display: block;
   width: 28px;
   height: 28px;
 }
