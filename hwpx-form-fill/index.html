@@ -15,8 +15,11 @@
   <body>
     <header>
       <a class="brand" href="../" aria-label="DeepWork 다운로드">
-        <img src="../assets/deepwork-icon.png" alt="" />
-        <span>DeepWork</span>
+        <picture>
+          <source srcset="../assets/deepwork-glyph-dark.svg" media="(prefers-color-scheme: dark)" />
+          <img src="../assets/deepwork-glyph-light.svg" alt="" width="28" height="28" />
+        </picture>
+        <span translate="no">DeepWork</span>
       </a>
       <nav aria-label="보조 메뉴">
         <a href="../privacy/deepwork-chrome-bridge/">개인정보처리방침</a>
