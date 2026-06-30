@@ -104,8 +104,9 @@ header {
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 9px;
   color: var(--ink);
+  font-size: 20px;
   font-weight: 700;
   text-decoration: none;
 }
@@ -116,8 +117,8 @@ header {
 
 .brand img {
   display: block;
-  width: 28px;
-  height: 28px;
+  width: 22px;
+  height: 22px;
 }
 
 nav {
