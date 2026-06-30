@@ -64,11 +64,11 @@
       "architecture": "x64",
       "packageType": "appx",
       "appInstallerUrl": "https://braincrew-lab.github.io/deepwork-public/releases/windows/DeepWork.appinstaller",
-      "packageUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.8-windows-self-signed.1/DeepWork.0.4.8.appx",
-      "certificateUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.8-windows-self-signed.1/DeepWork-local-msix-test-signing.cer",
-      "artifactName": "DeepWork.0.4.8.appx",
-      "bytes": 1715647960,
-      "sha256": "c814ebc82ede547dfd8d7718e7ec844cb741c2c43d54572422d4bcbaf5a44e84",
+      "packageUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.9-windows-self-signed.1/DeepWork.0.4.9.appx",
+      "certificateUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.9-windows-self-signed.1/DeepWork-local-msix-test-signing.cer",
+      "artifactName": "DeepWork.0.4.9.appx",
+      "bytes": 1681154792,
+      "sha256": "39e2f93d68ceb69eb43c66b9245f64bebcd81e7060aeab978b4457e737c02b86",
       "signature": {
         "status": "Valid",
         "channel": "self-signed-test-certificate",
@@ -80,8 +80,8 @@
         "feedUrl": "https://braincrew-lab.github.io/deepwork-public/releases/windows/DeepWork.appinstaller",
         "hoursBetweenUpdateChecks": 0
       },
-      "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.8-windows-self-signed.1/SHA256SUMS.txt",
-      "evidenceUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.8-windows-self-signed.1/windows-msix-vm-release-evidence.json"
+      "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.9-windows-self-signed.1/SHA256SUMS.txt",
+      "evidenceUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.9-windows-self-signed.1/windows-msix-vm-release-evidence.json"
     },
     "windowsSignedProof": {
       "architecture": "x64",
@@ -121,8 +121,8 @@
   },
   "source": {
     "repository": "braincrew-lab/deep-agent-builder-desktop",
-    "commit": "763ae51cd1d3937f47cf904c2e5131eee33b7795",
-    "tag": "v0.4.8"
+    "commit": "2fc32a6d3589f6a27b9bec2ae671e676f8c344c1",
+    "tag": "v0.4.9"
   },
   "verification": {
     "macosAppleSiliconPublicDownload": "available",
@@ -135,8 +135,8 @@
     "windowsAppInstallerPublicFeed": "available"
   },
   "windowsRelease": {
-    "tag": "v0.4.8-windows-self-signed.1",
-    "version": "0.4.8",
-    "releasedAt": "2026-06-30T04:36:59.859Z"
+    "tag": "v0.4.9-windows-self-signed.1",
+    "version": "0.4.9",
+    "releasedAt": "2026-06-30T06:42:34.132Z"
   }
 }
