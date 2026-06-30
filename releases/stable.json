@@ -2,8 +2,8 @@
   "product": "DeepWork",
   "channel": "stable",
   "status": "macos-apple-silicon-public-release-available",
-  "version": "0.4.7",
-  "releasedAt": "2026-06-29T10:56:46.469Z",
+  "version": "0.4.9",
+  "releasedAt": "2026-06-30T10:49:47.472Z",
   "downloads": {
     "macosAppleSilicon": {
       "architecture": "arm64",
@@ -15,17 +15,17 @@
       ],
       "packageType": "dmg",
       "bundledDeepWorkVm": true,
-      "downloadUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.7/DeepWork-0.4.7-arm64-full-offline.dmg",
-      "artifactName": "DeepWork-0.4.7-arm64-full-offline.dmg",
-      "bytes": 1099081040,
-      "sha256": "2f38056014ced229fea0d3e07c2de2cc3c04bd85f6cbcd3ee9754da045385707",
+      "downloadUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.9/DeepWork-0.4.9-arm64-full-offline.dmg",
+      "artifactName": "DeepWork-0.4.9-arm64-full-offline.dmg",
+      "bytes": 1086150818,
+      "sha256": "dc8bfd76332a12d482fd9161c096711d899fa029e69498e87e4bf12f92bcf430",
       "updater": {
         "provider": "github",
         "owner": "braincrew-lab",
         "repo": "deepwork-public",
-        "latestMacYmlUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.7/latest-mac.yml",
-        "zipUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.7/DeepWork-0.4.7-arm64-mac.zip",
-        "blockmapUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.7/DeepWork-0.4.7-arm64-mac.zip.blockmap"
+        "latestMacYmlUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.9/latest-mac.yml",
+        "zipUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.9/DeepWork-0.4.9-arm64-mac.zip",
+        "blockmapUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.9/DeepWork-0.4.9-arm64-mac.zip.blockmap"
       },
       "signature": {
         "status": "Valid",
@@ -33,7 +33,7 @@
         "notarization": "Accepted",
         "ticket": "Stapled"
       },
-      "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.7/SHA256SUMS.txt"
+      "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.9/SHA256SUMS.txt"
     },
     "macosUniversal": {
       "deprecated": true,
@@ -113,16 +113,22 @@
       "installGuideUrl": "https://braincrew-lab.github.io/deepwork-public/#browser-connection-guide"
     }
   },
-  "notesUrl": "https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.4.7",
+  "notesUrl": "https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.4.9",
   "releaseNotes": {
-    "title": "DeepWork v0.4.7 macOS public",
-    "summary": "DeepWork v0.4.7 macOS Apple Silicon 공개 릴리스 (signed + notarized, Deep Work VM 포함)",
-    "items": []
+    "title": "DeepWork v0.4.9 macOS public",
+    "summary": "VM 실행 안정성 개선과 다크모드·브라우저 연결 UX 보완, Deep Code 외부 CLI 위임 기능을 담은 macOS 릴리스입니다.",
+    "items": [
+      "Deep Code: 외부 코딩 CLI(OpenCode 등) 위임 — 진행/중단/결과·diff 표시",
+      "브라우저 연결 UX 개선: 미연결 시 '브라우저 연결하기' 안내, 무한 \"확인 중\" 해소",
+      "다크 모드 색 대비·탭 색상 정리(채팅 입력창·모드 탭바·Remote 탭)",
+      "Deep Work 보안 VM 실행 안정성 개선(디스크 공간 점검, 오버레이 정리)",
+      "원격 실행 오류 메시지 개선 및 clarify 응답 재개 UX"
+    ]
   },
   "source": {
     "repository": "braincrew-lab/deep-agent-builder-desktop",
-    "commit": "2fc32a6d3589f6a27b9bec2ae671e676f8c344c1",
-    "tag": "v0.4.9"
+    "commit": "7bae3f45b97d60b7a0364eb6815b113f021de138",
+    "tag": "main"
   },
   "verification": {
     "macosAppleSiliconPublicDownload": "available",
