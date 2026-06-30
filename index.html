@@ -8,14 +8,18 @@
       name="description"
       content="DeepWork 공식 다운로드 페이지입니다."
     />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#15171a" media="(prefers-color-scheme: dark)" />
     <link rel="icon" href="assets/deepwork-icon.png" />
+    <link rel="preconnect" href="https://api.github.com" crossorigin />
     <link rel="stylesheet" href="assets/site.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main">본문으로 건너뛰기</a>
     <header>
       <a class="brand" href="./" aria-label="DeepWork 다운로드">
-        <img src="assets/deepwork-icon.png" alt="" />
-        <span>DeepWork</span>
+        <img src="assets/deepwork-icon.png" alt="" width="28" height="28" />
+        <span translate="no">DeepWork</span>
       </a>
       <nav aria-label="주요 메뉴">
         <a href="privacy/deepwork-chrome-bridge/">개인정보처리방침</a>
@@ -24,11 +28,29 @@
       </nav>
     </header>
 
-    <main>
-      <section class="page-head">
-        <p class="eyebrow">공식 다운로드</p>
-        <h1>DeepWork</h1>
-        <p>현재 공개된 macOS, Windows, 인증서 다운로드만 제공합니다.</p>
+    <main id="main">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">공식 다운로드</p>
+          <h1 translate="no">DeepWork</h1>
+          <p class="hero-sub">
+            보안 격리 환경에서 실행되는 데스크톱 AI 에이전트. 현재 공개된 macOS,
+            Windows, 인증서 다운로드만 제공합니다.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#primary-download">macOS 다운로드</a>
+            <a class="button secondary" href="#windows-download">Windows 다운로드</a>
+          </div>
+        </div>
+        <div class="hero-shot">
+          <img
+            src="assets/app-screenshot.png"
+            alt="DeepWork 데스크톱 앱 화면 — 보안 격리 환경에서 실행되는 작업 스레드"
+            width="1280"
+            height="800"
+            fetchpriority="high"
+          />
+        </div>
       </section>
 
       <p class="section-title">최신 버전</p>
@@ -140,7 +162,11 @@
 
       <section class="version-history" aria-labelledby="version-history-title">
         <p class="section-title" id="version-history-title">이전 릴리스</p>
-        <p>지난 버전의 macOS DMG와 Windows APPX를 GitHub Releases에서 직접 받을 수 있습니다.</p>
+        <p>최신 릴리스만 표시합니다. 전체 목록은 GitHub Releases에서 받을 수 있습니다.</p>
+        <p class="version-mobile-note">
+          이전 릴리스 표는 데스크톱에서 확인하세요.
+          <a href="https://github.com/braincrew-lab/deepwork-public/releases">GitHub Releases 열기 →</a>
+        </p>
 
         <div class="version-group">
           <h2 class="version-group-title">macOS</h2>
@@ -153,7 +179,7 @@
                   <th scope="col">다운로드</th>
                 </tr>
               </thead>
-              <tbody id="version-rows-mac">
+              <tbody id="version-rows-mac" aria-live="polite">
                 <tr class="version-status">
                   <td colspan="3">릴리스 목록을 불러오는 중…</td>
                 </tr>
@@ -173,7 +199,7 @@
                   <th scope="col">다운로드</th>
                 </tr>
               </thead>
-              <tbody id="version-rows-win">
+              <tbody id="version-rows-win" aria-live="polite">
                 <tr class="version-status">
                   <td colspan="3">릴리스 목록을 불러오는 중…</td>
                 </tr>
@@ -198,6 +224,18 @@
         var winBody = document.getElementById("version-rows-win")
         if (!macBody || !winBody) return
 
+        var MAX_ROWS = 6
+        var dateFmt
+        try {
+          dateFmt = new Intl.DateTimeFormat("ko-KR", {
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit"
+          })
+        } catch (e) {
+          dateFmt = null
+        }
+
         function platformOf(rel, assets) {
           // Prefer the actual artifact extension over the tag name: some macOS-looking
           // tags (e.g. -t14-install, -c2-proof) ship only Windows .appx assets.
@@ -213,6 +251,7 @@
           if (!iso) return ""
           var d = new Date(iso)
           if (isNaN(d.getTime())) return ""
+          if (dateFmt) return dateFmt.format(d)
           var m = d.getMonth() + 1
           var day = d.getDate()
           return d.getFullYear() + "." + (m < 10 ? "0" + m : m) + "." + (day < 10 ? "0" + day : day)
@@ -233,11 +272,17 @@
           var assets = (rel.assets || []).filter(function (a) {
             return ASSET_RE.test(a.name)
           })
-          // Prefer the headline installer assets; fall back to whatever is downloadable.
+          // Prefer the headline installer assets; fall back to whatever is
+          // downloadable. Show only one asset per row to keep the column quiet —
+          // an offline DMG when present, otherwise the first installer.
           var primary = assets.filter(function (a) {
             return PRIMARY_RE.test(a.name)
           })
-          var shown = primary.length ? primary : assets
+          var pool = primary.length ? primary : assets
+          var offline = pool.filter(function (a) {
+            return /offline/i.test(a.name)
+          })
+          var shown = (offline.length ? offline : pool).slice(0, 1)
 
           var tr = document.createElement("tr")
 
@@ -246,6 +291,7 @@
           var verLink = document.createElement("a")
           verLink.href = rel.html_url
           verLink.textContent = rel.tag_name
+          verLink.translate = false
           verTd.appendChild(verLink)
           if (rel.prerelease) {
             var pre = document.createElement("span")
@@ -269,6 +315,7 @@
               link.href = a.browser_download_url
               link.className = "v-asset"
               link.textContent = a.name
+              link.translate = false
               dlTd.appendChild(link)
             })
           } else {
@@ -283,28 +330,46 @@
           return tr
         }
 
+        function moreRow(body, hidden) {
+          var tr = document.createElement("tr")
+          tr.className = "version-status"
+          var td = document.createElement("td")
+          td.colSpan = 3
+          var link = document.createElement("a")
+          link.href = "https://github.com/braincrew-lab/deepwork-public/releases"
+          link.textContent = "이전 " + hidden + "개 더 보기 — GitHub Releases →"
+          td.appendChild(link)
+          tr.appendChild(td)
+          body.appendChild(tr)
+        }
+
         function render(releases) {
           macBody.innerHTML = ""
           winBody.innerHTML = ""
-          var macCount = 0
-          var winCount = 0
+          var mac = 0
+          var win = 0
+          var macHidden = 0
+          var winHidden = 0
           releases.forEach(function (rel) {
             if (rel.draft) return
             var assets = (rel.assets || []).filter(function (a) {
               return ASSET_RE.test(a.name)
             })
-            var row = buildRow(rel)
             if (platformOf(rel, assets) === "Windows") {
-              winBody.appendChild(row)
-              winCount++
+              if (win < MAX_ROWS) winBody.appendChild(buildRow(rel))
+              else winHidden++
+              win++
             } else {
-              macBody.appendChild(row)
-              macCount++
+              if (mac < MAX_ROWS) macBody.appendChild(buildRow(rel))
+              else macHidden++
+              mac++
             }
           })
 
-          if (!macCount) statusRow(macBody, "표시할 macOS 릴리스가 없습니다.")
-          if (!winCount) statusRow(winBody, "표시할 Windows 릴리스가 없습니다.")
+          if (!mac) statusRow(macBody, "표시할 macOS 릴리스가 없습니다.")
+          else if (macHidden) moreRow(macBody, macHidden)
+          if (!win) statusRow(winBody, "표시할 Windows 릴리스가 없습니다.")
+          else if (winHidden) moreRow(winBody, winHidden)
         }
 
         fetch(API, { headers: { Accept: "application/vnd.github+json" } })
