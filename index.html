@@ -141,23 +141,47 @@
       <section class="version-history" aria-labelledby="version-history-title">
         <p class="section-title" id="version-history-title">이전 릴리스</p>
         <p>지난 버전의 macOS DMG와 Windows APPX를 GitHub Releases에서 직접 받을 수 있습니다.</p>
-        <div class="version-table-wrap">
-          <table class="version-table">
-            <thead>
-              <tr>
-                <th scope="col">버전</th>
-                <th scope="col">구분</th>
-                <th scope="col">날짜</th>
-                <th scope="col">다운로드</th>
-              </tr>
-            </thead>
-            <tbody id="version-rows">
-              <tr class="version-status">
-                <td colspan="4">릴리스 목록을 불러오는 중…</td>
-              </tr>
-            </tbody>
-          </table>
+
+        <div class="version-group">
+          <h2 class="version-group-title">macOS</h2>
+          <div class="version-table-wrap">
+            <table class="version-table">
+              <thead>
+                <tr>
+                  <th scope="col">버전</th>
+                  <th scope="col">날짜</th>
+                  <th scope="col">다운로드</th>
+                </tr>
+              </thead>
+              <tbody id="version-rows-mac">
+                <tr class="version-status">
+                  <td colspan="3">릴리스 목록을 불러오는 중…</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
+
+        <div class="version-group">
+          <h2 class="version-group-title">Windows</h2>
+          <div class="version-table-wrap">
+            <table class="version-table">
+              <thead>
+                <tr>
+                  <th scope="col">버전</th>
+                  <th scope="col">날짜</th>
+                  <th scope="col">다운로드</th>
+                </tr>
+              </thead>
+              <tbody id="version-rows-win">
+                <tr class="version-status">
+                  <td colspan="3">릴리스 목록을 불러오는 중…</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
         <p class="version-fallback">
           <a href="https://github.com/braincrew-lab/deepwork-public/releases">GitHub Releases에서 전체 목록 보기 →</a>
         </p>
@@ -170,8 +194,9 @@
         var API = "https://api.github.com/repos/" + REPO + "/releases?per_page=100"
         var ASSET_RE = /\.(dmg|appx|msix|msixbundle|cer|zip|exe|yml)$/i
         var PRIMARY_RE = /\.(dmg|appx|msix|msixbundle|cer)$/i
-        var tbody = document.getElementById("version-rows")
-        if (!tbody) return
+        var macBody = document.getElementById("version-rows-mac")
+        var winBody = document.getElementById("version-rows-win")
+        if (!macBody || !winBody) return
 
         function platformOf(rel, assets) {
           // Prefer the actual artifact extension over the tag name: some macOS-looking
@@ -193,86 +218,93 @@
           return d.getFullYear() + "." + (m < 10 ? "0" + m : m) + "." + (day < 10 ? "0" + day : day)
         }
 
-        function statusRow(text) {
-          tbody.innerHTML = ""
+        function statusRow(body, text) {
+          body.innerHTML = ""
           var tr = document.createElement("tr")
           tr.className = "version-status"
           var td = document.createElement("td")
-          td.colSpan = 4
+          td.colSpan = 3
           td.textContent = text
           tr.appendChild(td)
-          tbody.appendChild(tr)
+          body.appendChild(tr)
+        }
+
+        function buildRow(rel) {
+          var assets = (rel.assets || []).filter(function (a) {
+            return ASSET_RE.test(a.name)
+          })
+          // Prefer the headline installer assets; fall back to whatever is downloadable.
+          var primary = assets.filter(function (a) {
+            return PRIMARY_RE.test(a.name)
+          })
+          var shown = primary.length ? primary : assets
+
+          var tr = document.createElement("tr")
+
+          var verTd = document.createElement("td")
+          verTd.className = "v-version"
+          var verLink = document.createElement("a")
+          verLink.href = rel.html_url
+          verLink.textContent = rel.tag_name
+          verTd.appendChild(verLink)
+          if (rel.prerelease) {
+            var pre = document.createElement("span")
+            pre.className = "v-tag pre"
+            pre.textContent = "pre"
+            pre.title = "GitHub pre-release (정식 공개판이 아닌 proof/test 빌드)"
+            verTd.appendChild(pre)
+          }
+          tr.appendChild(verTd)
+
+          var dateTd = document.createElement("td")
+          dateTd.className = "v-date"
+          dateTd.textContent = formatDate(rel.published_at)
+          tr.appendChild(dateTd)
+
+          var dlTd = document.createElement("td")
+          dlTd.className = "v-downloads"
+          if (shown.length) {
+            shown.forEach(function (a) {
+              var link = document.createElement("a")
+              link.href = a.browser_download_url
+              link.className = "v-asset"
+              link.textContent = a.name
+              dlTd.appendChild(link)
+            })
+          } else {
+            var notes = document.createElement("a")
+            notes.href = rel.html_url
+            notes.className = "v-asset"
+            notes.textContent = "릴리스 노트"
+            dlTd.appendChild(notes)
+          }
+          tr.appendChild(dlTd)
+
+          return tr
         }
 
         function render(releases) {
-          tbody.innerHTML = ""
-          var count = 0
+          macBody.innerHTML = ""
+          winBody.innerHTML = ""
+          var macCount = 0
+          var winCount = 0
           releases.forEach(function (rel) {
             if (rel.draft) return
             var assets = (rel.assets || []).filter(function (a) {
               return ASSET_RE.test(a.name)
             })
-            // Prefer the headline installer assets; fall back to whatever is downloadable.
-            var primary = assets.filter(function (a) {
-              return PRIMARY_RE.test(a.name)
-            })
-            var shown = primary.length ? primary : assets
-            count++
-
-            var tr = document.createElement("tr")
-
-            var verTd = document.createElement("td")
-            verTd.className = "v-version"
-            var verLink = document.createElement("a")
-            verLink.href = rel.html_url
-            verLink.textContent = rel.tag_name
-            verTd.appendChild(verLink)
-            if (rel.prerelease) {
-              var pre = document.createElement("span")
-              pre.className = "v-tag pre"
-              pre.textContent = "pre"
-              verTd.appendChild(pre)
-            }
-            tr.appendChild(verTd)
-
-            var platTd = document.createElement("td")
-            var badge = document.createElement("span")
-            var plat = platformOf(rel, assets)
-            badge.className = "platform-badge " + (plat === "Windows" ? "win" : "mac")
-            badge.textContent = plat
-            platTd.appendChild(badge)
-            tr.appendChild(platTd)
-
-            var dateTd = document.createElement("td")
-            dateTd.className = "v-date"
-            dateTd.textContent = formatDate(rel.published_at)
-            tr.appendChild(dateTd)
-
-            var dlTd = document.createElement("td")
-            dlTd.className = "v-downloads"
-            if (shown.length) {
-              shown.forEach(function (a) {
-                var link = document.createElement("a")
-                link.href = a.browser_download_url
-                link.className = "v-asset"
-                link.textContent = a.name
-                dlTd.appendChild(link)
-              })
+            var row = buildRow(rel)
+            if (platformOf(rel, assets) === "Windows") {
+              winBody.appendChild(row)
+              winCount++
             } else {
-              var notes = document.createElement("a")
-              notes.href = rel.html_url
-              notes.className = "v-asset"
-              notes.textContent = "릴리스 노트"
-              dlTd.appendChild(notes)
+              macBody.appendChild(row)
+              macCount++
             }
-            tr.appendChild(dlTd)
-
-            tbody.appendChild(tr)
           })
 
-          if (!count) {
-            statusRow("표시할 릴리스가 없습니다.")
-          }
+          if (!macCount) statusRow(macBody, "표시할 macOS 릴리스가 없습니다.")
+          if (!winCount) statusRow(winBody, "표시할 Windows 릴리스가 없습니다.")
         }
 
         fetch(API, { headers: { Accept: "application/vnd.github+json" } })
@@ -285,7 +317,9 @@
             render(data)
           })
           .catch(function () {
-            statusRow("릴리스 목록을 불러오지 못했습니다. 아래 GitHub Releases 링크를 확인해 주세요.")
+            var msg = "릴리스 목록을 불러오지 못했습니다. 아래 GitHub Releases 링크를 확인해 주세요."
+            statusRow(macBody, msg)
+            statusRow(winBody, msg)
           })
       })()
     </script>
