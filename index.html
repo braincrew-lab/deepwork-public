@@ -31,6 +31,8 @@
         <p>현재 공개된 macOS, Windows, 인증서 다운로드만 제공합니다.</p>
       </section>
 
+      <p class="section-title">최신 버전</p>
+
       <section class="download-card" aria-labelledby="primary-download">
         <div>
           <h2 id="primary-download">macOS Apple Silicon</h2>
@@ -135,6 +137,157 @@
           CER 다운로드
         </a>
       </section>
+
+      <section class="version-history" aria-labelledby="version-history-title">
+        <p class="section-title" id="version-history-title">이전 릴리스</p>
+        <p>지난 버전의 macOS DMG와 Windows APPX를 GitHub Releases에서 직접 받을 수 있습니다.</p>
+        <div class="version-table-wrap">
+          <table class="version-table">
+            <thead>
+              <tr>
+                <th scope="col">버전</th>
+                <th scope="col">구분</th>
+                <th scope="col">날짜</th>
+                <th scope="col">다운로드</th>
+              </tr>
+            </thead>
+            <tbody id="version-rows">
+              <tr class="version-status">
+                <td colspan="4">릴리스 목록을 불러오는 중…</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="version-fallback">
+          <a href="https://github.com/braincrew-lab/deepwork-public/releases">GitHub Releases에서 전체 목록 보기 →</a>
+        </p>
+      </section>
     </main>
+
+    <script>
+      (function () {
+        var REPO = "braincrew-lab/deepwork-public"
+        var API = "https://api.github.com/repos/" + REPO + "/releases?per_page=100"
+        var ASSET_RE = /\.(dmg|appx|msix|msixbundle|cer|zip|exe|yml)$/i
+        var PRIMARY_RE = /\.(dmg|appx|msix|msixbundle|cer)$/i
+        var tbody = document.getElementById("version-rows")
+        if (!tbody) return
+
+        function platformOf(rel, assets) {
+          // Prefer the actual artifact extension over the tag name: some macOS-looking
+          // tags (e.g. -t14-install, -c2-proof) ship only Windows .appx assets.
+          var names = (assets || []).map(function (a) {
+            return a.name
+          })
+          if (names.some(function (n) { return /\.dmg$/i.test(n) })) return "macOS"
+          if (names.some(function (n) { return /\.(appx|msix|msixbundle|cer)$/i.test(n) })) return "Windows"
+          return /win|windows|appx|msix|cer/i.test(rel.tag_name) ? "Windows" : "macOS"
+        }
+
+        function formatDate(iso) {
+          if (!iso) return ""
+          var d = new Date(iso)
+          if (isNaN(d.getTime())) return ""
+          var m = d.getMonth() + 1
+          var day = d.getDate()
+          return d.getFullYear() + "." + (m < 10 ? "0" + m : m) + "." + (day < 10 ? "0" + day : day)
+        }
+
+        function statusRow(text) {
+          tbody.innerHTML = ""
+          var tr = document.createElement("tr")
+          tr.className = "version-status"
+          var td = document.createElement("td")
+          td.colSpan = 4
+          td.textContent = text
+          tr.appendChild(td)
+          tbody.appendChild(tr)
+        }
+
+        function render(releases) {
+          tbody.innerHTML = ""
+          var count = 0
+          releases.forEach(function (rel) {
+            if (rel.draft) return
+            var assets = (rel.assets || []).filter(function (a) {
+              return ASSET_RE.test(a.name)
+            })
+            // Prefer the headline installer assets; fall back to whatever is downloadable.
+            var primary = assets.filter(function (a) {
+              return PRIMARY_RE.test(a.name)
+            })
+            var shown = primary.length ? primary : assets
+            count++
+
+            var tr = document.createElement("tr")
+
+            var verTd = document.createElement("td")
+            verTd.className = "v-version"
+            var verLink = document.createElement("a")
+            verLink.href = rel.html_url
+            verLink.textContent = rel.tag_name
+            verTd.appendChild(verLink)
+            if (rel.prerelease) {
+              var pre = document.createElement("span")
+              pre.className = "v-tag pre"
+              pre.textContent = "pre"
+              verTd.appendChild(pre)
+            }
+            tr.appendChild(verTd)
+
+            var platTd = document.createElement("td")
+            var badge = document.createElement("span")
+            var plat = platformOf(rel, assets)
+            badge.className = "platform-badge " + (plat === "Windows" ? "win" : "mac")
+            badge.textContent = plat
+            platTd.appendChild(badge)
+            tr.appendChild(platTd)
+
+            var dateTd = document.createElement("td")
+            dateTd.className = "v-date"
+            dateTd.textContent = formatDate(rel.published_at)
+            tr.appendChild(dateTd)
+
+            var dlTd = document.createElement("td")
+            dlTd.className = "v-downloads"
+            if (shown.length) {
+              shown.forEach(function (a) {
+                var link = document.createElement("a")
+                link.href = a.browser_download_url
+                link.className = "v-asset"
+                link.textContent = a.name
+                dlTd.appendChild(link)
+              })
+            } else {
+              var notes = document.createElement("a")
+              notes.href = rel.html_url
+              notes.className = "v-asset"
+              notes.textContent = "릴리스 노트"
+              dlTd.appendChild(notes)
+            }
+            tr.appendChild(dlTd)
+
+            tbody.appendChild(tr)
+          })
+
+          if (!count) {
+            statusRow("표시할 릴리스가 없습니다.")
+          }
+        }
+
+        fetch(API, { headers: { Accept: "application/vnd.github+json" } })
+          .then(function (res) {
+            if (!res.ok) throw new Error("HTTP " + res.status)
+            return res.json()
+          })
+          .then(function (data) {
+            if (!Array.isArray(data)) throw new Error("unexpected response")
+            render(data)
+          })
+          .catch(function () {
+            statusRow("릴리스 목록을 불러오지 못했습니다. 아래 GitHub Releases 링크를 확인해 주세요.")
+          })
+      })()
+    </script>
   </body>
 </html>

@@ -378,6 +378,138 @@ footer {
   font-size: 14px;
 }
 
+.section-title {
+  margin: 36px 0 16px;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.page-head + .section-title {
+  margin-top: 8px;
+}
+
+.version-history {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--rule);
+}
+
+.version-history > .section-title {
+  margin-top: 0;
+}
+
+.version-table-wrap {
+  margin-top: 18px;
+  overflow-x: auto;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.version-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.version-table th,
+.version-table td {
+  padding: 12px 16px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--rule);
+}
+
+.version-table thead th {
+  position: sticky;
+  top: 0;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background: var(--paper);
+  white-space: nowrap;
+}
+
+.version-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.version-table tbody tr:hover {
+  background: #fbfcfc;
+}
+
+.version-table .v-version {
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.version-table .v-version a {
+  font-weight: 600;
+}
+
+.v-tag.pre {
+  margin-left: 6px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: #f3edda;
+  color: var(--warn);
+  font-size: 11px;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+.platform-badge {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.platform-badge.mac {
+  background: #e4efec;
+  color: var(--accent-strong);
+}
+
+.platform-badge.win {
+  background: #e6eef6;
+  color: #1f5499;
+}
+
+.version-table .v-date {
+  color: var(--muted);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.version-table .v-downloads {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.v-asset {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.version-status td {
+  color: var(--muted);
+  text-align: center;
+}
+
+.version-fallback {
+  margin-top: 14px;
+  font-size: 14px;
+}
+
 @media (max-width: 720px) {
   header,
   .download-card,
@@ -403,5 +535,10 @@ footer {
   .metadata div {
     grid-template-columns: 1fr;
     gap: 2px;
+  }
+
+  .version-table th,
+  .version-table td {
+    padding: 10px 12px;
   }
 }
