@@ -658,3 +658,90 @@ footer {
     font-size: 14px;
   }
 }
+
+.install-guide {
+  margin-top: 56px;
+}
+
+.install-guide-intro {
+  margin: 12px 0 0;
+  max-width: 720px;
+  color: var(--muted);
+}
+
+.install-guide-intro code {
+  background: var(--code-bg);
+  border-radius: 4px;
+  padding: 1px 5px;
+}
+
+.guide-card h3 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--ink);
+}
+
+.command-row {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.command-box {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  overflow-x: auto;
+  padding: 14px 16px;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: var(--code-bg);
+  color: var(--ink);
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Consolas,
+    monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre;
+}
+
+.copy-button {
+  flex: none;
+  padding: 0 16px;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--accent-strong);
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.copy-button:hover,
+.copy-button:focus-visible {
+  border-color: var(--accent-strong);
+}
+
+.guide-note {
+  margin: 0;
+  max-width: 720px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.install-guide > .guide-note {
+  margin-top: 18px;
+}
+
+@media (max-width: 640px) {
+  .command-row {
+    flex-direction: column;
+  }
+
+  .copy-button {
+    min-height: 40px;
+  }
+}
