@@ -4,7 +4,12 @@
 # 정식 배포(signed)는 이 스크립트 없이 APPX 다운로드 후 더블클릭으로 설치하세요.
 #
 # 사용법 — PowerShell(또는 터미널)에 아래 한 줄을 붙여넣고 Enter:
-#   irm https://braincrew-lab.github.io/deepwork-public/install-windows.ps1 | iex
+#   irm https://braincrew-lab.github.io/deepwork-public/install-windows.ps1 -OutFile "$env:TEMP\deepwork-install.ps1"; powershell -NoProfile -ExecutionPolicy Bypass -File "$env:TEMP\deepwork-install.ps1"
+#
+# (주의) `irm ... | iex`로 실행하지 마세요 — 이 페이지는 .ps1을 charset 없는
+# application/octet-stream으로 서빙해서 Windows PowerShell 5.1이 UTF-8을
+# Latin-1로 잘못 디코딩합니다(첫 줄 cmdlet 인식 오류 + 한글 깨짐).
+# 파일로 받아 -File로 실행하면 BOM을 읽어 정상 동작합니다.
 #
 # 하는 일:
 #   1. 최신 비공식(self-signed) APPX와 테스트 인증서(.cer)를 내려받고 SHA-256을 검증합니다.

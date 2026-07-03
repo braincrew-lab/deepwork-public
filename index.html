@@ -271,7 +271,7 @@
             <li>"설치 완료"가 표시되면 시작 메뉴에서 <strong>DeepWork</strong>를 실행합니다.</li>
           </ol>
           <div class="command-row">
-            <pre class="command-box"><code id="install-command">irm https://braincrew-lab.github.io/deepwork-public/install-windows.ps1 | iex</code></pre>
+            <pre class="command-box"><code id="install-command">irm https://braincrew-lab.github.io/deepwork-public/install-windows.ps1 -OutFile "$env:TEMP\deepwork-install.ps1"; powershell -NoProfile -ExecutionPolicy Bypass -File "$env:TEMP\deepwork-install.ps1"</code></pre>
             <button type="button" class="copy-button" data-copy-target="install-command">복사</button>
           </div>
           <p class="guide-note">
