@@ -86,18 +86,18 @@
     "windowsSignedProof": {
       "architecture": "x64",
       "packageType": "appx",
-      "tag": "v0.4.6-win-signed.1",
-      "downloadUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.6-win-signed.1/DeepWork.0.4.6-win-signed.1.appx",
-      "artifactName": "DeepWork.0.4.6-win-signed.1.appx",
-      "bytes": 1715543159,
-      "sha256": "21370fdcc1211beb56caf0c12ed3ab0de6efee151ce5c133b950ca4fddc4e1f3",
+      "tag": "v0.4.9-win-signed.1",
+      "downloadUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.4.9-win-signed.1/DeepWork.0.4.9-win-signed.1.appx",
+      "artifactName": "DeepWork.0.4.9-win-signed.1.appx",
+      "bytes": 1681187911,
+      "sha256": "f70b2288e9cae5e5d08e086b6b13b25a3c6d9fa76bad3005ff2f41c8e9075a51",
       "signature": {
         "status": "Valid",
         "channel": "windows-signed-appx",
         "productionSigningEvidence": true,
-        "notes": "Signed APPX built from deep-agent-builder-desktop origin/main commit 9ea1f167ef0645bd209f89ca3838a9ec91baf343 by release workflow run 28103294553. Public release intentionally exposes the APPX package only."
+        "notes": "Signed APPX built from deep-agent-builder-desktop commit 2fc32a6d3589f6a27b9bec2ae671e676f8c344c1 (v0.4.9) by release workflow run 28657608288. Public release intentionally exposes the APPX package only."
       },
-      "releaseNotesUrl": "https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.4.6-win-signed.1"
+      "releaseNotesUrl": "https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.4.9-win-signed.1"
     },
     "chromeBridgeExtension": {
       "status": "chrome-web-store-review-pending",
