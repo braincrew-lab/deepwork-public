@@ -682,17 +682,16 @@ footer {
 }
 
 .command-row {
-  display: flex;
-  align-items: stretch;
-  gap: 10px;
+  position: relative;
+  min-width: 0;
 }
 
 .command-box {
-  flex: 1;
-  min-width: 0;
   margin: 0;
+  max-width: 100%;
   overflow-x: auto;
-  padding: 14px 16px;
+  /* 오른쪽 패딩은 오버레이된 복사 버튼 밑에 텍스트 끝이 가려지지 않게 하는 여백 */
+  padding: 14px 86px 14px 16px;
   border: 1px solid var(--rule);
   border-radius: 6px;
   background: var(--code-bg);
@@ -709,8 +708,11 @@ footer {
 }
 
 .copy-button {
-  flex: none;
-  padding: 0 16px;
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  padding: 6px 14px;
   border: 1px solid var(--rule);
   border-radius: 6px;
   background: var(--paper);
@@ -736,12 +738,3 @@ footer {
   margin-top: 18px;
 }
 
-@media (max-width: 640px) {
-  .command-row {
-    flex-direction: column;
-  }
-
-  .copy-button {
-    min-height: 40px;
-  }
-}
