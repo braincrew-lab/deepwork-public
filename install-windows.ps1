@@ -1,10 +1,13 @@
-﻿# DeepWork Windows 원클릭 설치 스크립트
+﻿# DeepWork Windows 비공식(self-signed) 빌드 원클릭 설치 스크립트
+#
+# 이 스크립트는 테스트 인증서로 서명된 "비공식" 빌드를 설치합니다.
+# 정식 배포(signed)는 이 스크립트 없이 APPX 다운로드 후 더블클릭으로 설치하세요.
 #
 # 사용법 — PowerShell(또는 터미널)에 아래 한 줄을 붙여넣고 Enter:
 #   irm https://braincrew-lab.github.io/deepwork-public/install-windows.ps1 | iex
 #
 # 하는 일:
-#   1. 최신 self-signed APPX와 테스트 인증서(.cer)를 내려받고 SHA-256을 검증합니다.
+#   1. 최신 비공식(self-signed) APPX와 테스트 인증서(.cer)를 내려받고 SHA-256을 검증합니다.
 #   2. 관리자 권한(UAC 승인 필요)으로 인증서를 신뢰 저장소 2곳(TrustedPeople, Root)에 등록합니다.
 #   3. APPX를 설치하고 결과를 확인합니다.
 #
@@ -78,6 +81,7 @@ function Install-DeepWork {
   $version = [string]$stable.windowsRelease.version
   $sizeGb = [math]::Round([double]$win.bytes / 1GB, 2)
   Write-Host ("    버전 v{0} - {1} ({2} GB)" -f $version, $win.artifactName, $sizeGb)
+  Write-Host '    비공식(self-signed) 빌드입니다 — 정식 배포는 다운로드 페이지의 Windows 카드를 이용하세요.' -ForegroundColor Yellow
 
   $existing = Get-AppxPackage -Name $packageName -ErrorAction SilentlyContinue
   if ($existing -and [version]$existing.Version -ge [version]"$version.0") {
