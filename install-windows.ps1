@@ -108,6 +108,7 @@ function Install-DeepWork {
   Write-Host ''
   Write-Host '==> 인증서 신뢰 등록과 앱 설치를 시작합니다.' -ForegroundColor Cyan
   Write-Host '    파란 "사용자 계정 컨트롤" 창이 뜨면 [예]를 눌러 주세요.' -ForegroundColor Yellow
+  Write-Host '    실행 중인 DeepWork가 있으면 설치를 위해 자동으로 종료됩니다.' -ForegroundColor Yellow
 
   $logPath = Join-Path $workDir 'install.log'
   $innerPath = Join-Path $workDir 'deepwork-install-elevated.ps1'
@@ -117,7 +118,7 @@ Start-Transcript -Path '$logPath' -Force | Out-Null
 try {
   Import-Certificate -FilePath '$cerPath' -CertStoreLocation Cert:\LocalMachine\TrustedPeople | Out-Null
   Import-Certificate -FilePath '$cerPath' -CertStoreLocation Cert:\LocalMachine\Root | Out-Null
-  Add-AppxPackage -Path '$appxPath'
+  Add-AppxPackage -Path '$appxPath' -ForceApplicationShutdown
   Get-AppxPackage -Name '$packageName' | Select-Object Name, Version, PackageFullName | Format-List
 } finally {
   Stop-Transcript | Out-Null
