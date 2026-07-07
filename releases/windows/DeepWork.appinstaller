@@ -9,7 +9,7 @@
     Publisher="CN=Braincrew Inc., O=Braincrew Inc., L=Seongnam-si, S=Gyeonggi-do, C=KR"
     Version="0.5.3.0"
     ProcessorArchitecture="x64"
-    Uri="https://github.com/braincrew-lab/deepwork-public/releases/download/v0.5.3/DeepWork.0.5.3.appx"
+    Uri="https://github.com/braincrew-lab/deepwork-public/releases/download/v0.5.3-windows-self-signed.1/DeepWork.0.5.3.appx"
   />
   <UpdateSettings>
     <OnLaunch HoursBetweenUpdateChecks="0" />
