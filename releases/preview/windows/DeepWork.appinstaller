@@ -9,7 +9,7 @@
     Publisher="CN=Braincrew Inc., O=Braincrew Inc., L=Seongnam-si, S=Gyeonggi-do, C=KR"
     Version="0.5.7.0"
     ProcessorArchitecture="x64"
-    Uri="https://github.com/braincrew-lab/deepwork-public/releases/download/v0.5.7-preview.1/DeepWork.0.5.7.appx"
+    Uri="https://github.com/braincrew-lab/deepwork-public/releases/download/v0.5.7-preview.2/DeepWork.0.5.7.appx"
   />
   <UpdateSettings>
     <OnLaunch HoursBetweenUpdateChecks="0" />
