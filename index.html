@@ -66,11 +66,11 @@
           <dl class="metadata">
             <div>
               <dt>버전</dt>
-              <dd>v0.5.7</dd>
+              <dd>v0.5.6</dd>
             </div>
             <div>
               <dt>파일</dt>
-              <dd>DeepWork-0.5.7-arm64-full-offline.dmg</dd>
+              <dd>DeepWork-0.5.6-arm64-full-offline.dmg</dd>
             </div>
             <div>
               <dt>지원</dt>
@@ -79,14 +79,14 @@
             <div>
               <dt>SHA-256</dt>
               <dd>
-                <code>0f78e3c5d1420250cbbeadbe2b22817c6f6b200d4ee3400d31b4b2df8fc14fbd</code>
+                <code>ed7e5236fe8500793904d562f232aaeff39fd603a1d32f47df912d003d9db5d7</code>
               </dd>
             </div>
           </dl>
         </div>
         <a
           class="button primary"
-          href="https://github.com/braincrew-lab/deepwork-public/releases/download/v0.5.7/DeepWork-0.5.7-arm64-full-offline.dmg"
+          href="https://github.com/braincrew-lab/deepwork-public/releases/download/v0.5.6/DeepWork-0.5.6-arm64-full-offline.dmg"
         >
           macOS 다운로드
         </a>
@@ -102,16 +102,16 @@
           <dl class="metadata">
             <div>
               <dt>버전</dt>
-              <dd>v0.5.7</dd>
+              <dd>v0.5.6</dd>
             </div>
             <div>
               <dt>파일</dt>
-              <dd>DeepWork.0.5.7.appx</dd>
+              <dd>DeepWork.0.5.6.appx</dd>
             </div>
             <div>
               <dt>SHA-256</dt>
               <dd>
-                <code>4c234cf4eb517418d3328c352199e29a5b893a1244885f1fb348dea8d3dcece9</code>
+                <code>b9b5ff961541d32ac2e8a099750328ad4c1f0f7dcbdfd3b96c97b938b054db82</code>
               </dd>
             </div>
             <div>
@@ -123,13 +123,13 @@
         <div class="button-stack" aria-label="Windows 정식 배포 다운로드">
           <a
             class="button primary"
-            href="https://github.com/braincrew-lab/deepwork-public/releases/download/v0.5.7/DeepWork.0.5.7.appx"
+            href="https://github.com/braincrew-lab/deepwork-public/releases/download/v0.5.6/DeepWork.0.5.6.appx"
           >
             Windows 다운로드
           </a>
           <a
             class="button secondary"
-            href="https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.5.7"
+            href="https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.5.6"
           >
             릴리스 노트
           </a>
@@ -329,6 +329,7 @@
         var API = "https://api.github.com/repos/" + REPO + "/releases?per_page=100"
         var ASSET_RE = /\.(dmg|appx|msix|msixbundle|cer|zip|exe|yml)$/i
         var PRIMARY_RE = /\.(dmg|appx|msix|msixbundle|cer)$/i
+        var WITHHELD_RELEASES = { "v0.5.7": true }
         var macBody = document.getElementById("version-rows-mac")
         var winBody = document.getElementById("version-rows-win")
         if (!macBody || !winBody) return
@@ -461,6 +462,7 @@
           var winHidden = 0
           releases.forEach(function (rel) {
             if (rel.draft) return
+            if (WITHHELD_RELEASES[rel.tag_name]) return
             var assets = (rel.assets || []).filter(function (a) {
               return ASSET_RE.test(a.name)
             })
