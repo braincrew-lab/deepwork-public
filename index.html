@@ -329,7 +329,7 @@
         var API = "https://api.github.com/repos/" + REPO + "/releases?per_page=100"
         var ASSET_RE = /\.(dmg|appx|msix|msixbundle|cer|zip|exe|yml)$/i
         var PRIMARY_RE = /\.(dmg|appx|msix|msixbundle|cer)$/i
-        var WITHHELD_RELEASES = { "v0.5.7": true }
+        var WITHHELD_RELEASE_RE = /^v0\.5\.7(?:$|-)/
         var macBody = document.getElementById("version-rows-mac")
         var winBody = document.getElementById("version-rows-win")
         if (!macBody || !winBody) return
@@ -462,7 +462,7 @@
           var winHidden = 0
           releases.forEach(function (rel) {
             if (rel.draft) return
-            if (WITHHELD_RELEASES[rel.tag_name]) return
+            if (WITHHELD_RELEASE_RE.test(rel.tag_name)) return
             var assets = (rel.assets || []).filter(function (a) {
               return ASSET_RE.test(a.name)
             })
