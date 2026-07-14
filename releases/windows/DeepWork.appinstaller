@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AppInstaller
   xmlns="http://schemas.microsoft.com/appx/appinstaller/2021"
-  Version="0.5.8.0"
+  Version="0.5.9.0"
   Uri="https://braincrew-lab.github.io/deepwork-public/releases/windows/DeepWork.appinstaller"
 >
   <MainPackage
     Name="Braincrew.DeepWork"
     Publisher="CN=Braincrew Inc., O=Braincrew Inc., L=Seongnam-si, S=Gyeonggi-do, C=KR"
-    Version="0.5.8.0"
+    Version="0.5.9.0"
     ProcessorArchitecture="x64"
-    Uri="https://github.com/braincrew-lab/deepwork-public/releases/download/v0.5.8/DeepWork.0.5.8.appx"
+    Uri="https://github.com/braincrew-lab/deepwork-public/releases/download/v0.5.9/DeepWork.0.5.9.appx"
   />
   <UpdateSettings>
     <OnLaunch HoursBetweenUpdateChecks="0" />
