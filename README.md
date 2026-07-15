@@ -59,13 +59,13 @@ on a dedicated disposable Windows test PC from an elevated PowerShell window.
 Review the plan without changing the PC:
 
 ```powershell
-$u='https://braincrew-lab.github.io/deepwork-public/windows-first-install-reset.ps1';$p=Join-Path $env:TEMP 'windows-first-install-reset.ps1';Invoke-WebRequest -UseBasicParsing $u -OutFile $p;if((Get-FileHash $p -Algorithm SHA256).Hash.ToLowerInvariant() -ne 'ee6b42ad5aa0dde8145fa9ffff290927c6d6d34210b47dbf1327a477f42143d1'){throw 'DeepWork reset script hash mismatch'};& powershell.exe -NoProfile -ExecutionPolicy Bypass -File $p -WhatIf -ResetWindowsVirtualization
+$u='https://braincrew-lab.github.io/deepwork-public/windows-first-install-reset.ps1';$p=Join-Path $env:TEMP 'windows-first-install-reset.ps1';Invoke-WebRequest -UseBasicParsing $u -OutFile $p;if((Get-FileHash $p -Algorithm SHA256).Hash.ToLowerInvariant() -ne '990bfa4d9ce3b04ca43781e903d544e9e55de529ad8e20b68a53de42292676f8'){throw 'DeepWork reset script hash mismatch'};& powershell.exe -NoProfile -ExecutionPolicy Bypass -File $p -WhatIf -ResetWindowsVirtualization
 ```
 
 Perform the reset and reboot:
 
 ```powershell
-$u='https://braincrew-lab.github.io/deepwork-public/windows-first-install-reset.ps1';$p=Join-Path $env:TEMP 'windows-first-install-reset.ps1';Invoke-WebRequest -UseBasicParsing $u -OutFile $p;if((Get-FileHash $p -Algorithm SHA256).Hash.ToLowerInvariant() -ne 'ee6b42ad5aa0dde8145fa9ffff290927c6d6d34210b47dbf1327a477f42143d1'){throw 'DeepWork reset script hash mismatch'};& powershell.exe -NoProfile -ExecutionPolicy Bypass -File $p -ConfirmFactoryReset -ResetWindowsVirtualization -Restart
+$u='https://braincrew-lab.github.io/deepwork-public/windows-first-install-reset.ps1';$p=Join-Path $env:TEMP 'windows-first-install-reset.ps1';Invoke-WebRequest -UseBasicParsing $u -OutFile $p;if((Get-FileHash $p -Algorithm SHA256).Hash.ToLowerInvariant() -ne '990bfa4d9ce3b04ca43781e903d544e9e55de529ad8e20b68a53de42292676f8'){throw 'DeepWork reset script hash mismatch'};& powershell.exe -NoProfile -ExecutionPolicy Bypass -File $p -ConfirmFactoryReset -ResetWindowsVirtualization -Restart
 ```
 
 Published checksum: [`windows-first-install-reset.ps1.sha256`](windows-first-install-reset.ps1.sha256).
