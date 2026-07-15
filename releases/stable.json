@@ -64,10 +64,10 @@
       "architecture": "x64",
       "packageType": "appx",
       "appInstallerUrl": "https://braincrew-lab.github.io/deepwork-public/releases/windows/DeepWork.appinstaller",
-      "packageUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.4/DeepWork.0.6.4.appx",
-      "artifactName": "DeepWork.0.6.4.appx",
-      "bytes": 1970645000,
-      "sha256": "de7a2d90558f042015b6ff9d38e965184309b7adb44526134164c1db2295016e",
+      "packageUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.5/DeepWork.0.6.5.appx",
+      "artifactName": "DeepWork.0.6.5.appx",
+      "bytes": 1970673895,
+      "sha256": "dacf1e1e0462e8eb063a99bf64b342a40bb9c823f0c37bd8f9e6b82f6f1ee965",
       "signature": {
         "status": "Valid",
         "channel": "digicert-keylocker",
@@ -78,8 +78,8 @@
         "feedUrl": "https://braincrew-lab.github.io/deepwork-public/releases/windows/DeepWork.appinstaller",
         "hoursBetweenUpdateChecks": 0
       },
-      "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.4/SHA256SUMS.txt",
-      "evidenceUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.4/windows-msix-vm-release-evidence.json"
+      "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.5/SHA256SUMS.txt",
+      "evidenceUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.5/windows-msix-vm-release-evidence.json"
     },
     "windowsSignedProof": {
       "architecture": "x64",
@@ -119,8 +119,8 @@
   },
   "source": {
     "repository": "braincrew-lab/deep-agent-builder-desktop",
-    "commit": "5a67c5d563ba2fe39580e82b8910697560dfedae",
-    "tag": "v0.6.3"
+    "commit": "506efe098b2a6d2fa820388408c6cfdef65c23e9",
+    "tag": "v0.6.5"
   },
   "verification": {
     "macosAppleSiliconPublicDownload": "available",
@@ -134,8 +134,8 @@
     "windowsKeyLockerPublicDownload": "available"
   },
   "windowsRelease": {
-    "tag": "v0.6.4",
-    "version": "0.6.4",
-    "releasedAt": "2026-07-15T05:51:38.726Z"
+    "tag": "v0.6.5",
+    "version": "0.6.5",
+    "releasedAt": "2026-07-15T09:09:05.169Z"
   }
 }
