@@ -3,7 +3,7 @@
   "channel": "stable",
   "status": "macos-apple-silicon-public-release-available",
   "version": "0.6.3",
-  "releasedAt": "2026-07-15T04:42:21.956Z",
+  "releasedAt": "2026-07-15T06:41:46.543Z",
   "downloads": {
     "macosAppleSilicon": {
       "architecture": "arm64",
@@ -14,11 +14,11 @@
         "Intel Mac"
       ],
       "packageType": "dmg",
-      "bundledDeepWorkVm": false,
-      "downloadUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.3/DeepWork-0.6.3-arm64.dmg",
-      "artifactName": "DeepWork-0.6.3-arm64.dmg",
-      "bytes": 339035621,
-      "sha256": "b0d3ea06d9681dece0952df76e70b5638f2f0171f007523ec636d12bd94dfd05",
+      "bundledDeepWorkVm": true,
+      "downloadUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.3/DeepWork-0.6.3-arm64-full-offline.dmg",
+      "artifactName": "DeepWork-0.6.3-arm64-full-offline.dmg",
+      "bytes": 1549254020,
+      "sha256": "52db26a38daab1da8677393af11f4161f1cdf905520da2053683bdaec2045ab2",
       "updater": {
         "provider": "github",
         "owner": "braincrew-lab",
@@ -119,8 +119,8 @@
   },
   "source": {
     "repository": "braincrew-lab/deep-agent-builder-desktop",
-    "commit": "6eb2c8b419f5b1c67cd29029f93664931b8c00b6",
-    "tag": "v0.6.4"
+    "commit": "5a67c5d563ba2fe39580e82b8910697560dfedae",
+    "tag": "v0.6.3"
   },
   "verification": {
     "macosAppleSiliconPublicDownload": "available",
