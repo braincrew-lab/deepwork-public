@@ -157,9 +157,7 @@ function Get-SharedVirtualizationConsumers {
     "com.docker.build",
     "wsl",
     "wslhost",
-    "wslservice",
-    "vmmem",
-    "vmmemWSL"
+    "wslservice"
   )
   return @(
     Get-Process -ErrorAction SilentlyContinue |
@@ -360,7 +358,11 @@ function Reset-WindowsVirtualizationPlatform {
   $vmWorkers = @(Get-Process -Name "vmwp" -ErrorAction SilentlyContinue)
   if ($vmWorkers.Count -gt 0 -and -not $ForceSharedVirtualizationReset) {
     $summary = ($vmWorkers | ForEach-Object { "vmwp($($_.Id))" }) -join ", "
-    throw "VM worker processes remain after DeepWork stopped: $summary. Refusing to reset shared HCS state. On a dedicated disposable test PC only, pass -ForceSharedVirtualizationReset."
+    if ($WhatIfPreference) {
+      Add-ResetAction -Action "verify-no-shared-vm" -Target $summary -Result "planned" -Detail "Recheck after DeepWork stops during the real reset"
+    } else {
+      throw "VM worker processes remain after DeepWork stopped: $summary. Refusing to reset shared HCS state. On a dedicated disposable test PC only, pass -ForceSharedVirtualizationReset."
+    }
   }
 
   Stop-NamedService -Name "vmcompute" -AllowMissing
