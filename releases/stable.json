@@ -14,11 +14,11 @@
         "Intel Mac"
       ],
       "packageType": "dmg",
-      "bundledDeepWorkVm": true,
-      "downloadUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.1/DeepWork-0.6.1-arm64-full-offline.dmg",
-      "artifactName": "DeepWork-0.6.1-arm64-full-offline.dmg",
-      "bytes": 1472515581,
-      "sha256": "d05c949cfda00bec6289bd05dd9ff2f3e470ca210c563ad2ea9f664f60739fe9",
+      "bundledDeepWorkVm": false,
+      "downloadUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.1/DeepWork-0.6.1-arm64.dmg",
+      "artifactName": "DeepWork-0.6.1-arm64.dmg",
+      "bytes": 342289837,
+      "sha256": "201d3c13c2f6e6ca360bda74666cd378aa1c8bef37e733212cf25ec5ed1dc79c",
       "updater": {
         "provider": "github",
         "owner": "braincrew-lab",
