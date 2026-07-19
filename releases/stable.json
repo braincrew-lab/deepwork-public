@@ -2,8 +2,8 @@
   "product": "DeepWork",
   "channel": "stable",
   "status": "macos-apple-silicon-public-release-available",
-  "version": "0.6.8",
-  "releasedAt": "2026-07-18T10:28:38.060Z",
+  "version": "0.6.9",
+  "releasedAt": "2026-07-19T00:47:46.075Z",
   "downloads": {
     "macosAppleSilicon": {
       "architecture": "arm64",
@@ -15,17 +15,17 @@
       ],
       "packageType": "dmg",
       "bundledDeepWorkVm": false,
-      "downloadUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.8/DeepWork-0.6.8-arm64.dmg",
-      "artifactName": "DeepWork-0.6.8-arm64.dmg",
-      "bytes": 339079365,
-      "sha256": "c88a354a34a8eb1402b5662899aa923fe6f55efa2ecca324071949e1e5451998",
+      "downloadUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.9/DeepWork-0.6.9-arm64.dmg",
+      "artifactName": "DeepWork-0.6.9-arm64.dmg",
+      "bytes": 339323990,
+      "sha256": "1376b363e5d14ac13af3aae38ad0aa6949721eb47d0f1c1c2209b91144e5e040",
       "updater": {
         "provider": "github",
         "owner": "braincrew-lab",
         "repo": "deepwork-public",
-        "latestMacYmlUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.8/latest-mac.yml",
-        "zipUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.8/DeepWork-0.6.8-arm64-mac.zip",
-        "blockmapUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.8/DeepWork-0.6.8-arm64-mac.zip.blockmap"
+        "latestMacYmlUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.9/latest-mac.yml",
+        "zipUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.9/DeepWork-0.6.9-arm64-mac.zip",
+        "blockmapUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.9/DeepWork-0.6.9-arm64-mac.zip.blockmap"
       },
       "signature": {
         "status": "Valid",
@@ -33,7 +33,7 @@
         "notarization": "Accepted",
         "ticket": "Stapled"
       },
-      "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.8/SHA256SUMS.txt"
+      "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.9/SHA256SUMS.txt"
     },
     "macosUniversal": {
       "deprecated": true,
@@ -111,16 +111,16 @@
       "installGuideUrl": "https://braincrew-lab.github.io/deepwork-public/#browser-connection-guide"
     }
   },
-  "notesUrl": "https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.6.8",
+  "notesUrl": "https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.6.9",
   "releaseNotes": {
-    "title": "DeepWork v0.6.8 macOS public",
+    "title": "DeepWork v0.6.9 macOS public",
     "summary": "Apple Silicon Mac signed and notarized public release.",
     "items": []
   },
   "source": {
     "repository": "braincrew-lab/deep-agent-builder-desktop",
-    "commit": "dc24a282d48927f80b9d17f1a41f0395f11fa422",
-    "tag": "v0.6.8"
+    "commit": "9005c5df9a27a74b7b81b8464600a447e964fd31",
+    "tag": "v0.6.9"
   },
   "verification": {
     "macosAppleSiliconPublicDownload": "available",
