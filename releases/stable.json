@@ -129,7 +129,6 @@
     "macosAppNotarization": "success",
     "macosDmgNotarization": "success",
     "electronUpdaterPublicProvider": "success",
-    "windowsSelfSignedPublicDownload": "available",
     "windowsSignedProofDownload": "available",
     "windowsAppInstallerPublicFeed": "available",
     "windowsKeyLockerPublicDownload": "available"
