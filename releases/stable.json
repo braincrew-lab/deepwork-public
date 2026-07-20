@@ -64,11 +64,11 @@
       "architecture": "x64",
       "packageType": "appx",
       "appInstallerUrl": "https://braincrew-lab.github.io/deepwork-public/releases/windows/DeepWork.appinstaller",
-      "packageUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.12/DeepWork.0.6.12.appx",
+      "packageUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.13/DeepWork.0.6.13.appx",
       "bundledDeepWorkVm": false,
-      "artifactName": "DeepWork.0.6.12.appx",
-      "bytes": 374572986,
-      "sha256": "d94993cb19c4ac24d90e3034943107f25dd2ca67467be7d2c00c7004b4e61566",
+      "artifactName": "DeepWork.0.6.13.appx",
+      "bytes": 374575176,
+      "sha256": "df72397ecd0ab23efb6f7adc8380020eb9227a1b6a014c8927ab0d92d1d61d77",
       "signature": {
         "status": "Valid",
         "channel": "digicert-keylocker",
@@ -79,8 +79,8 @@
         "feedUrl": "https://braincrew-lab.github.io/deepwork-public/releases/windows/DeepWork.appinstaller",
         "hoursBetweenUpdateChecks": 0
       },
-      "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.12/SHA256SUMS.txt",
-      "evidenceUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.12/windows-msix-vm-release-evidence.json"
+      "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.13/SHA256SUMS.txt",
+      "evidenceUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.13/windows-msix-vm-release-evidence.json"
     },
     "windowsSignedProof": {
       "architecture": "x64",
@@ -120,8 +120,8 @@
   },
   "source": {
     "repository": "braincrew-lab/deep-agent-builder-desktop",
-    "commit": "954e15b232cbf1d3696965fb239cdc4c05748d38",
-    "tag": "v0.6.12"
+    "commit": "fa81cd8378059155c79d2b53bffa4f0d9cbc36a4",
+    "tag": "v0.6.13"
   },
   "verification": {
     "macosAppleSiliconPublicDownload": "available",
@@ -135,8 +135,8 @@
     "windowsKeyLockerPublicDownload": "available"
   },
   "windowsRelease": {
-    "tag": "v0.6.12",
-    "version": "0.6.12",
-    "releasedAt": "2026-07-19T18:49:43.623Z"
+    "tag": "v0.6.13",
+    "version": "0.6.13",
+    "releasedAt": "2026-07-20T03:41:17.235Z"
   }
 }
