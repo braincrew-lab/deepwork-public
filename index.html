@@ -194,9 +194,11 @@
       (function () {
         var REPO = "braincrew-lab/deepwork-public"
         var API = "https://api.github.com/repos/" + REPO + "/releases?per_page=100"
-        var ASSET_RE = /\.(dmg|appx|msix|msixbundle|cer|zip|exe|yml)$/i
-        var PRIMARY_RE = /\.(dmg|appx|msix|msixbundle|cer)$/i
         var WITHHELD_RELEASE_RE = /^v0\.5\.7(?:$|-)/
+        // VM 이미지(deep-work-vm-*)는 앱이 내부적으로 내려받는 인프라 릴리스라 표에서 제외.
+        var INFRA_RELEASE_RE = /^deep-work-vm-/
+        var MAC_ASSET_RE = /\.dmg$/i
+        var WIN_ASSET_RE = /\.(appx|msix|msixbundle)$/i
         var macBody = document.getElementById("version-rows-mac")
         var winBody = document.getElementById("version-rows-win")
         if (!macBody || !winBody) return
@@ -211,17 +213,6 @@
           })
         } catch (e) {
           dateFmt = null
-        }
-
-        function platformOf(rel, assets) {
-          // Prefer the actual artifact extension over the tag name: some macOS-looking
-          // tags (e.g. -t14-install, -c2-proof) ship only Windows .appx assets.
-          var names = (assets || []).map(function (a) {
-            return a.name
-          })
-          if (names.some(function (n) { return /\.dmg$/i.test(n) })) return "macOS"
-          if (names.some(function (n) { return /\.(appx|msix|msixbundle|cer)$/i.test(n) })) return "Windows"
-          return /win|windows|appx|msix|cer/i.test(rel.tag_name) ? "Windows" : "macOS"
         }
 
         function formatDate(iso) {
@@ -245,22 +236,24 @@
           body.appendChild(tr)
         }
 
-        function buildRow(rel) {
-          var assets = (rel.assets || []).filter(function (a) {
-            return ASSET_RE.test(a.name)
-          })
-          // Prefer the headline installer assets; fall back to whatever is
-          // downloadable. Show only one asset per row to keep the column quiet —
-          // an offline DMG when present, otherwise the first installer.
-          var primary = assets.filter(function (a) {
-            return PRIMARY_RE.test(a.name)
-          })
-          var pool = primary.length ? primary : assets
-          var offline = pool.filter(function (a) {
-            return /offline/i.test(a.name)
-          })
-          var shown = (offline.length ? offline : pool).slice(0, 1)
+        function channelBadge(rel) {
+          if (/-preview\.\d+$/i.test(rel.tag_name)) {
+            return { text: "preview", title: "프리뷰 채널 빌드 (정식 공개판이 아님)" }
+          }
+          if (rel.prerelease) {
+            return { text: "pre", title: "GitHub pre-release (정식 공개판이 아닌 proof/test 빌드)" }
+          }
+          return null
+        }
 
+        function pickAsset(assets, preferRe) {
+          var preferred = assets.filter(function (a) {
+            return preferRe.test(a.name)
+          })
+          return (preferred.length ? preferred : assets)[0] || null
+        }
+
+        function buildRow(rel, asset) {
           var tr = document.createElement("tr")
 
           var verTd = document.createElement("td")
@@ -270,12 +263,13 @@
           verLink.textContent = rel.tag_name
           verLink.translate = false
           verTd.appendChild(verLink)
-          if (rel.prerelease) {
-            var pre = document.createElement("span")
-            pre.className = "v-tag pre"
-            pre.textContent = "pre"
-            pre.title = "GitHub pre-release (정식 공개판이 아닌 proof/test 빌드)"
-            verTd.appendChild(pre)
+          var badge = channelBadge(rel)
+          if (badge) {
+            var tag = document.createElement("span")
+            tag.className = "v-tag " + badge.text
+            tag.textContent = badge.text
+            tag.title = badge.title
+            verTd.appendChild(tag)
           }
           tr.appendChild(verTd)
 
@@ -286,22 +280,17 @@
 
           var dlTd = document.createElement("td")
           dlTd.className = "v-downloads"
-          if (shown.length) {
-            shown.forEach(function (a) {
-              var link = document.createElement("a")
-              link.href = a.browser_download_url
-              link.className = "v-asset"
-              link.textContent = a.name
-              link.translate = false
-              dlTd.appendChild(link)
-            })
+          var link = document.createElement("a")
+          link.className = "v-asset"
+          if (asset) {
+            link.href = asset.browser_download_url
+            link.textContent = asset.name
+            link.translate = false
           } else {
-            var notes = document.createElement("a")
-            notes.href = rel.html_url
-            notes.className = "v-asset"
-            notes.textContent = "릴리스 노트"
-            dlTd.appendChild(notes)
+            link.href = rel.html_url
+            link.textContent = "릴리스 노트"
           }
+          dlTd.appendChild(link)
           tr.appendChild(dlTd)
 
           return tr
@@ -320,34 +309,48 @@
           body.appendChild(tr)
         }
 
+        function fillTable(body, rows, emptyMessage) {
+          body.innerHTML = ""
+          if (!rows.length) {
+            statusRow(body, emptyMessage)
+            return
+          }
+          rows.slice(0, MAX_ROWS).forEach(function (row) {
+            body.appendChild(buildRow(row.rel, row.asset))
+          })
+          if (rows.length > MAX_ROWS) moreRow(body, rows.length - MAX_ROWS)
+        }
+
         function render(releases) {
-          macBody.innerHTML = ""
-          winBody.innerHTML = ""
-          var mac = 0
-          var win = 0
-          var macHidden = 0
-          var winHidden = 0
+          var macRows = []
+          var winRows = []
           releases.forEach(function (rel) {
             if (rel.draft) return
             if (WITHHELD_RELEASE_RE.test(rel.tag_name)) return
-            var assets = (rel.assets || []).filter(function (a) {
-              return ASSET_RE.test(a.name)
+            if (INFRA_RELEASE_RE.test(rel.tag_name)) return
+            var assets = rel.assets || []
+            var macAssets = assets.filter(function (a) {
+              return MAC_ASSET_RE.test(a.name)
             })
-            if (platformOf(rel, assets) === "Windows") {
-              if (win < MAX_ROWS) winBody.appendChild(buildRow(rel))
-              else winHidden++
-              win++
-            } else {
-              if (mac < MAX_ROWS) macBody.appendChild(buildRow(rel))
-              else macHidden++
-              mac++
+            var winAssets = assets.filter(function (a) {
+              return WIN_ASSET_RE.test(a.name)
+            })
+            // 통합 릴리스(mac DMG + Windows APPX가 한 태그)는 양쪽 표에 모두,
+            // 각 표에는 해당 플랫폼 설치 파일만 표시한다.
+            if (macAssets.length) {
+              macRows.push({ rel: rel, asset: pickAsset(macAssets, /offline/i) })
+            }
+            if (winAssets.length) {
+              winRows.push({ rel: rel, asset: pickAsset(winAssets, /\.(appx|msixbundle)$/i) })
+            }
+            if (!macAssets.length && !winAssets.length) {
+              var target = /win|windows|appx|msix|cer/i.test(rel.tag_name) ? winRows : macRows
+              target.push({ rel: rel, asset: null })
             }
           })
 
-          if (!mac) statusRow(macBody, "표시할 macOS 릴리스가 없습니다.")
-          else if (macHidden) moreRow(macBody, macHidden)
-          if (!win) statusRow(winBody, "표시할 Windows 릴리스가 없습니다.")
-          else if (winHidden) moreRow(winBody, winHidden)
+          fillTable(macBody, macRows, "표시할 macOS 릴리스가 없습니다.")
+          fillTable(winBody, winRows, "표시할 Windows 릴리스가 없습니다.")
         }
 
         fetch(API, { headers: { Accept: "application/vnd.github+json" } })

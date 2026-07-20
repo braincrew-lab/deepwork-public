@@ -569,7 +569,7 @@ footer {
   font-weight: 600;
 }
 
-.v-tag.pre {
+.v-tag {
   margin-left: 6px;
   padding: 1px 6px;
   border-radius: 999px;
@@ -578,6 +578,11 @@ footer {
   font-size: 11px;
   font-weight: 700;
   vertical-align: middle;
+}
+
+.v-tag.preview {
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  color: var(--accent);
 }
 
 .version-table .v-date {
