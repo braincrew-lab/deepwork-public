@@ -63,24 +63,19 @@
     "windows": {
       "architecture": "x64",
       "packageType": "appx",
-      "appInstallerUrl": "https://braincrew-lab.github.io/deepwork-public/releases/windows/DeepWork.appinstaller",
-      "packageUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.16/DeepWork.0.6.16.appx",
+      "packageUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.17/DeepWork.0.6.17.appx",
       "bundledDeepWorkVm": false,
-      "artifactName": "DeepWork.0.6.16.appx",
-      "bytes": 374551741,
-      "sha256": "48221446bb86a693f72b44d37a3206599ac3ad63b1278a309a857f009a6fb8b1",
+      "artifactName": "DeepWork.0.6.17.appx",
+      "bytes": 375579538,
+      "sha256": "24d798e762a6e5c8bde23dbd47add43faa41841d0c1bb0f33e5df89e741abc3e",
       "signature": {
         "status": "Valid",
         "channel": "digicert-keylocker",
         "signerSubject": "CN=Braincrew Inc., O=Braincrew Inc., L=Seongnam-si, S=Gyeonggi-do, C=KR",
         "productionSigningEvidence": true
       },
-      "updater": {
-        "feedUrl": "https://braincrew-lab.github.io/deepwork-public/releases/windows/DeepWork.appinstaller",
-        "hoursBetweenUpdateChecks": 0
-      },
-      "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.16/SHA256SUMS.txt",
-      "evidenceUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.16/windows-msix-vm-release-evidence.json"
+      "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.17/SHA256SUMS.txt",
+      "evidenceUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.17/windows-msix-vm-release-evidence.json"
     },
     "windowsSignedProof": {
       "architecture": "x64",
@@ -120,8 +115,8 @@
   },
   "source": {
     "repository": "braincrew-lab/deep-agent-builder-desktop",
-    "commit": "11522389973278af42ac89de37e8b6c0ea029209",
-    "tag": "v0.6.16"
+    "commit": "2ac82efeaa0ee2a6fe50d04789f127c472c2c49f",
+    "tag": "v0.6.17"
   },
   "verification": {
     "macosAppleSiliconPublicDownload": "available",
@@ -130,12 +125,11 @@
     "macosDmgNotarization": "success",
     "electronUpdaterPublicProvider": "success",
     "windowsSignedProofDownload": "available",
-    "windowsAppInstallerPublicFeed": "available",
     "windowsKeyLockerPublicDownload": "available"
   },
   "windowsRelease": {
-    "tag": "v0.6.16",
-    "version": "0.6.16",
-    "releasedAt": "2026-07-22T07:19:14.486Z"
+    "tag": "v0.6.17",
+    "version": "0.6.17",
+    "releasedAt": "2026-07-29T05:06:14.034Z"
   }
 }
