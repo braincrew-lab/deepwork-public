@@ -2,8 +2,8 @@
   "product": "DeepWork",
   "channel": "stable",
   "status": "macos-apple-silicon-public-release-available",
-  "version": "0.6.20",
-  "releasedAt": "2026-08-09T10:39:02.906Z",
+  "version": "0.6.21",
+  "releasedAt": "2026-08-09T13:21:15.989Z",
   "downloads": {
     "macosAppleSilicon": {
       "architecture": "arm64",
@@ -15,17 +15,17 @@
       ],
       "packageType": "dmg",
       "bundledDeepWorkVm": false,
-      "downloadUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.20/DeepWork-0.6.20-arm64.dmg",
-      "artifactName": "DeepWork-0.6.20-arm64.dmg",
-      "bytes": 415302339,
-      "sha256": "5332d46b50b2d0d1ddc0a225c357c81313a2511197d9d2a09f5d358a6e09dc8f",
+      "downloadUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.21/DeepWork-0.6.21-arm64.dmg",
+      "artifactName": "DeepWork-0.6.21-arm64.dmg",
+      "bytes": 415442127,
+      "sha256": "e799171ded75dac85d809c145085340474d6842a3f2f0563cd6b01b0a46708ef",
       "updater": {
         "provider": "github",
         "owner": "braincrew-lab",
         "repo": "deepwork-public",
-        "latestMacYmlUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.20/latest-mac.yml",
-        "zipUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.20/DeepWork-0.6.20-arm64-mac.zip",
-        "blockmapUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.20/DeepWork-0.6.20-arm64-mac.zip.blockmap"
+        "latestMacYmlUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.21/latest-mac.yml",
+        "zipUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.21/DeepWork-0.6.21-arm64-mac.zip",
+        "blockmapUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.21/DeepWork-0.6.21-arm64-mac.zip.blockmap"
       },
       "signature": {
         "status": "Valid",
@@ -33,7 +33,7 @@
         "notarization": "Accepted",
         "ticket": "Stapled"
       },
-      "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.20/SHA256SUMS.txt"
+      "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.21/SHA256SUMS.txt"
     },
     "macosUniversal": {
       "deprecated": true,
@@ -107,9 +107,9 @@
       "installGuideUrl": "https://braincrew-lab.github.io/deepwork-public/#browser-connection-guide"
     }
   },
-  "notesUrl": "https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.6.20",
+  "notesUrl": "https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.6.21",
   "releaseNotes": {
-    "title": "DeepWork v0.6.20 macOS public",
+    "title": "DeepWork v0.6.21 macOS public",
     "summary": "Apple Silicon Mac signed and notarized public release.",
     "items": []
   },
