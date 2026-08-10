@@ -63,19 +63,19 @@
     "windows": {
       "architecture": "x64",
       "packageType": "appx",
-      "packageUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.22/DeepWork.0.6.22.appx",
+      "packageUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.23/DeepWork.0.6.23.appx",
       "bundledDeepWorkVm": false,
-      "artifactName": "DeepWork.0.6.22.appx",
-      "bytes": 422174551,
-      "sha256": "d9b026a2a2ac5d8ca532e4d818eccb9fbc8c86165722d38271896bb9f8b527f5",
+      "artifactName": "DeepWork.0.6.23.appx",
+      "bytes": 422172762,
+      "sha256": "e9d14f5223a04fc03d0893fc4ffed42b31196dab6e8f10ff8733afc2b6477d1f",
       "signature": {
         "status": "Valid",
         "channel": "digicert-keylocker",
         "signerSubject": "CN=Braincrew Inc., O=Braincrew Inc., L=Seongnam-si, S=Gyeonggi-do, C=KR",
         "productionSigningEvidence": true
       },
-      "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.22/SHA256SUMS.txt",
-      "evidenceUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.22/windows-msix-vm-release-evidence.json"
+      "checksumsUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.23/SHA256SUMS.txt",
+      "evidenceUrl": "https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.23/windows-msix-vm-release-evidence.json"
     },
     "windowsSignedProof": {
       "architecture": "x64",
@@ -128,8 +128,8 @@
     "windowsKeyLockerPublicDownload": "available"
   },
   "windowsRelease": {
-    "tag": "v0.6.22",
-    "version": "0.6.22",
-    "releasedAt": "2026-08-10T06:50:33.692Z"
+    "tag": "v0.6.23",
+    "version": "0.6.23",
+    "releasedAt": "2026-08-10T13:58:24.497Z"
   }
 }
