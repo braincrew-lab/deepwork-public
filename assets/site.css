@@ -1,37 +1,56 @@
+/* DeepWork public site — Liquid Glass rebrand.
+   Brand mark gradient: #00E778 (green) → #746EFF (violet). */
+
 :root {
   color-scheme: light dark;
-  --ink: #202124;
-  --muted: #5f6368;
-  --paper: #f8f9fa;
-  --panel: #ffffff;
-  --rule: #dadce0;
-  --accent: #0b6b57;
-  --accent-strong: #084c3f;
+  --ink: #171923;
+  --muted: #575c6b;
+  --paper: #f3f4f9;
+  --panel: rgba(255, 255, 255, 0.66);
+  --panel-solid: #ffffff;
+  --rule: rgba(23, 25, 35, 0.12);
+  --accent: #0b7a5a;
+  --accent-strong: #4a43d9;
   --warn: #9a5b00;
-  --shot-bg: #eef1f0;
-  --code-bg: #eef1f1;
-  --subtle-bg: #fbfbfb;
-  --subtle-rule: #e6e8ea;
-  --focus: #0b6b57;
-  --on-accent: #ffffff;
+  --code-bg: rgba(23, 25, 35, 0.06);
+  --subtle-bg: rgba(23, 25, 35, 0.03);
+  --subtle-rule: rgba(23, 25, 35, 0.08);
+  --focus: #5d56f2;
+  --on-accent: #081018;
+  --brand-a: #00c76c;
+  --brand-b: #746eff;
+  --brand-text-a: #049467;
+  --brand-text-b: #4a43d9;
+  --glass-edge: rgba(255, 255, 255, 0.65);
+  --glow-a: rgba(0, 231, 120, 0.16);
+  --glow-b: rgba(116, 110, 255, 0.18);
+  --card-shadow: 0 18px 44px -28px rgba(41, 37, 112, 0.35);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --ink: #e8eaed;
-    --muted: #9aa0a6;
-    --paper: #15171a;
-    --panel: #1e2125;
-    --rule: #33373d;
-    --accent: #4cc7a4;
-    --accent-strong: #5fd3b2;
+    --ink: #eceef4;
+    --muted: #9ba1ae;
+    --paper: #0e1015;
+    --panel: rgba(255, 255, 255, 0.045);
+    --panel-solid: #1a1d24;
+    --rule: rgba(255, 255, 255, 0.1);
+    --accent: #3ecf8e;
+    --accent-strong: #9d98ff;
     --warn: #e0a45a;
-    --shot-bg: #25292e;
-    --code-bg: #2a2e33;
-    --subtle-bg: #1a1d21;
-    --subtle-rule: #2c3036;
-    --focus: #5fd3b2;
-    --on-accent: #10211b;
+    --code-bg: rgba(255, 255, 255, 0.07);
+    --subtle-bg: rgba(255, 255, 255, 0.03);
+    --subtle-rule: rgba(255, 255, 255, 0.07);
+    --focus: #8f8aff;
+    --on-accent: #081018;
+    --brand-a: #00e778;
+    --brand-b: #8f8aff;
+    --brand-text-a: #00e778;
+    --brand-text-b: #a3a0ff;
+    --glass-edge: rgba(255, 255, 255, 0.09);
+    --glow-a: rgba(0, 231, 120, 0.1);
+    --glow-b: rgba(116, 110, 255, 0.14);
+    --card-shadow: 0 22px 48px -30px rgba(0, 0, 0, 0.7);
   }
 }
 
@@ -45,8 +64,8 @@
   top: -48px;
   z-index: 10;
   padding: 10px 16px;
-  border-radius: 6px;
-  background: var(--panel);
+  border-radius: 999px;
+  background: var(--panel-solid);
   border: 1px solid var(--rule);
   color: var(--ink);
   text-decoration: none;
@@ -60,12 +79,13 @@
 :focus-visible {
   outline: 2px solid var(--focus);
   outline-offset: 2px;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;
+    animation: none !important;
     scroll-behavior: auto !important;
   }
 }
@@ -73,7 +93,13 @@
 body {
   margin: 0;
   color: var(--ink);
-  background: var(--paper);
+  background-color: var(--paper);
+  /* 브랜드 그라데이션을 은은한 조명으로 깔아 아이콘의 유리 질감과 톤을 맞춘다 */
+  background-image:
+    radial-gradient(52rem 34rem at 12% -6%, var(--glow-a), transparent 62%),
+    radial-gradient(56rem 36rem at 96% 4%, var(--glow-b), transparent 64%),
+    radial-gradient(40rem 30rem at 55% 118%, var(--glow-b), transparent 70%);
+  background-attachment: fixed;
   font-family:
     ui-sans-serif,
     -apple-system,
@@ -92,23 +118,37 @@ a {
 }
 
 header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 18px clamp(20px, 4vw, 48px);
+  padding: 14px clamp(20px, 4vw, 48px);
   border-bottom: 1px solid var(--rule);
   background: var(--panel);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  backdrop-filter: blur(18px) saturate(1.4);
+  box-shadow: inset 0 1px 0 var(--glass-edge);
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 10px;
   color: var(--ink);
   font-size: 20px;
   font-weight: 700;
   text-decoration: none;
+}
+
+.brand span {
+  background: linear-gradient(92deg, var(--brand-text-a), var(--brand-text-b));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .brand picture {
@@ -117,8 +157,8 @@ header {
 
 .brand img {
   display: block;
-  width: 22px;
-  height: 22px;
+  width: 26px;
+  height: auto;
 }
 
 nav {
@@ -126,6 +166,19 @@ nav {
   gap: 16px;
   flex-wrap: wrap;
   font-size: 14px;
+}
+
+nav a {
+  color: var(--ink);
+  text-decoration: none;
+  opacity: 0.82;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 main {
@@ -143,10 +196,12 @@ main {
 }
 
 .eyebrow {
-  margin: 0 0 10px;
-  color: var(--accent-strong);
+  margin: 0 0 12px;
+  color: var(--accent);
   font-size: 13px;
   font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 h1,
@@ -157,13 +212,14 @@ h2 {
 }
 
 h1 {
-  font-size: 56px;
+  font-size: clamp(44px, 7vw, 64px);
   line-height: 1;
+  letter-spacing: -0.02em;
 }
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
   gap: clamp(28px, 5vw, 64px);
   align-items: center;
   padding-bottom: 8px;
@@ -175,7 +231,7 @@ h1 {
 
 .hero-sub {
   margin-top: 16px;
-  max-width: 36ch;
+  max-width: 38ch;
   font-size: 17px;
 }
 
@@ -186,21 +242,60 @@ h1 {
   margin-top: 28px;
 }
 
-.hero-shot {
+/* 스크린샷 대신 새 Liquid Glass 앱 아이콘을 브랜드 쇼케이스로 띄운다 */
+.hero-mark {
+  position: relative;
+  display: grid;
+  place-items: center;
   min-width: 0;
-  padding: 10px;
-  border: 1px solid var(--rule);
-  border-radius: 14px;
-  background: var(--shot-bg);
-  box-shadow: 0 24px 48px -28px rgba(0, 0, 0, 0.4);
+  padding: clamp(28px, 5vw, 48px);
 }
 
-.hero-shot img {
+.hero-mark::before {
+  content: "";
+  position: absolute;
+  inset: 6%;
+  border-radius: 50%;
+  background:
+    radial-gradient(closest-side at 36% 38%, var(--glow-a), transparent 72%),
+    radial-gradient(closest-side at 66% 62%, var(--glow-b), transparent 72%);
+  filter: blur(14px);
+}
+
+.hero-mark img {
+  position: relative;
   display: block;
-  width: 100%;
+  width: min(232px, 58%);
   height: auto;
-  border-radius: 8px;
-  border: 1px solid var(--rule);
+  filter: drop-shadow(0 26px 40px rgba(20, 18, 60, 0.35));
+  animation: hero-mark-float 7s ease-in-out infinite;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* 다크에서는 아이콘 스퀘클이 배경과 겹치므로 브랜드 글로우로 실루엣을 띄운다 */
+  .hero-mark::before {
+    inset: -2%;
+    filter: blur(22px);
+    background:
+      radial-gradient(closest-side at 34% 36%, rgba(0, 231, 120, 0.22), transparent 70%),
+      radial-gradient(closest-side at 68% 64%, rgba(116, 110, 255, 0.3), transparent 70%);
+  }
+
+  .hero-mark img {
+    filter:
+      drop-shadow(0 0 1px rgba(255, 255, 255, 0.35))
+      drop-shadow(0 22px 44px rgba(0, 0, 0, 0.6));
+  }
+}
+
+@keyframes hero-mark-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 h2 {
@@ -216,27 +311,41 @@ p {
 
 .button {
   display: inline-flex;
-  min-height: 44px;
+  min-height: 46px;
   align-items: center;
   justify-content: center;
-  padding: 0 18px;
-  border: 1px solid var(--accent-strong);
-  border-radius: 6px;
-  background: var(--accent-strong);
+  padding: 0 22px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: linear-gradient(120deg, var(--brand-a), var(--brand-b));
   color: var(--on-accent);
   font-weight: 700;
   text-decoration: none;
   touch-action: manipulation;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    0 12px 26px -14px color-mix(in srgb, var(--brand-b) 55%, transparent);
 }
 
 .button.primary {
   min-width: 190px;
 }
 
+.button.primary:hover {
+  filter: brightness(1.05) saturate(1.05);
+}
+
 .button.secondary {
   border-color: var(--rule);
   background: var(--panel);
-  color: var(--accent-strong);
+  color: var(--ink);
+  box-shadow: inset 0 1px 0 var(--glass-edge);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.button.secondary:hover {
+  border-color: var(--accent-strong);
 }
 
 .button.compact {
@@ -262,10 +371,15 @@ p {
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 24px;
   align-items: center;
-  padding: 24px;
+  padding: 26px;
   border: 1px solid var(--rule);
-  border-radius: 8px;
+  border-radius: 18px;
   background: var(--panel);
+  -webkit-backdrop-filter: blur(16px) saturate(1.3);
+  backdrop-filter: blur(16px) saturate(1.3);
+  box-shadow:
+    inset 0 1px 0 var(--glass-edge),
+    var(--card-shadow);
 }
 
 .download-card + .download-card {
@@ -278,6 +392,7 @@ p {
   padding: 14px 16px;
   background: var(--subtle-bg);
   border-color: var(--subtle-rule);
+  box-shadow: inset 0 1px 0 var(--glass-edge);
 }
 
 .download-card-subtle h2 {
@@ -312,7 +427,6 @@ p {
   min-height: 40px;
   padding: 0 14px;
   border-color: var(--rule);
-  background: var(--paper);
 }
 
 .guide-card {
@@ -321,8 +435,11 @@ p {
   margin-top: 16px;
   padding: 24px;
   border: 1px solid var(--rule);
-  border-radius: 8px;
+  border-radius: 18px;
   background: var(--panel);
+  -webkit-backdrop-filter: blur(16px) saturate(1.3);
+  backdrop-filter: blur(16px) saturate(1.3);
+  box-shadow: inset 0 1px 0 var(--glass-edge);
 }
 
 .guide-card ol {
@@ -342,8 +459,11 @@ p {
   margin-top: 16px;
   padding: 24px;
   border: 1px solid var(--rule);
-  border-radius: 8px;
+  border-radius: 18px;
   background: var(--panel);
+  -webkit-backdrop-filter: blur(16px) saturate(1.3);
+  backdrop-filter: blur(16px) saturate(1.3);
+  box-shadow: inset 0 1px 0 var(--glass-edge);
 }
 
 .copy-prompt {
@@ -353,9 +473,9 @@ p {
   white-space: pre-wrap;
   overflow-wrap: anywhere;
   padding: 18px;
-  border: 1px solid #c8d2ce;
-  border-radius: 6px;
-  background: #f3f7f5;
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  background: var(--code-bg);
   color: var(--ink);
   font-family:
     ui-monospace,
@@ -380,8 +500,9 @@ p {
   gap: 18px;
   padding: 18px;
   border: 1px solid var(--rule);
-  border-radius: 8px;
+  border-radius: 14px;
   background: var(--panel);
+  box-shadow: inset 0 1px 0 var(--glass-edge);
 }
 
 .release-table {
@@ -428,7 +549,7 @@ p {
 
 code {
   padding: 2px 5px;
-  border-radius: 4px;
+  border-radius: 5px;
   background: var(--code-bg);
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.92em;
@@ -460,6 +581,8 @@ footer {
   border-top: 1px solid var(--rule);
   color: var(--muted);
   background: var(--panel);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  backdrop-filter: blur(18px) saturate(1.4);
   font-size: 14px;
 }
 
@@ -490,8 +613,19 @@ footer {
   color: var(--ink);
   font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+.section-title::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 3px;
+  margin-right: 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--brand-a), var(--brand-b));
+  vertical-align: 3px;
 }
 
 .page-head + .section-title {
@@ -522,8 +656,11 @@ footer {
   margin-top: 12px;
   overflow-x: auto;
   border: 1px solid var(--rule);
-  border-radius: 8px;
+  border-radius: 14px;
   background: var(--panel);
+  -webkit-backdrop-filter: blur(14px) saturate(1.3);
+  backdrop-filter: blur(14px) saturate(1.3);
+  box-shadow: inset 0 1px 0 var(--glass-edge);
 }
 
 .version-table {
@@ -548,7 +685,7 @@ footer {
   font-weight: 700;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  background: var(--paper);
+  background: var(--subtle-bg);
   white-space: nowrap;
 }
 
@@ -571,7 +708,7 @@ footer {
 
 .v-tag {
   margin-left: 6px;
-  padding: 1px 6px;
+  padding: 1px 8px;
   border-radius: 999px;
   background: color-mix(in srgb, var(--warn) 16%, transparent);
   color: var(--warn);
@@ -620,7 +757,22 @@ footer {
 @media (max-width: 860px) {
   .hero {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 8px;
+  }
+
+  .hero-mark {
+    order: -1;
+    justify-items: start;
+    padding: 0 0 18px;
+  }
+
+  .hero-mark img {
+    width: 96px;
+    animation: none;
+  }
+
+  .hero-mark::before {
+    inset: -30% -60% 0 -20%;
   }
 }
 
@@ -698,7 +850,7 @@ footer {
   /* 오른쪽 패딩은 오버레이된 복사 버튼 밑에 텍스트 끝이 가려지지 않게 하는 여백 */
   padding: 14px 86px 14px 16px;
   border: 1px solid var(--rule);
-  border-radius: 6px;
+  border-radius: 12px;
   background: var(--code-bg);
   color: var(--ink);
   font-family:
@@ -719,8 +871,8 @@ footer {
   transform: translateY(-50%);
   padding: 6px 14px;
   border: 1px solid var(--rule);
-  border-radius: 6px;
-  background: var(--paper);
+  border-radius: 999px;
+  background: var(--panel-solid);
   color: var(--accent-strong);
   font: inherit;
   font-size: 14px;
@@ -742,4 +894,3 @@ footer {
 .install-guide > .guide-note {
   margin-top: 18px;
 }
-
