@@ -1,5 +1,38 @@
 # DeepWork Public
 
+> **기업의 업무망 안으로, AI의 실행력을.**
+
+DeepWork는 문서를 작성하고, 업무 도구를 다루고, 코드를 구현하는
+**기업용 AI 데스크톱**입니다. 금융권을 포함한 대기업의 업무 환경과
+비개발 일반 사무직 사용자를 우선하며, 일상 업무부터 개발까지 다룹니다.
+
+[제품 소개](https://braincrew-lab.github.io/deepwork-public/) ·
+[공식 다운로드](https://braincrew-lab.github.io/deepwork-public/#downloads)
+
+## 제품 메시지와 주요 기능
+
+랜딩페이지와 소개 자료는 다음 순서로 기능과 작업 결과를 설명합니다.
+
+| 기능 | 소개 카피 |
+| --- | --- |
+| 문서·데이터 | 엑셀을 정리하고, 보고서를 만듭니다. |
+| 브라우저·컴퓨터 유즈 | 브라우저에서 찾고, 입력하고, 내려받습니다. 일반 데스크톱 앱 조작은 준비 중으로 표시합니다. |
+| 격리 공간 | 필요한 폴더를 연결한 격리 공간에서 파일을 처리하고 코드를 실행합니다. |
+| Work / Code | 문서 작업부터 코드 수정과 테스트까지 하나의 앱에서 다룹니다. |
+| 플러그인 | 필요한 업무 도구와 기능을 연결합니다. |
+| 모델 연결 | 회사에서 사용하는 AI 모델을 연결합니다. |
+
+모델 연결은 **상용 모델 API / 기업용 클라우드 / 사내 모델**로 나눕니다.
+Azure·Amazon Bedrock은 기업용 클라우드 범주에 함께 표시합니다. 폐쇄망은
+사내 모델과 내부 도구를 사용하는 배포 구성으로 설명합니다.
+
+사용자에게는 **격리 공간**이라는 용어를 씁니다. Work / Code라는 업무 구분이
+격리 여부를 결정하지 않으며, 브라우저·플러그인 등 외부 도구의 실행과 접근
+권한은 별도입니다. 공개 카피에 모든 모델의 동일 성능, 모든 외부 전송 차단,
+미확인 기능·고객 성과를 약속하지 않습니다.
+
+## About This Repository
+
 Public product website and distribution hub for DeepWork features, downloads,
 release metadata, update checker files, and public legal pages.
 
