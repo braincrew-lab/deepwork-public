@@ -1,7 +1,7 @@
 # DeepWork Public
 
-Public distribution hub for DeepWork downloads, release metadata, update
-checker files, and public legal pages.
+Public product website and distribution hub for DeepWork features, downloads,
+release metadata, update checker files, and public legal pages.
 
 This repository is intentionally public. It gives users, reviewers, enterprise
 admins, and update clients a stable unauthenticated place to read public
@@ -9,9 +9,9 @@ DeepWork information and fetch official distribution metadata.
 
 ## Repository Role
 
-`deepwork-public` owns the public surfaces around DeepWork distribution:
+`deepwork-public` owns the public product and distribution surfaces for DeepWork:
 
-- the root download page for current DeepWork releases;
+- the root product landing page, enterprise contact, and official downloads;
 - public privacy policy pages, including Chrome Web Store review pages;
 - release-facing metadata used by download pages and update checkers;
 - links to official GitHub Release artifacts;
@@ -37,7 +37,7 @@ Planned public paths:
 
 | Path | Purpose |
 | --- | --- |
-| `/` | Download page for official macOS and Windows builds |
+| `/` | Product landing page and official macOS and Windows downloads |
 | `/hwpx-form-fill/` | Link-only HWPX form-fill usability fixture; not linked from the root download page |
 | `/privacy/deepwork-chrome-bridge/` | Chrome Web Store privacy policy URL |
 | `/releases/stable.json` | Public stable release metadata |
@@ -47,6 +47,15 @@ Planned public paths:
 If Braincrew later connects a company domain, keep the same path structure and
 redirect old GitHub Pages URLs rather than breaking published Web Store or
 updater links.
+
+## Landing Page Maintenance
+
+`assets/landing.css` and `assets/landing.js` apply only to the root product page.
+The feature panels are illustrative workflow examples, not product screenshots.
+Use “격리 공간” in public copy. Keep the download card IDs `primary-download`
+and `windows-download` and their metadata markup stable: desktop release scripts
+update these sections by matching the HTML. Preserve the `prettier-ignore`
+comments and literal `<code>…</code>` tags around the release SHA values.
 
 ## Windows First-Install Reset
 

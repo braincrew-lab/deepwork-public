@@ -3,371 +3,1045 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DeepWork 다운로드</title>
+    <title>DeepWork — 기업의 업무망 안으로, AI의 실행력을</title>
     <meta
       name="description"
-      content="DeepWork 공식 다운로드 페이지입니다."
+      content="문서 작성, 브라우저 업무, 코드 개발까지. 격리 공간과 다양한 모델 연결을 갖춘 기업용 AI 데스크톱, DeepWork."
     />
-    <meta name="theme-color" content="#f3f4f9" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#0e1015" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f8faf8" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta
+      property="og:title"
+      content="DeepWork — 기업의 업무망 안으로, AI의 실행력을"
+    />
+    <meta
+      property="og:description"
+      content="문서를 만들고, 업무 도구를 다루고, 코드를 구현합니다. 기업을 위한 AI 데스크톱."
+    />
+    <meta
+      property="og:url"
+      content="https://braincrew-lab.github.io/deepwork-public/"
+    />
+    <meta
+      property="og:image"
+      content="https://braincrew-lab.github.io/deepwork-public/assets/deepwork-app-icon.png"
+    />
+    <link
+      rel="canonical"
+      href="https://braincrew-lab.github.io/deepwork-public/"
+    />
     <link rel="icon" href="assets/deepwork-icon.png?v=lg26" />
-    <link rel="preconnect" href="https://api.github.com" crossorigin />
     <link rel="stylesheet" href="assets/site.css" />
+    <link rel="stylesheet" href="assets/landing.css" />
+    <script src="assets/landing.js" defer></script>
   </head>
-  <body>
+  <body class="landing">
     <a class="skip-link" href="#main">본문으로 건너뛰기</a>
-    <header>
-      <a class="brand" href="./" aria-label="DeepWork 다운로드">
-        <picture>
-          <source srcset="assets/deepwork-glyph-dark.svg" media="(prefers-color-scheme: dark)" />
-          <img src="assets/deepwork-glyph-light.svg" alt="" width="28" height="28" />
-        </picture>
-        <span translate="no">DeepWork</span>
-      </a>
-      <nav aria-label="주요 메뉴">
-        <a href="privacy/deepwork-chrome-bridge/">개인정보처리방침</a>
-        <a href="releases/stable.json">릴리스 메타데이터</a>
-        <a href="https://github.com/braincrew-lab/deepwork-public/releases">GitHub Releases</a>
-        <a href="hwpx-form-fill/">HWPX 서식</a>
-      </nav>
-    </header>
-
-    <main id="main">
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">공식 다운로드</p>
-          <h1 translate="no">DeepWork</h1>
-          <p class="hero-sub">
-            보안 격리 환경에서 실행되는 데스크톱 AI 에이전트. 현재 공개된 macOS,
-            Windows, 인증서 다운로드만 제공합니다.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#primary-download">macOS 다운로드</a>
-            <a class="button secondary" href="#windows-download">Windows 다운로드</a>
-          </div>
-        </div>
-        <div class="hero-mark" aria-hidden="true">
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="./" aria-label="DeepWork 홈">
           <img
-            src="assets/deepwork-app-icon.png"
+            src="assets/deepwork-glyph-light.svg"
             alt=""
-            width="512"
-            height="512"
-            fetchpriority="high"
+            width="28"
+            height="28"
           />
-        </div>
-      </section>
-
-      <p class="section-title">최신 버전</p>
-
-      <section class="download-card" aria-labelledby="primary-download">
-        <div>
-          <h2 id="primary-download">macOS Apple Silicon</h2>
-          <p>Apple Silicon Mac용 signed + notarized DMG. Deep Work VM을 포함합니다. Intel Mac은 지원 대상이 아닙니다.</p>
-          <dl class="metadata">
-            <div>
-              <dt>버전</dt>
-              <dd>v0.7.0</dd>
-            </div>
-            <div>
-              <dt>파일</dt>
-              <dd>DeepWork-0.7.0-arm64.dmg</dd>
-            </div>
-            <div>
-              <dt>지원</dt>
-              <dd>Apple Silicon Mac</dd>
-            </div>
-            <div>
-              <dt>SHA-256</dt>
-              <dd>
-                <code>01c175eac356e9060a5c736e6011d442c1822151207afbc2c5df8fe1f3d60392</code>
-              </dd>
-            </div>
-          </dl>
-        </div>
-        <a
-          class="button primary"
-          href="https://github.com/braincrew-lab/deepwork-public/releases/download/v0.7.0/DeepWork-0.7.0-arm64.dmg"
-        >
-          macOS 다운로드
+          <span translate="no">DeepWork</span>
         </a>
-      </section>
-
-      <section class="download-card" aria-labelledby="windows-download">
-        <div>
-          <h2 id="windows-download">Windows</h2>
-          <p>
-            Windows x64 정식 배포입니다. 프로덕션 인증서로 서명(signed)되어 있어 다운로드 후
-            더블클릭만으로 설치됩니다 — 인증서 등록이 필요 없습니다.
-          </p>
-          <dl class="metadata">
-            <div>
-              <dt>버전</dt>
-              <dd>v0.6.26</dd>
+        <nav class="nav-links" aria-label="주요 메뉴">
+          <a href="#features">주요 기능</a>
+          <a href="#isolation">격리 공간</a>
+          <a href="#downloads">다운로드</a>
+        </nav>
+        <a class="nav-contact" href="#contact"
+          >도입 상담 <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </header>
+    <main id="main">
+      <div class="container">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow">
+              <span class="pill">Enterprise AI Desktop</span>
+            </p>
+            <h1 id="hero-title">
+              기업의 업무망 안으로,<br /><span>AI의 실행력을.</span>
+            </h1>
+            <p class="hero-sub">
+              문서를 작성하고, 업무 도구를 다루고,<br class="desktop-break" />
+              코드를 구현하는 AI 데스크톱.<br />기업이 선택한 모델과 격리된 실행
+              공간으로<br class="desktop-break" />
+              일상 업무부터 개발까지 함께합니다.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#contact"
+                >도입 상담 <span aria-hidden="true">↗</span></a
+              >
+              <a class="button secondary" href="#features"
+                >주요 기능 살펴보기 <span aria-hidden="true">↓</span></a
+              >
             </div>
-            <div>
-              <dt>파일</dt>
-              <dd>DeepWork.0.6.26.appx</dd>
-            </div>
-            <div>
-              <dt>SHA-256</dt>
-              <dd>
-                <code>6aae54c3e81854dbc7b0cf3553758647f646ceb93b8bbdb63b1f50bce8e8fac0</code>
-              </dd>
-            </div>
-            <div>
-              <dt>서명</dt>
-              <dd>DigiCert KeyLocker signed APPX (production)</dd>
-            </div>
-          </dl>
-        </div>
-        <div class="button-stack" aria-label="Windows 정식 배포 다운로드">
-          <a
-            class="button primary"
-            href="https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.26/DeepWork.0.6.26.appx"
-          >
-            Windows 다운로드
-          </a>
-          <a
-            class="button secondary"
-            href="https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.6.26"
-          >
-            릴리스 노트
-          </a>
-        </div>
-      </section>
-
-      <section class="version-history" aria-labelledby="version-history-title">
-        <p class="section-title" id="version-history-title">이전 릴리스</p>
-        <p>최신 릴리스만 표시합니다. 전체 목록은 GitHub Releases에서 받을 수 있습니다.</p>
-        <p class="version-mobile-note">
-          이전 릴리스 표는 데스크톱에서 확인하세요.
-          <a href="https://github.com/braincrew-lab/deepwork-public/releases">GitHub Releases 열기 →</a>
-        </p>
-
-        <div class="version-group">
-          <h2 class="version-group-title">macOS</h2>
-          <div class="version-table-wrap">
-            <table class="version-table">
-              <thead>
-                <tr>
-                  <th scope="col">버전</th>
-                  <th scope="col">날짜</th>
-                  <th scope="col">다운로드</th>
-                </tr>
-              </thead>
-              <tbody id="version-rows-mac" aria-live="polite">
-                <tr class="version-status">
-                  <td colspan="3">릴리스 목록을 불러오는 중…</td>
-                </tr>
-              </tbody>
-            </table>
+            <p class="hero-note">
+              격리 공간 <span aria-hidden="true">·</span> 사내 모델 연결
+              <span aria-hidden="true">·</span> Work &amp; Code
+            </p>
           </div>
-        </div>
-
-        <div class="version-group">
-          <h2 class="version-group-title">Windows</h2>
-          <div class="version-table-wrap">
-            <table class="version-table">
-              <thead>
-                <tr>
-                  <th scope="col">버전</th>
-                  <th scope="col">날짜</th>
-                  <th scope="col">다운로드</th>
-                </tr>
-              </thead>
-              <tbody id="version-rows-win" aria-live="polite">
-                <tr class="version-status">
-                  <td colspan="3">릴리스 목록을 불러오는 중…</td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="hero-visual">
+            <div
+              class="workflow-window"
+              role="img"
+              aria-label="업무 흐름 예시: 부서별 실적 파일을 확인하고 데이터를 정리한 뒤 월간 보고서를 작성합니다."
+            >
+              <div class="window-bar">
+                <span class="mini-logo">D</span
+                ><span class="window-label">DeepWork</span
+                ><span class="window-status">Work</span>
+              </div>
+              <div class="workflow-body">
+                <div class="workflow-main">
+                  <p class="task-label">월간 보고서 작성</p>
+                  <div class="prompt-box">
+                    부서별 실적 파일을 합쳐서<br />월간 보고서로 만들어줘.
+                  </div>
+                  <div class="process-list">
+                    <div class="process-step">
+                      <span class="step-icon">01</span
+                      ><span class="step-copy">필요한 자료 확인</span
+                      ><span class="step-state">파일 읽기</span>
+                    </div>
+                    <div class="process-step">
+                      <span class="step-icon">02</span
+                      ><span class="step-copy">데이터 취합과 분석</span
+                      ><span class="step-state">격리 공간</span>
+                    </div>
+                    <div class="process-step">
+                      <span class="step-icon">03</span
+                      ><span class="step-copy">보고서 작성</span
+                      ><span class="step-state">결과 확인</span>
+                    </div>
+                  </div>
+                  <div class="result-sheet">
+                    <div class="sheet-top">
+                      <span>REPORT</span><span>월간 운영 보고서</span>
+                    </div>
+                    <div class="sheet-chart" aria-hidden="true">
+                      <span class="chart-bar" style="--bar: 38%"></span
+                      ><span class="chart-bar" style="--bar: 59%"></span
+                      ><span class="chart-bar" style="--bar: 46%"></span
+                      ><span class="chart-bar" style="--bar: 73%"></span
+                      ><span class="chart-bar" style="--bar: 63%"></span
+                      ><span class="chart-bar" style="--bar: 87%"></span>
+                    </div>
+                    <div class="file-chip">
+                      <span aria-hidden="true">↳</span> 월간_운영_보고서.docx
+                      <span>문서</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="hero-caption">업무 흐름을 보여주는 예시 화면입니다.</p>
           </div>
-        </div>
+        </section>
+        <nav class="feature-index" aria-label="기능 바로가기">
+          <a href="#documents">문서·데이터</a
+          ><a href="#computer">브라우저·컴퓨터</a
+          ><a href="#isolation">격리 공간</a><a href="#work-code">Work / Code</a
+          ><a href="#plugins">플러그인</a><a href="#models">모델 연결</a>
+        </nav>
+        <div id="features">
+          <section
+            class="feature-section"
+            id="documents"
+            aria-labelledby="documents-title"
+          >
+            <div class="feature-heading">
+              <p class="eyebrow">
+                <span class="section-number">01</span> 문서·데이터
+              </p>
+              <h2 id="documents-title">
+                엑셀을 정리하고,<br />보고서를 만듭니다.
+              </h2>
+              <p>
+                흩어진 파일에서 필요한 정보를 찾고,<br />데이터를 정리해 표와
+                문서로 작성합니다.
+              </p>
+              <div class="feature-tags">
+                <span>파일 분석</span><span>데이터 정리</span
+                ><span>문서 작성</span>
+              </div>
+            </div>
+            <div class="feature-visual scene">
+              <div class="scene-toolbar">
+                <span>여러 파일을 하나의 결과물로</span><span>작업 예시</span>
+              </div>
+              <div class="scene-grid">
+                <div class="document-stack">
+                  <div class="file-row">
+                    <span class="file-icon">X</span>
+                    <div class="file-info">
+                      <strong>영업팀_실적.xlsx</strong
+                      ><span>부서별 운영 자료</span>
+                    </div>
+                  </div>
+                  <div class="file-row">
+                    <span class="file-icon">X</span>
+                    <div class="file-info">
+                      <strong>운영팀_실적.xlsx</strong
+                      ><span>부서별 운영 자료</span>
+                    </div>
+                  </div>
+                  <div class="file-row">
+                    <span class="file-icon">W</span>
+                    <div class="file-info">
+                      <strong>보고서_양식.docx</strong
+                      ><span>문서 작성 기준</span>
+                    </div>
+                  </div>
+                </div>
+                <span class="arrow-connector" aria-hidden="true">→</span>
+                <div class="report-preview">
+                  <span class="model-label">MONTHLY REPORT</span>
+                  <h3>월간 운영 보고서</h3>
+                  <p>주요 실적 요약</p>
+                  <div class="report-grid" aria-hidden="true">
+                    <span>부서</span><span>실적</span><span>변동</span
+                    ><span>영업팀</span><span>집계</span><span>비교</span
+                    ><span>운영팀</span><span>집계</span><span>비교</span>
+                  </div>
+                  <div class="report-line"></div>
+                  <div class="report-line"></div>
+                  <div class="report-line short"></div>
+                  <span class="file-type">편집 가능한 문서</span>
+                </div>
+              </div>
+              <p class="scene-caption">
+                “부서별 실적 파일을 합쳐서 월간 보고서로 만들어줘.”
+              </p>
+            </div>
+          </section>
+          <section
+            class="feature-section reverse"
+            id="computer"
+            aria-labelledby="computer-title"
+          >
+            <div class="feature-heading">
+              <p class="eyebrow">
+                <span class="section-number">02</span> 브라우저·컴퓨터 유즈
+              </p>
+              <h2 id="computer-title">
+                브라우저에서 찾고,<br />입력하고, 내려받습니다.
+              </h2>
+              <p>
+                웹 페이지를 탐색하고 필요한 정보를 모읍니다.<br />반복 입력과
+                자료 다운로드까지 처리합니다.
+              </p>
+              <div class="feature-tags">
+                <span>자료 검색</span><span>클릭·입력</span
+                ><span>다운로드</span>
+              </div>
+              <p class="feature-footnote">
+                데스크톱 앱을 조작하는 컴퓨터 유즈는 준비 중입니다.
+              </p>
+            </div>
+            <div class="feature-visual scene" data-tabs>
+              <div class="scene-toolbar">
+                <div
+                  class="tabs"
+                  role="tablist"
+                  aria-label="브라우저와 컴퓨터 작업 예시"
+                >
+                  <button
+                    type="button"
+                    id="browser-tab"
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="browser-panel"
+                  >
+                    브라우저</button
+                  ><button
+                    type="button"
+                    id="app-tab"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="app-panel"
+                    tabindex="-1"
+                  >
+                    컴퓨터 유즈 <span class="coming-soon">준비 중</span>
+                  </button>
+                </div>
+                <span>작업 예시</span>
+              </div>
+              <div
+                class="tab-panel"
+                id="browser-panel"
+                role="tabpanel"
+                tabindex="0"
+                aria-labelledby="browser-tab"
+              >
+                <div class="browser-frame">
+                  <div class="browser-address">
+                    <span aria-hidden="true">↔</span
+                    ><span>업무 포털 / 자료실</span
+                    ><span aria-hidden="true">↻</span>
+                  </div>
+                  <div class="browser-content">
+                    <div class="browser-search">
+                      이번 달 운영 자료 <span aria-hidden="true">⌕</span>
+                    </div>
+                    <div class="browser-row">
+                      <span class="file-icon">X</span><span>월간 운영 실적</span
+                      ><span class="file-type">다운로드 ↓</span>
+                    </div>
+                    <div class="browser-row">
+                      <span class="file-icon">W</span
+                      ><span>보고서 작성 양식</span
+                      ><span class="file-type">다운로드 ↓</span>
+                    </div>
+                    <div class="browser-row">
+                      <span class="file-icon">P</span
+                      ><span>부서별 참고 자료</span
+                      ><span class="file-type">다운로드 ↓</span>
+                    </div>
+                  </div>
+                </div>
+                <p class="scene-caption">
+                  “포털에서 이번 달 자료를 찾아 내려받아줘.”
+                </p>
+              </div>
+              <div
+                class="tab-panel"
+                id="app-panel"
+                role="tabpanel"
+                tabindex="0"
+                aria-labelledby="app-tab"
+                hidden
+              >
+                <div class="browser-frame">
+                  <div class="browser-address">
+                    <span>업무 앱</span><span>준비 중 · 활용 예시</span>
+                  </div>
+                  <div class="app-grid">
+                    <div class="app-menu">
+                      <span>업무 현황</span><strong>자료 입력</strong
+                      ><span>문서 목록</span>
+                    </div>
+                    <div class="app-form">
+                      <div class="form-preview-row">
+                        <span>보고 기간</span><strong>이번 달</strong>
+                      </div>
+                      <div class="form-preview-row">
+                        <span>대상 부서</span><strong>운영팀</strong>
+                      </div>
+                      <div class="form-preview-row">
+                        <span>입력 내용</span
+                        ><strong>표의 항목을 확인해 입력</strong>
+                      </div>
+                      <div class="access-pill">입력 결과 확인</div>
+                    </div>
+                  </div>
+                </div>
+                <p class="scene-caption">
+                  “이 표의 내용을 업무 앱의 입력 항목에 채워줘.”<br />
+                  <span>준비 중인 기능의 활용 예시입니다.</span>
+                </p>
+              </div>
+            </div>
+          </section>
+          <section
+            class="feature-section sandbox-section"
+            id="isolation"
+            aria-labelledby="isolation-title"
+          >
+            <div class="feature-heading">
+              <p class="eyebrow">
+                <span class="section-number">03</span> 샌드박스
+              </p>
+              <h2 id="isolation-title">
+                AI 작업을<br />격리 공간에서 실행합니다.
+              </h2>
+              <p>
+                내 PC 안의 별도 작업 공간에 필요한 폴더를 연결합니다.<br />그
+                안에서 파일을 처리하고 코드를 실행합니다.
+              </p>
+              <div class="feature-tags">
+                <span>격리된 실행</span><span>폴더 접근 권한</span
+                ><span>결과 파일 확인</span>
+              </div>
+            </div>
+            <div
+              class="feature-visual sandbox-scene"
+              role="img"
+              aria-label="격리 실행 예시: 내 PC의 선택한 업무 폴더를 격리 공간에 연결하고, 데이터를 처리해 보고서 파일을 만듭니다."
+            >
+              <div class="scene-toolbar">
+                <span>내 PC</span><span>격리 실행 예시</span>
+              </div>
+              <div class="host-files">
+                <span class="file-icon">▤</span><strong>선택한 업무 폴더</strong
+                ><span class="access-pill">허용한 범위</span>
+              </div>
+              <div class="isolation-connector" aria-hidden="true">
+                <span>↓</span> 필요한 파일만 연결
+              </div>
+              <div class="isolation-boundary">
+                <div class="boundary-label">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <rect
+                      x="5"
+                      y="10"
+                      width="14"
+                      height="11"
+                      rx="2"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                    />
+                    <path
+                      d="M8 10V7a4 4 0 0 1 8 0v3"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                    />
+                  </svg>
+                  AI 작업 공간 <span>격리 실행</span>
+                </div>
+                <div class="isolation-task">
+                  <span>파일 읽기</span><span aria-hidden="true">→</span
+                  ><span>데이터 처리</span><span aria-hidden="true">→</span
+                  ><span>문서 생성</span>
+                </div>
+                <div class="boundary-output">
+                  <span class="file-icon">W</span
+                  ><span>월간_운영_보고서.docx</span>
+                </div>
+              </div>
+              <p class="scene-caption">
+                격리 실행 작업의 흐름입니다. 브라우저·앱 조작은 별도 권한으로
+                실행됩니다.
+              </p>
+            </div>
+          </section>
+          <section
+            class="feature-section reverse"
+            id="work-code"
+            aria-labelledby="work-code-title"
+          >
+            <div class="feature-heading">
+              <p class="eyebrow">
+                <span class="section-number">04</span> Work &amp; Code
+              </p>
+              <h2 id="work-code-title">
+                문서 작업부터<br />코드 수정과 테스트까지.
+              </h2>
+              <p>
+                업무를 위한 Work, 개발을 위한 Code.<br />하나의 앱에서 작업에
+                맞는 도구를 사용합니다.
+              </p>
+              <div class="feature-tags">
+                <span>문서·데이터</span><span>코드 수정</span
+                ><span>실행·테스트</span>
+              </div>
+            </div>
+            <div class="feature-visual scene mode-scene" data-tabs>
+              <div class="scene-toolbar">
+                <div
+                  class="tabs"
+                  role="tablist"
+                  aria-label="Work와 Code 업무 예시"
+                >
+                  <button
+                    type="button"
+                    id="work-tab"
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="work-panel"
+                  >
+                    Work</button
+                  ><button
+                    type="button"
+                    id="code-tab"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="code-panel"
+                    tabindex="-1"
+                  >
+                    Code
+                  </button>
+                </div>
+                <span>작업 예시</span>
+              </div>
+              <div
+                class="tab-panel"
+                id="work-panel"
+                role="tabpanel"
+                tabindex="0"
+                aria-labelledby="work-tab"
+              >
+                <div class="mode-content">
+                  <p class="task-label">문서 작업</p>
+                  <div class="prompt-box">
+                    두 문서의 변경된 내용을 비교해줘.
+                  </div>
+                  <div class="file-row">
+                    <span class="file-icon">W</span>
+                    <div class="file-info">
+                      <strong>문서_변경_비교표.docx</strong
+                      ><span>변경 항목 · 원문 위치 · 확인할 내용</span>
+                    </div>
+                    <span class="file-type">결과물</span>
+                  </div>
+                  <div class="process-list">
+                    <div class="process-step">
+                      <span class="step-icon">01</span
+                      ><span>개정 전·후 문서 확인</span>
+                    </div>
+                    <div class="process-step">
+                      <span class="step-icon">02</span
+                      ><span>변경 내용과 근거 정리</span>
+                    </div>
+                  </div>
+                </div>
+                <p class="scene-caption">
+                  자료를 읽고, 업무에 필요한 문서로 정리합니다.
+                </p>
+              </div>
+              <div
+                class="tab-panel"
+                id="code-panel"
+                role="tabpanel"
+                tabindex="0"
+                aria-labelledby="code-tab"
+                hidden
+              >
+                <div class="mode-content">
+                  <p class="task-label">개발 작업</p>
+                  <div class="prompt-box">
+                    이 함수의 오류를 고치고 테스트해줘.
+                  </div>
+                  <div class="code-preview">
+                    <div class="browser-address">
+                      <span>report.ts</span><span>변경 사항 예시</span>
+                    </div>
+                    <pre><code><span class="code-removed">− return records[0].amount</span>
+<span class="code-added">+ return records[0]?.amount ?? 0</span>
 
-        <p class="version-fallback">
-          <a href="https://github.com/braincrew-lab/deepwork-public/releases">GitHub Releases에서 전체 목록 보기 →</a>
-        </p>
-      </section>
+<span class="code-comment">// 빈 데이터도 처리하도록 수정</span></code></pre>
+                  </div>
+                  <div class="access-pill">변경 사항과 테스트 결과 확인</div>
+                </div>
+                <p class="scene-caption">
+                  프로젝트를 읽고, 코드를 수정하고, 실행해 확인합니다.
+                </p>
+              </div>
+            </div>
+          </section>
+          <section
+            class="feature-section"
+            id="plugins"
+            aria-labelledby="plugins-title"
+          >
+            <div class="feature-heading">
+              <p class="eyebrow">
+                <span class="section-number">05</span> 플러그인
+              </p>
+              <h2 id="plugins-title">
+                필요한 업무 도구를<br />플러그인으로 추가합니다.
+              </h2>
+              <p>
+                사용하는 서비스와 업무 기능을 연결해<br />AI가 할 수 있는 일을
+                넓힙니다.
+              </p>
+              <div class="feature-tags">
+                <span>서비스 연결</span><span>업무 기능 확장</span>
+              </div>
+            </div>
+            <div class="feature-visual scene">
+              <div class="scene-toolbar">
+                <span>업무에 필요한 기능을 연결</span><span>활용 예시</span>
+              </div>
+              <div class="plugin-grid">
+                <div class="plugin-card">
+                  <span class="plugin-icon">▤</span>
+                  <h3>문서 도구</h3>
+                  <p>자료를 찾고<br />문서에 활용</p>
+                </div>
+                <div class="plugin-card">
+                  <span class="plugin-icon">⌘</span>
+                  <h3>업무 서비스</h3>
+                  <p>필요한 시스템과<br />도구 연결</p>
+                </div>
+                <div class="plugin-card">
+                  <span class="plugin-icon">✳</span>
+                  <h3>팀의 작업 방식</h3>
+                  <p>업무 지침과<br />기능 추가</p>
+                </div>
+              </div>
+              <div class="plugin-result">
+                <span class="mini-logo">D</span><span>DeepWork</span
+                ><span class="arrow-connector" aria-hidden="true">←</span
+                ><span>필요한 도구와 기능</span>
+              </div>
+              <p class="scene-caption">연결한 도구를 실제 업무에 활용합니다.</p>
+            </div>
+          </section>
+          <section
+            class="model-section"
+            id="models"
+            aria-labelledby="models-title"
+          >
+            <div class="section-heading">
+              <p class="eyebrow">
+                <span class="section-number">06</span> 모델 연결
+              </p>
+              <h2 id="models-title">
+                회사에서 사용하는<br />AI 모델을 연결합니다.
+              </h2>
+              <p>
+                상용 모델부터 사내 모델까지.<br />기업 환경에 맞는 AI를 선택해
+                사용합니다.
+              </p>
+            </div>
+            <div class="model-grid">
+              <div class="model-card">
+                <span class="model-label">MODEL API</span>
+                <h3>상용 모델 API</h3>
+                <p>지원하는 모델 제공사의<br />API를 연결합니다.</p>
+                <span class="model-endpoint">모델 제공사 직접 연결</span>
+              </div>
+              <div class="model-card">
+                <span class="model-label">ENTERPRISE CLOUD</span>
+                <h3>기업용 클라우드</h3>
+                <p>조직이 사용하는<br />클라우드 AI를 연결합니다.</p>
+                <span class="model-endpoint">Azure · Amazon Bedrock 등</span>
+              </div>
+              <div class="model-card">
+                <span class="model-label">ON-PREMISES</span>
+                <h3>사내 모델</h3>
+                <p>온프레미스 모델과<br />사내 추론 서버를 연결합니다.</p>
+                <span class="model-endpoint">사내망 · 폐쇄망 구성</span>
+              </div>
+            </div>
+            <p class="model-note">
+              폐쇄망에서는 사내 모델과 내부 도구를 사용하는 구성을 검토합니다.
+            </p>
+          </section>
+        </div>
+        <section
+          class="contact-section"
+          id="contact"
+          aria-labelledby="contact-title"
+        >
+          <div class="contact-copy">
+            <p class="eyebrow">GET IN TOUCH</p>
+            <h2 id="contact-title">
+              DeepWork를 귀사의<br />업무에 적용해 보세요.
+            </h2>
+            <p>사용 중인 모델과 업무 환경에 맞는 구성을 함께 안내합니다.</p>
+          </div>
+          <div class="contact-actions">
+            <a
+              class="button primary"
+              href="mailto:service@brain-crew.com?subject=DeepWork%20%EB%8F%84%EC%9E%85%20%EB%AC%B8%EC%9D%98"
+              >이메일로 도입 상담 <span aria-hidden="true">↗</span></a
+            ><a class="contact-email" href="mailto:service@brain-crew.com"
+              >service@brain-crew.com</a
+            >
+          </div>
+        </section>
+        <section
+          class="downloads"
+          id="downloads"
+          aria-labelledby="downloads-title"
+        >
+          <div class="section-heading">
+            <p class="eyebrow">DOWNLOAD</p>
+            <h2 id="downloads-title">DeepWork 공식 다운로드</h2>
+            <p>
+              사용하는 PC에 맞는 버전을 선택하세요.<br />폐쇄망 등 기업 배포
+              구성은 도입 상담을 통해 안내합니다.
+            </p>
+          </div>
+          <!-- Keep release-updater markup stable: exact code tags are required. -->
+          <!-- prettier-ignore -->
+          <section class="download-card" aria-labelledby="primary-download">
+            <div>
+              <h2 id="primary-download">macOS Apple Silicon</h2>
+              <p>
+                Apple Silicon Mac용 서명·공증된 DMG입니다. 격리 공간 실행에
+                필요한 구성 요소는 별도로 내려받습니다. Intel Mac은 지원하지
+                않습니다.
+              </p>
+              <dl class="metadata">
+                <div>
+                  <dt>버전</dt>
+                  <dd>v0.7.0</dd>
+                </div>
+                <div>
+                  <dt>파일</dt>
+                  <dd>DeepWork-0.7.0-arm64.dmg</dd>
+                </div>
+                <div>
+                  <dt>지원</dt>
+                  <dd>Apple Silicon Mac</dd>
+                </div>
+                <div>
+                  <dt>SHA-256</dt>
+                  <dd>
+                    <code>01c175eac356e9060a5c736e6011d442c1822151207afbc2c5df8fe1f3d60392</code>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+            <a
+              class="button primary"
+              href="https://github.com/braincrew-lab/deepwork-public/releases/download/v0.7.0/DeepWork-0.7.0-arm64.dmg"
+            >
+              macOS 다운로드
+            </a>
+          </section>
+
+          <!-- prettier-ignore -->
+          <section class="download-card" aria-labelledby="windows-download">
+            <div>
+              <h2 id="windows-download">Windows</h2>
+              <p>
+                Windows x64 정식 배포입니다. 프로덕션 인증서로 서명(signed)되어
+                있어 다운로드 후 더블클릭만으로 설치됩니다 — 인증서 등록이 필요
+                없습니다.
+              </p>
+              <dl class="metadata">
+                <div>
+                  <dt>버전</dt>
+                  <dd>v0.6.26</dd>
+                </div>
+                <div>
+                  <dt>파일</dt>
+                  <dd>DeepWork.0.6.26.appx</dd>
+                </div>
+                <div>
+                  <dt>SHA-256</dt>
+                  <dd>
+                    <code>6aae54c3e81854dbc7b0cf3553758647f646ceb93b8bbdb63b1f50bce8e8fac0</code>
+                  </dd>
+                </div>
+                <div>
+                  <dt>서명</dt>
+                  <dd>DigiCert KeyLocker signed APPX (production)</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="button-stack" aria-label="Windows 정식 배포 다운로드">
+              <a
+                class="button primary"
+                href="https://github.com/braincrew-lab/deepwork-public/releases/download/v0.6.26/DeepWork.0.6.26.appx"
+              >
+                Windows 다운로드
+              </a>
+              <a
+                class="button secondary"
+                href="https://github.com/braincrew-lab/deepwork-public/releases/tag/v0.6.26"
+              >
+                릴리스 노트
+              </a>
+            </div>
+          </section>
+
+          <section
+            class="version-history"
+            aria-labelledby="version-history-title"
+          >
+            <p class="section-title" id="version-history-title">이전 릴리스</p>
+            <p>
+              최신 릴리스만 표시합니다. 전체 목록은 GitHub Releases에서 받을 수
+              있습니다.
+            </p>
+            <p class="version-mobile-note">
+              이전 릴리스 표는 데스크톱에서 확인하세요.
+              <a
+                href="https://github.com/braincrew-lab/deepwork-public/releases"
+                >GitHub Releases 열기 →</a
+              >
+            </p>
+
+            <div class="version-group">
+              <h2 class="version-group-title">macOS</h2>
+              <div class="version-table-wrap">
+                <table class="version-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">버전</th>
+                      <th scope="col">날짜</th>
+                      <th scope="col">다운로드</th>
+                    </tr>
+                  </thead>
+                  <tbody id="version-rows-mac" aria-live="polite">
+                    <tr class="version-status">
+                      <td colspan="3">릴리스 목록을 불러오는 중…</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="version-group">
+              <h2 class="version-group-title">Windows</h2>
+              <div class="version-table-wrap">
+                <table class="version-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">버전</th>
+                      <th scope="col">날짜</th>
+                      <th scope="col">다운로드</th>
+                    </tr>
+                  </thead>
+                  <tbody id="version-rows-win" aria-live="polite">
+                    <tr class="version-status">
+                      <td colspan="3">릴리스 목록을 불러오는 중…</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <p class="version-fallback">
+              <a
+                href="https://github.com/braincrew-lab/deepwork-public/releases"
+                >GitHub Releases에서 전체 목록 보기 →</a
+              >
+            </p>
+          </section>
+        </section>
+      </div>
     </main>
-
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="brand" href="./"
+          ><img
+            src="assets/deepwork-glyph-light.svg"
+            alt=""
+            width="24"
+            height="24"
+          /><span translate="no">DeepWork</span></a
+        >
+        <p>© Braincrew. All rights reserved.</p>
+        <nav class="footer-links" aria-label="서비스 정보">
+          <a href="https://www.brain-crew.com/">브레인크루</a
+          ><a href="privacy/deepwork-chrome-bridge/">개인정보처리방침</a
+          ><a href="https://github.com/braincrew-lab/deepwork-public/releases"
+            >릴리스 노트</a
+          ><a href="releases/stable.json">릴리스 메타데이터</a>
+        </nav>
+      </div>
+    </footer>
     <script>
       (function () {
-        var REPO = "braincrew-lab/deepwork-public"
-        var API = "https://api.github.com/repos/" + REPO + "/releases?per_page=100"
-        var WITHHELD_RELEASE_RE = /^v0\.5\.7(?:$|-)/
+        var REPO = "braincrew-lab/deepwork-public";
+        var API =
+          "https://api.github.com/repos/" + REPO + "/releases?per_page=100";
+        var WITHHELD_RELEASE_RE = /^v0\.5\.7(?:$|-)/;
         // VM 이미지(deep-work-vm-*)는 앱이 내부적으로 내려받는 인프라 릴리스라 표에서 제외.
-        var INFRA_RELEASE_RE = /^deep-work-vm-/
-        var MAC_ASSET_RE = /\.dmg$/i
-        var WIN_ASSET_RE = /\.(appx|msix|msixbundle)$/i
-        var macBody = document.getElementById("version-rows-mac")
-        var winBody = document.getElementById("version-rows-win")
-        if (!macBody || !winBody) return
+        var INFRA_RELEASE_RE = /^deep-work-vm-/;
+        var MAC_ASSET_RE = /\.dmg$/i;
+        var WIN_ASSET_RE = /\.(appx|msix|msixbundle)$/i;
+        var macBody = document.getElementById("version-rows-mac");
+        var winBody = document.getElementById("version-rows-win");
+        if (!macBody || !winBody) return;
 
-        var MAX_ROWS = 6
-        var dateFmt
+        var MAX_ROWS = 6;
+        var dateFmt;
         try {
           dateFmt = new Intl.DateTimeFormat("ko-KR", {
             year: "numeric",
             month: "2-digit",
-            day: "2-digit"
-          })
+            day: "2-digit",
+          });
         } catch (e) {
-          dateFmt = null
+          dateFmt = null;
         }
 
         function formatDate(iso) {
-          if (!iso) return ""
-          var d = new Date(iso)
-          if (isNaN(d.getTime())) return ""
-          if (dateFmt) return dateFmt.format(d)
-          var m = d.getMonth() + 1
-          var day = d.getDate()
-          return d.getFullYear() + "." + (m < 10 ? "0" + m : m) + "." + (day < 10 ? "0" + day : day)
+          if (!iso) return "";
+          var d = new Date(iso);
+          if (isNaN(d.getTime())) return "";
+          if (dateFmt) return dateFmt.format(d);
+          var m = d.getMonth() + 1;
+          var day = d.getDate();
+          return (
+            d.getFullYear() +
+            "." +
+            (m < 10 ? "0" + m : m) +
+            "." +
+            (day < 10 ? "0" + day : day)
+          );
         }
 
         function statusRow(body, text) {
-          body.innerHTML = ""
-          var tr = document.createElement("tr")
-          tr.className = "version-status"
-          var td = document.createElement("td")
-          td.colSpan = 3
-          td.textContent = text
-          tr.appendChild(td)
-          body.appendChild(tr)
+          body.innerHTML = "";
+          var tr = document.createElement("tr");
+          tr.className = "version-status";
+          var td = document.createElement("td");
+          td.colSpan = 3;
+          td.textContent = text;
+          tr.appendChild(td);
+          body.appendChild(tr);
         }
 
         function channelBadge(rel) {
           if (/-preview\.\d+$/i.test(rel.tag_name)) {
-            return { text: "preview", title: "프리뷰 채널 빌드 (정식 공개판이 아님)" }
+            return {
+              text: "preview",
+              title: "프리뷰 채널 빌드 (정식 공개판이 아님)",
+            };
           }
           if (rel.prerelease) {
-            return { text: "pre", title: "GitHub pre-release (정식 공개판이 아닌 proof/test 빌드)" }
+            return {
+              text: "pre",
+              title: "GitHub pre-release (정식 공개판이 아닌 proof/test 빌드)",
+            };
           }
-          return null
+          return null;
         }
 
         function pickAsset(assets, preferRe) {
           var preferred = assets.filter(function (a) {
-            return preferRe.test(a.name)
-          })
-          return (preferred.length ? preferred : assets)[0] || null
+            return preferRe.test(a.name);
+          });
+          return (preferred.length ? preferred : assets)[0] || null;
         }
 
         function buildRow(rel, asset) {
-          var tr = document.createElement("tr")
+          var tr = document.createElement("tr");
 
-          var verTd = document.createElement("td")
-          verTd.className = "v-version"
-          var verLink = document.createElement("a")
-          verLink.href = rel.html_url
-          verLink.textContent = rel.tag_name
-          verLink.translate = false
-          verTd.appendChild(verLink)
-          var badge = channelBadge(rel)
+          var verTd = document.createElement("td");
+          verTd.className = "v-version";
+          var verLink = document.createElement("a");
+          verLink.href = rel.html_url;
+          verLink.textContent = rel.tag_name;
+          verLink.translate = false;
+          verTd.appendChild(verLink);
+          var badge = channelBadge(rel);
           if (badge) {
-            var tag = document.createElement("span")
-            tag.className = "v-tag " + badge.text
-            tag.textContent = badge.text
-            tag.title = badge.title
-            verTd.appendChild(tag)
+            var tag = document.createElement("span");
+            tag.className = "v-tag " + badge.text;
+            tag.textContent = badge.text;
+            tag.title = badge.title;
+            verTd.appendChild(tag);
           }
-          tr.appendChild(verTd)
+          tr.appendChild(verTd);
 
-          var dateTd = document.createElement("td")
-          dateTd.className = "v-date"
-          dateTd.textContent = formatDate(rel.published_at)
-          tr.appendChild(dateTd)
+          var dateTd = document.createElement("td");
+          dateTd.className = "v-date";
+          dateTd.textContent = formatDate(rel.published_at);
+          tr.appendChild(dateTd);
 
-          var dlTd = document.createElement("td")
-          dlTd.className = "v-downloads"
-          var link = document.createElement("a")
-          link.className = "v-asset"
+          var dlTd = document.createElement("td");
+          dlTd.className = "v-downloads";
+          var link = document.createElement("a");
+          link.className = "v-asset";
           if (asset) {
-            link.href = asset.browser_download_url
-            link.textContent = asset.name
-            link.translate = false
+            link.href = asset.browser_download_url;
+            link.textContent = asset.name;
+            link.translate = false;
           } else {
-            link.href = rel.html_url
-            link.textContent = "릴리스 노트"
+            link.href = rel.html_url;
+            link.textContent = "릴리스 노트";
           }
-          dlTd.appendChild(link)
-          tr.appendChild(dlTd)
+          dlTd.appendChild(link);
+          tr.appendChild(dlTd);
 
-          return tr
+          return tr;
         }
 
         function moreRow(body, hidden) {
-          var tr = document.createElement("tr")
-          tr.className = "version-status"
-          var td = document.createElement("td")
-          td.colSpan = 3
-          var link = document.createElement("a")
-          link.href = "https://github.com/braincrew-lab/deepwork-public/releases"
-          link.textContent = "이전 " + hidden + "개 더 보기 — GitHub Releases →"
-          td.appendChild(link)
-          tr.appendChild(td)
-          body.appendChild(tr)
+          var tr = document.createElement("tr");
+          tr.className = "version-status";
+          var td = document.createElement("td");
+          td.colSpan = 3;
+          var link = document.createElement("a");
+          link.href =
+            "https://github.com/braincrew-lab/deepwork-public/releases";
+          link.textContent =
+            "이전 " + hidden + "개 더 보기 — GitHub Releases →";
+          td.appendChild(link);
+          tr.appendChild(td);
+          body.appendChild(tr);
         }
 
         function fillTable(body, rows, emptyMessage) {
-          body.innerHTML = ""
+          body.innerHTML = "";
           if (!rows.length) {
-            statusRow(body, emptyMessage)
-            return
+            statusRow(body, emptyMessage);
+            return;
           }
           rows.slice(0, MAX_ROWS).forEach(function (row) {
-            body.appendChild(buildRow(row.rel, row.asset))
-          })
-          if (rows.length > MAX_ROWS) moreRow(body, rows.length - MAX_ROWS)
+            body.appendChild(buildRow(row.rel, row.asset));
+          });
+          if (rows.length > MAX_ROWS) moreRow(body, rows.length - MAX_ROWS);
         }
 
         function render(releases) {
-          var macRows = []
-          var winRows = []
+          var macRows = [];
+          var winRows = [];
           releases.forEach(function (rel) {
-            if (rel.draft) return
-            if (WITHHELD_RELEASE_RE.test(rel.tag_name)) return
-            if (INFRA_RELEASE_RE.test(rel.tag_name)) return
-            var assets = rel.assets || []
+            if (rel.draft) return;
+            if (WITHHELD_RELEASE_RE.test(rel.tag_name)) return;
+            if (INFRA_RELEASE_RE.test(rel.tag_name)) return;
+            var assets = rel.assets || [];
             var macAssets = assets.filter(function (a) {
-              return MAC_ASSET_RE.test(a.name)
-            })
+              return MAC_ASSET_RE.test(a.name);
+            });
             var winAssets = assets.filter(function (a) {
-              return WIN_ASSET_RE.test(a.name)
-            })
+              return WIN_ASSET_RE.test(a.name);
+            });
             // 통합 릴리스(mac DMG + Windows APPX가 한 태그)는 양쪽 표에 모두,
             // 각 표에는 해당 플랫폼 설치 파일만 표시한다.
             if (macAssets.length) {
-              macRows.push({ rel: rel, asset: pickAsset(macAssets, /offline/i) })
+              macRows.push({
+                rel: rel,
+                asset: pickAsset(macAssets, /offline/i),
+              });
             }
             if (winAssets.length) {
-              winRows.push({ rel: rel, asset: pickAsset(winAssets, /\.(appx|msixbundle)$/i) })
+              winRows.push({
+                rel: rel,
+                asset: pickAsset(winAssets, /\.(appx|msixbundle)$/i),
+              });
             }
             if (!macAssets.length && !winAssets.length) {
-              var target = /win|windows|appx|msix|cer/i.test(rel.tag_name) ? winRows : macRows
-              target.push({ rel: rel, asset: null })
+              var target = /win|windows|appx|msix|cer/i.test(rel.tag_name)
+                ? winRows
+                : macRows;
+              target.push({ rel: rel, asset: null });
             }
-          })
+          });
 
-          fillTable(macBody, macRows, "표시할 macOS 릴리스가 없습니다.")
-          fillTable(winBody, winRows, "표시할 Windows 릴리스가 없습니다.")
+          fillTable(macBody, macRows, "표시할 macOS 릴리스가 없습니다.");
+          fillTable(winBody, winRows, "표시할 Windows 릴리스가 없습니다.");
         }
 
         fetch(API, { headers: { Accept: "application/vnd.github+json" } })
           .then(function (res) {
-            if (!res.ok) throw new Error("HTTP " + res.status)
-            return res.json()
+            if (!res.ok) throw new Error("HTTP " + res.status);
+            return res.json();
           })
           .then(function (data) {
-            if (!Array.isArray(data)) throw new Error("unexpected response")
-            render(data)
+            if (!Array.isArray(data)) throw new Error("unexpected response");
+            render(data);
           })
           .catch(function () {
-            var msg = "릴리스 목록을 불러오지 못했습니다. 아래 GitHub Releases 링크를 확인해 주세요."
-            statusRow(macBody, msg)
-            statusRow(winBody, msg)
-          })
-      })()
+            var msg =
+              "릴리스 목록을 불러오지 못했습니다. 아래 GitHub Releases 링크를 확인해 주세요.";
+            statusRow(macBody, msg);
+            statusRow(winBody, msg);
+          });
+      })();
     </script>
   </body>
 </html>
