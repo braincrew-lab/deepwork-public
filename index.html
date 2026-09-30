@@ -993,6 +993,8 @@
             if (rel.draft) return;
             if (WITHHELD_RELEASE_RE.test(rel.tag_name)) return;
             if (INFRA_RELEASE_RE.test(rel.tag_name)) return;
+            // CLI 릴리스는 GitHub에 유지하되 데스크톱 다운로드 표에서는 제외.
+            if (/^deepcode-cli-/.test(rel.tag_name)) return;
             var assets = rel.assets || [];
             var macAssets = assets.filter(function (a) {
               return MAC_ASSET_RE.test(a.name);
