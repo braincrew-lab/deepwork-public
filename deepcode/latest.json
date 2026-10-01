@@ -1,32 +1,32 @@
 {
   "name": "deepcode",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "node": "22.23.3",
-  "releasedAt": "2026-10-01T13:10:12.372Z",
+  "releasedAt": "2026-10-01T14:48:15.922Z",
   "platforms": {
     "win32-x64": {
-      "file": "deepcode-0.3.2-win32-x64.zip",
-      "url": "https://github.com/braincrew-lab/deepwork-public/releases/download/deepcode-cli-v0.3.2/deepcode-0.3.2-win32-x64.zip",
-      "sha256": "f8dd5204573506452f0741704d09b9abd49bb5b32036bf016f2fcfb32acf0996",
-      "size": 87172547
+      "file": "deepcode-0.3.3-win32-x64.zip",
+      "url": "https://github.com/braincrew-lab/deepwork-public/releases/download/deepcode-cli-v0.3.3/deepcode-0.3.3-win32-x64.zip",
+      "sha256": "893dd6e1383cd88e18019b812fe7e37fc3d0d0983e52ad01a1dd6344faae59ba",
+      "size": 87188454
     },
     "darwin-arm64": {
-      "file": "deepcode-0.3.2-darwin-arm64.tar.gz",
-      "url": "https://github.com/braincrew-lab/deepwork-public/releases/download/deepcode-cli-v0.3.2/deepcode-0.3.2-darwin-arm64.tar.gz",
-      "sha256": "b396c0daf5afedae58922f38e4524f1025c2b0d15c7b58286455162f04d61c80",
-      "size": 82403986
+      "file": "deepcode-0.3.3-darwin-arm64.tar.gz",
+      "url": "https://github.com/braincrew-lab/deepwork-public/releases/download/deepcode-cli-v0.3.3/deepcode-0.3.3-darwin-arm64.tar.gz",
+      "sha256": "c679e21d70fa696b3ff844aa1407fea694d2e6d0e729b839c55704ac6bf1f125",
+      "size": 82421577
     },
     "darwin-x64": {
-      "file": "deepcode-0.3.2-darwin-x64.tar.gz",
-      "url": "https://github.com/braincrew-lab/deepwork-public/releases/download/deepcode-cli-v0.3.2/deepcode-0.3.2-darwin-x64.tar.gz",
-      "sha256": "a8632e3288b32e4488096dfff7499370c5f8777abc428aa074f84fb7634f3ed3",
-      "size": 83729249
+      "file": "deepcode-0.3.3-darwin-x64.tar.gz",
+      "url": "https://github.com/braincrew-lab/deepwork-public/releases/download/deepcode-cli-v0.3.3/deepcode-0.3.3-darwin-x64.tar.gz",
+      "sha256": "3b3fc3fd937e77f7f268cb4eaa1e08412df562a067c0012a1b09a9b83849227d",
+      "size": 83747356
     },
     "linux-x64": {
-      "file": "deepcode-0.3.2-linux-x64.tar.gz",
-      "url": "https://github.com/braincrew-lab/deepwork-public/releases/download/deepcode-cli-v0.3.2/deepcode-0.3.2-linux-x64.tar.gz",
-      "sha256": "ee2618ba6192e30cd462232cae0b42103f56584f0b7d9d327969206a02114544",
-      "size": 87649500
+      "file": "deepcode-0.3.3-linux-x64.tar.gz",
+      "url": "https://github.com/braincrew-lab/deepwork-public/releases/download/deepcode-cli-v0.3.3/deepcode-0.3.3-linux-x64.tar.gz",
+      "sha256": "d2474a3095dc224a5aa3c80adf5ad7c76efb1e9bf7d47369cd7b264457f5287f",
+      "size": 87665484
     }
   }
 }
